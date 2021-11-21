@@ -1,6 +1,5 @@
 package com.liyuehong.weeklyreport.model;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Article {
@@ -8,23 +7,17 @@ public class Article {
 
     private String title;
 
-    private Integer uid;
+    private Date editDate;
 
     private Date publishDate;
 
-    private Date editDate;
+    private Integer uid;
 
     private Integer state;
 
     private String mdContent;
 
-    public Date getPublishDate() {
-        return publishDate;
-    }
-
-    public void setPublishDate(Date publishDate) {
-        this.publishDate = publishDate;
-    }
+    private String htmlContent;
 
     public Date getEditDate() {
         return editDate;
@@ -34,12 +27,28 @@ public class Article {
         this.editDate = editDate;
     }
 
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public void setPublishDate(Date publishDate) {
+        this.publishDate = publishDate;
+    }
+
     public String getMdContent() {
         return mdContent;
     }
 
     public void setMdContent(String mdContent) {
         this.mdContent = mdContent;
+    }
+
+    public String getHtmlContent() {
+        return htmlContent;
+    }
+
+    public void setHtmlContent(String htmlContent) {
+        this.htmlContent = htmlContent;
     }
 
     public Integer getId() {

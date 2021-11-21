@@ -8,6 +8,7 @@ class WeeklyReportApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }

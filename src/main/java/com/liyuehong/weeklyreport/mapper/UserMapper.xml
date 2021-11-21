@@ -18,11 +18,14 @@
     from user
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="loadUserByUsername" resultType="com.liyuehong.weeklyreport.model.User">
+    select * from user where username=#{username}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.liyuehong.weeklyreport.mapper.UserMapper" >
+  <insert id="reg" parameterType="com.liyuehong.weeklyreport.mapper.UserMapper" >
     insert into user (id, username, password, 
       enabled, email, regTime
       )

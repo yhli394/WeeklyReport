@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.liyuehong.weeklyreport.mapper.ArticleMapper" >
-  <resultMap id="BaseResultMap" type="com.liyuehong.weeklyreport.mapper.ArticleMapper" >
+  <resultMap id="BaseResultMap" type="com.liyuehong.weeklyreport.model.Article" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
-    <result column="uid" property="uid" jdbcType="INTEGER" />
-    <result column="publishDate" property="publishDate" jdbcType="TIMESTAMP" />
     <result column="editDate" property="editDate" jdbcType="TIMESTAMP" />
+    <result column="publishDate" property="publishDate" jdbcType="TIMESTAMP" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
     <result column="state" property="state" jdbcType="INTEGER" />
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.liyuehong.weeklyreport.mapper.ArticleMapper" extends="BaseResultMap" >
+  <resultMap id="ResultMapWithBLOBs" type="com.liyuehong.weeklyreport.model.Article" extends="BaseResultMap" >
     <result column="mdContent" property="mdContent" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, title, uid, publishDate, editDate, state
+    id, title, editDate, publishDate, uid, state
   </sql>
   <sql id="Blob_Column_List" >
     mdContent
@@ -30,15 +30,15 @@
     delete from article
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.liyuehong.weeklyreport.mapper.ArticleMapper" >
-    insert into article (id, title, uid, 
-      publishDate, editDate, state, 
+  <insert id="insert" parameterType="com.liyuehong.weeklyreport.model.Article" >
+    insert into article (id, title, editDate, 
+      publishDate, uid, state, 
       mdContent)
-    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{uid,jdbcType=INTEGER}, 
-      #{publishDate,jdbcType=TIMESTAMP}, #{editDate,jdbcType=TIMESTAMP}, #{state,jdbcType=INTEGER}, 
-      #{mdcontent,jdbcType=LONGVARCHAR})
+    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{editDate,jdbcType=TIMESTAMP}, 
+      #{publishDate,jdbcType=TIMESTAMP}, #{uid,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, 
+      #{mdContent,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.liyuehong.weeklyreport.mapper.ArticleMapper" >
+  <insert id="insertSelective" parameterType="com.liyuehong.weeklyreport.model.Article" >
     insert into article
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -47,19 +47,19 @@
       <if test="title != null" >
         title,
       </if>
-      <if test="uid != null" >
-        uid,
+      <if test="editDate != null" >
+        editDate,
       </if>
       <if test="publishDate != null" >
         publishDate,
       </if>
-      <if test="editDate != null" >
-        editDate,
+      <if test="uid != null" >
+        uid,
       </if>
       <if test="state != null" >
         state,
       </if>
-      <if test="mdcontent != null" >
+      <if test="mdContent != null" >
         mdContent,
       </if>
     </trim>
@@ -70,64 +70,63 @@
       <if test="title != null" >
         #{title,jdbcType=VARCHAR},
       </if>
-      <if test="uid != null" >
-        #{uid,jdbcType=INTEGER},
+      <if test="editDate != null" >
+        #{editDate,jdbcType=TIMESTAMP},
       </if>
       <if test="publishDate != null" >
         #{publishDate,jdbcType=TIMESTAMP},
       </if>
-
-      <if test="editDate != null" >
-        #{editDate,jdbcType=TIMESTAMP},
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
       </if>
       <if test="state != null" >
         #{state,jdbcType=INTEGER},
       </if>
-      <if test="mdcontent != null" >
-        #{mdcontent,jdbcType=LONGVARCHAR},
+      <if test="mdContent != null" >
+        #{mdContent,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.liyuehong.weeklyreport.mapper.ArticleMapper" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.liyuehong.weeklyreport.model.Article" >
     update article
     <set >
       <if test="title != null" >
         title = #{title,jdbcType=VARCHAR},
       </if>
-      <if test="uid != null" >
-        uid = #{uid,jdbcType=INTEGER},
+      <if test="editDate != null" >
+        editDate = #{editDate,jdbcType=TIMESTAMP},
       </if>
       <if test="publishDate != null" >
         publishDate = #{publishDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="editDate != null" >
-        editDate = #{editDate,jdbcType=TIMESTAMP},
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
       </if>
       <if test="state != null" >
         state = #{state,jdbcType=INTEGER},
       </if>
-      <if test="mdcontent != null" >
-        mdContent = #{mdcontent,jdbcType=LONGVARCHAR},
+      <if test="mdContent != null" >
+        mdContent = #{mdContent,jdbcType=LONGVARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.liyuehong.weeklyreport.mapper.ArticleMapper" >
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.liyuehong.weeklyreport.model.Article" >
     update article
     set title = #{title,jdbcType=VARCHAR},
-      uid = #{uid,jdbcType=INTEGER},
-      publishDate = #{publishDate,jdbcType=TIMESTAMP},
       editDate = #{editDate,jdbcType=TIMESTAMP},
+      publishDate = #{publishDate,jdbcType=TIMESTAMP},
+      uid = #{uid,jdbcType=INTEGER},
       state = #{state,jdbcType=INTEGER},
-      mdContent = #{mdcontent,jdbcType=LONGVARCHAR}
+      mdContent = #{mdContent,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.liyuehong.weeklyreport.mapper.ArticleMapper" >
+  <update id="updateByPrimaryKey" parameterType="com.liyuehong.weeklyreport.model.Article" >
     update article
     set title = #{title,jdbcType=VARCHAR},
-      uid = #{uid,jdbcType=INTEGER},
-      publishDate = #{publishDate,jdbcType=TIMESTAMP},
       editDate = #{editDate,jdbcType=TIMESTAMP},
+      publishDate = #{publishDate,jdbcType=TIMESTAMP},
+      uid = #{uid,jdbcType=INTEGER},
       state = #{state,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
