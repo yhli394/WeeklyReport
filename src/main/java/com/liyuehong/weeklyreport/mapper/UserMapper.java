@@ -29,5 +29,7 @@ public interface UserMapper {
      * @param username
      * @return
      */
-    List<User> loadUserByUsername(String username);
+    User loadUserByUsername(String username);
+
+
 }

@@ -5,6 +5,16 @@ public class Role {
 
     private String name;
 
+    private String nameZh;
+
+    public String getNameZh() {
+        return nameZh;
+    }
+
+    public void setNameZh(String nameZh) {
+        this.nameZh = nameZh;
+    }
+
     public Integer getId() {
         return id;
     }

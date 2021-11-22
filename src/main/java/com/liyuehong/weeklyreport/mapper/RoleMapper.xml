@@ -8,6 +8,9 @@
   <sql id="Base_Column_List" >
     id, name
   </sql>
+  <select id="getRolesByUid" parameterType="Integer" resultType="com.liyuehong.weeklyreport.model.Role">
+    SELECT r.* FROM roles r,roles_user ru WHERE r.`id`=ru.`rid` AND ru.`uid`=#{uid}
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

@@ -32,12 +32,11 @@ public class LoginController {
         String password = person.get("password");
         //判断用户名和密码是否为空
         if(username!=null&&password!=null){
-            List<User> users = userService.loadUserByUsername(username);
+            User users = (User) userService.loadUserByUsername(username);
             //判断用户名是否存在
-            if(users!=null&&users.size()>0){
-                User user = users.get(0);
+            if(users!=null){
                 //判断密码是否正确
-                if(password.equals(user.getPassword())){
+                if(password.equals(users.getPassword())){
                     //密码正确
                     return new RespMsg(200,"登录成功");
                 }else{

@@ -45,13 +45,13 @@
     delete from article
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.liyuehong.weeklyreport.model.Article" >
+  <insert id="addNewArticle" parameterType="com.liyuehong.weeklyreport.model.Article" useGeneratedKeys="true" keyProperty="id">
     insert into article (id, title, editDate, 
       publishDate, uid, state, 
-      mdContent)
+      mdContent,htmlContent)
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{editDate,jdbcType=TIMESTAMP}, 
       #{publishDate,jdbcType=TIMESTAMP}, #{uid,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, 
-      #{mdContent,jdbcType=LONGVARCHAR})
+      #{mdContent,jdbcType=LONGVARCHAR},#{htmlContent,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.liyuehong.weeklyreport.model.Article" >
     insert into article
@@ -136,7 +136,7 @@
       mdContent = #{mdContent,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.liyuehong.weeklyreport.model.Article" >
+  <update id="updateArticle" parameterType="com.liyuehong.weeklyreport.model.Article" >
     update article
     set title = #{title,jdbcType=VARCHAR},
       editDate = #{editDate,jdbcType=TIMESTAMP},
