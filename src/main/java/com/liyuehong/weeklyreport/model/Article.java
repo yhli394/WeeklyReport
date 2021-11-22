@@ -1,5 +1,6 @@
 package com.liyuehong.weeklyreport.model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Article {
@@ -7,9 +8,9 @@ public class Article {
 
     private String title;
 
-    private Date editDate;
+    private Timestamp editDate;
 
-    private Date publishDate;
+    private Timestamp publishDate;
 
     private Integer uid;
 
@@ -19,19 +20,19 @@ public class Article {
 
     private String htmlContent;
 
-    public Date getEditDate() {
+    public Timestamp getEditDate() {
         return editDate;
     }
 
-    public void setEditDate(Date editDate) {
+    public void setEditDate(Timestamp editDate) {
         this.editDate = editDate;
     }
 
-    public Date getPublishDate() {
+    public Timestamp getPublishDate() {
         return publishDate;
     }
 
-    public void setPublishDate(Date publishDate) {
+    public void setPublishDate(Timestamp publishDate) {
         this.publishDate = publishDate;
     }
 

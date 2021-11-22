@@ -2,6 +2,8 @@ package com.liyuehong.weeklyreport.mapper;
 
 import com.liyuehong.weeklyreport.model.Role;
 
+import java.util.List;
+
 public interface RoleMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface RoleMapper {
     int updateByPrimaryKeySelective(Role record);
 
     int updateByPrimaryKey(Role record);
+
+    List<Role> getRolesByUid(Integer uid);
 }

@@ -5,7 +5,12 @@ import com.liyuehong.weeklyreport.model.Article;
 public interface ArticleMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(Article record);
+    /**
+     * 增加文章
+     * @param article
+     * @return
+     */
+    int addNewArticle(Article article);
 
     int insertSelective(Article record);
 
@@ -15,5 +20,17 @@ public interface ArticleMapper {
 
     int updateByPrimaryKeyWithBLOBs(Article record);
 
-    int updateByPrimaryKey(Article record);
+    /**
+     * 更新
+     * @param article
+     * @return
+     */
+    int updateArticle(Article article);
 }
+
+
+
+
+
+
+
