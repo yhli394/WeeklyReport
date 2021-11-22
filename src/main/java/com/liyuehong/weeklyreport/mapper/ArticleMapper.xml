@@ -18,6 +18,21 @@
   <sql id="Blob_Column_List" >
     mdContent
   </sql>
+  <insert id="addNewArticle" parameterType="com.liyuehong.weeklyreport.model.Article" useGeneratedKeys="true" keyProperty="id">
+    INSERT INTO article SET
+      title=#{title},mdContent=#{mdContent},htmlContent=#{htmlContent},uid=#{uid},publishDate=#{publishDate},state=#{state},editDate=#{editDate}
+  </insert>
+  <update id="updateArticle" parameterType="com.liyuehong.weeklyreport.model.Article">
+    UPDATE article SET
+    title=#{title},mdContent=#{mdContent},htmlContent=#{htmlContent},editDate=#{editDate}
+    <if test="state==1">
+      ,state=1
+    </if>
+    <if test="publishDate!=null">
+      ,publishDate=#{publishDate}
+    </if>
+    WHERE id=#{id}
+  </update>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

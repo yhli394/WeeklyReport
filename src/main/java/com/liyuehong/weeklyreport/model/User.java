@@ -2,7 +2,9 @@ package com.liyuehong.weeklyreport.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.core.userdetails.UserDetails;
 
+import java.io.Serializable;
 import java.util.Date;
 
 public class User {

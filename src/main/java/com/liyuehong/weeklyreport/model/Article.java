@@ -1,14 +1,16 @@
 package com.liyuehong.weeklyreport.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Article {
     private Integer id;
 
     private String title;
-
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date editDate;
-
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date publishDate;
 
     private Integer uid;
