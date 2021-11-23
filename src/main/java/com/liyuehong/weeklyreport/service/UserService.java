@@ -4,10 +4,8 @@ import com.liyuehong.weeklyreport.mapper.RoleMapper;
 import com.liyuehong.weeklyreport.mapper.UserMapper;
 import com.liyuehong.weeklyreport.model.Role;
 import com.liyuehong.weeklyreport.model.User;
+import com.liyuehong.weeklyreport.utils.RespMsg;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +16,7 @@ import java.util.List;
  * @Date 2021/11/21 16:14
  */
 @Service
-public class UserService implements UserDetailsService {
+public class UserService{
     @Autowired
     UserMapper userMapper;
     @Autowired
@@ -41,21 +39,13 @@ public class UserService implements UserDetailsService {
         }
     }
 
-    /**
-     * 登录
-     * @param username
-     * @return
-     *
-     */
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User users = userMapper.loadUserByUsername(username);
-        if(users==null){
-            throw new UsernameNotFoundException("用户名未找到");
+    public User loadUserByUsername(String username){
+        User user = userMapper.loadUserByUsername(username);
+        if(user==null){
+            return new User();
         }
-        //查询用户的角色信息，并返回存入user中
-        List<Role> roles = roleMapper.getRolesByUid(users.getId());
-        users.setRoles(roles);
-        return users;
+        return user;
     }
+
+
 }

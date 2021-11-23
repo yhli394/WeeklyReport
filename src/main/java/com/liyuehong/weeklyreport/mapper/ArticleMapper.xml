@@ -18,10 +18,6 @@
   <sql id="Blob_Column_List" >
     mdContent
   </sql>
-  <insert id="addNewArticle" parameterType="com.liyuehong.weeklyreport.model.Article" useGeneratedKeys="true" keyProperty="id">
-    INSERT INTO article SET
-      title=#{title},mdContent=#{mdContent},htmlContent=#{htmlContent},uid=#{uid},publishDate=#{publishDate},state=#{state},editDate=#{editDate}
-  </insert>
   <update id="updateArticle" parameterType="com.liyuehong.weeklyreport.model.Article">
     UPDATE article SET
     title=#{title},mdContent=#{mdContent},htmlContent=#{htmlContent},editDate=#{editDate}
@@ -134,15 +130,6 @@
       uid = #{uid,jdbcType=INTEGER},
       state = #{state,jdbcType=INTEGER},
       mdContent = #{mdContent,jdbcType=LONGVARCHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateArticle" parameterType="com.liyuehong.weeklyreport.model.Article" >
-    update article
-    set title = #{title,jdbcType=VARCHAR},
-      editDate = #{editDate,jdbcType=TIMESTAMP},
-      publishDate = #{publishDate,jdbcType=TIMESTAMP},
-      uid = #{uid,jdbcType=INTEGER},
-      state = #{state,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

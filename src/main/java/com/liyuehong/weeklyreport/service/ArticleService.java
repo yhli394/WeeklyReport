@@ -2,7 +2,6 @@ package com.liyuehong.weeklyreport.service;
 
 import com.liyuehong.weeklyreport.mapper.ArticleMapper;
 import com.liyuehong.weeklyreport.model.Article;
-import com.liyuehong.weeklyreport.utils.GetCurrentUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +27,7 @@ public class ArticleService {
             }
             article.setEditDate(timestamp);
             //设置当前用户
-            article.setUid(GetCurrentUser.getCurrentUser().getId());
+            //article.setUid(GetCurrentUser.getCurrentUser().getId());
             int i = articleMapper.addNewArticle(article);
             return i;
         } else {
