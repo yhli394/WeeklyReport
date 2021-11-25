@@ -10,17 +10,17 @@
     <result column="state" property="state" jdbcType="INTEGER" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.liyuehong.weeklyreport.model.Article" extends="BaseResultMap" >
-    <result column="mdContent" property="mdContent" jdbcType="LONGVARCHAR" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, title, editDate, publishDate, uid, state
   </sql>
   <sql id="Blob_Column_List" >
-    mdContent
+    mdcontent
   </sql>
   <update id="updateArticle" parameterType="com.liyuehong.weeklyreport.model.Article">
     UPDATE article SET
-    title=#{title},mdContent=#{mdContent},htmlContent=#{htmlContent},editDate=#{editDate}
+    title=#{title},content=#{content},editDate=#{editDate}
     <if test="state==1">
       ,state=1
     </if>
@@ -41,15 +41,8 @@
     delete from article
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="addNewArticle" parameterType="com.liyuehong.weeklyreport.model.Article" useGeneratedKeys="true" keyProperty="id">
-    insert into article (id, title, editDate, 
-      publishDate, uid, state, 
-      mdContent,htmlContent)
-    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{editDate,jdbcType=TIMESTAMP}, 
-      #{publishDate,jdbcType=TIMESTAMP}, #{uid,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, 
-      #{mdContent,jdbcType=LONGVARCHAR},#{htmlContent,jdbcType=LONGVARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.liyuehong.weeklyreport.model.Article" >
+  <insert id="addNewArticle" parameterType="com.liyuehong.weeklyreport.model.Article" useGeneratedKeys="true"
+          keyProperty="id">
     insert into article
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -70,8 +63,8 @@
       <if test="state != null" >
         state,
       </if>
-      <if test="mdContent != null" >
-        mdContent,
+      <if test="content != null" >
+        content,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -93,8 +86,8 @@
       <if test="state != null" >
         #{state,jdbcType=INTEGER},
       </if>
-      <if test="mdContent != null" >
-        #{mdContent,jdbcType=LONGVARCHAR},
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -116,8 +109,8 @@
       <if test="state != null" >
         state = #{state,jdbcType=INTEGER},
       </if>
-      <if test="mdContent != null" >
-        mdContent = #{mdContent,jdbcType=LONGVARCHAR},
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -129,7 +122,7 @@
       publishDate = #{publishDate,jdbcType=TIMESTAMP},
       uid = #{uid,jdbcType=INTEGER},
       state = #{state,jdbcType=INTEGER},
-      mdContent = #{mdContent,jdbcType=LONGVARCHAR}
+      content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

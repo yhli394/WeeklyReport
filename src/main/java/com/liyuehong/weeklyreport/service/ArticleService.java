@@ -17,29 +17,23 @@ public class ArticleService {
     @Autowired
     ArticleMapper articleMapper;
 
-    public int addNewArticle(Article article) {
-        if (article.getId() == -1) {
-            //添加操作
-            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            if (article.getState() == 1) {
+    public Article addNewArticle(Article article) {
+            //如果文章id为空，那么是第一次提交
+            if(article.getId()==null){
+                Timestamp timestamp = new Timestamp(System.currentTimeMillis());
                 //设置发表日期
                 article.setPublishDate(timestamp);
-            }
-            article.setEditDate(timestamp);
-            //设置当前用户
-            //article.setUid(GetCurrentUser.getCurrentUser().getId());
-            int i = articleMapper.addNewArticle(article);
-            return i;
-        } else {
-            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            if (article.getState() == 1) {
-                //设置发表日期
+                int i = articleMapper.addNewArticle(article);
+                return article;
+            }else{
+                Timestamp timestamp = new Timestamp(System.currentTimeMillis());
                 article.setPublishDate(timestamp);
+                int i = articleMapper.updateArticle(article);
+                return article;
             }
-            //更新
-            article.setEditDate(new Timestamp(System.currentTimeMillis()));
-            int i = articleMapper.updateArticle(article);
-            return i;
-        }
     }
+
 }
+
+
+

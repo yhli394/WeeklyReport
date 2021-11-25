@@ -1,23 +1,26 @@
 package com.liyuehong.weeklyreport.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
 
 public class User {
+    @JsonIgnore
     private Integer id;
 
     private String username;
 
     private String password;
-
+    @JsonIgnore
     private Byte enabled;
-
+    @JsonIgnore
     private String email;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @JsonIgnore
+    //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date regTime;
 
     public Integer getId() {

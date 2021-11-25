@@ -1,6 +1,8 @@
 package com.liyuehong.weeklyreport.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
 
@@ -8,18 +10,25 @@ public class Article {
     private Integer id;
 
     private String title;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @JsonIgnore
     private Date editDate;
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date publishDate;
 
     private Integer uid;
-
+    @JsonIgnore
     private Integer state;
 
-    private String mdContent;
+    private String content;
 
-    private String htmlContent;
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     public Date getEditDate() {
         return editDate;
@@ -35,22 +44,6 @@ public class Article {
 
     public void setPublishDate(Date publishDate) {
         this.publishDate = publishDate;
-    }
-
-    public String getMdContent() {
-        return mdContent;
-    }
-
-    public void setMdContent(String mdContent) {
-        this.mdContent = mdContent;
-    }
-
-    public String getHtmlContent() {
-        return htmlContent;
-    }
-
-    public void setHtmlContent(String htmlContent) {
-        this.htmlContent = htmlContent;
     }
 
     public Integer getId() {

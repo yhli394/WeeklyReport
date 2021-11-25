@@ -1,7 +1,9 @@
 package com.liyuehong.weeklyreport.mapper;
 
 import com.liyuehong.weeklyreport.model.Article;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface ArticleMapper {
     int deleteByPrimaryKey(Integer id);
 

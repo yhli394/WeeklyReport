@@ -33,4 +33,5 @@ public class RigController {
             return new RespMsg(500,"用户名重复，注册失败!");
         }
     }
+
 }
