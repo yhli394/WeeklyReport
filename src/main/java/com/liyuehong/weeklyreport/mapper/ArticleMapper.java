@@ -5,8 +5,6 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface ArticleMapper {
-    int deleteByPrimaryKey(Integer id);
-
     int insert(Article record);
 
     int insertSelective(Article record);
@@ -22,4 +20,7 @@ public interface ArticleMapper {
     int addNewArticle(Article article);
 
     int updateArticle(Article article);
+
+    int deleteArticleById(Integer id);
+
 }

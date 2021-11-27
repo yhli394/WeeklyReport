@@ -33,6 +33,10 @@ public class ArticleService {
             }
     }
 
+    public int deleteArticleById(Integer id) {
+        int i = articleMapper.deleteArticleById(id);
+        return i;
+    }
 }
 
 

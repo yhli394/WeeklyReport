@@ -17,6 +17,10 @@ public class RespMsg {
         this.msg = msg;
     }
 
+    public RespMsg(String msg) {
+        this.msg = msg;
+    }
+
     public Integer getStatus() {
         return status;
     }
