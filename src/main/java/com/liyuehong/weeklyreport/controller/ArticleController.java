@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
+import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * @author yhli3
@@ -41,18 +43,20 @@ public class ArticleController {
 
     @ApiOperation("查询本周周报接口")
     @RequestMapping(value = "/selectAll",method = RequestMethod.GET)
-    public Article selectByWeek(Timestamp time){
+    public Article selectByWeek(Date time){
         return new Article();
     }
 
     @ApiOperation("查询单个用户所有文章接口")
     @RequestMapping(value = "/select/{uid}",method = RequestMethod.GET)
-    public Article selectByUserId(@PathVariable Integer uid){
-        return new Article();
+    public List<Article> selectByUserId(@PathVariable Integer uid){
+        List<Article> articles = articleService.selectByUserId(uid);
+        return articles;
     }
 
 
 }
+
 
 
 

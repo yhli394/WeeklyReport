@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * @author yhli3
@@ -33,9 +34,19 @@ public class ArticleService {
             }
     }
 
+    /**
+     * 删除文章
+     * @param id
+     * @return
+     */
     public int deleteArticleById(Integer id) {
         int i = articleMapper.deleteArticleById(id);
         return i;
+    }
+
+    public List<Article> selectByUserId(Integer uid){
+        List<Article> articles = articleMapper.selectByUserId(uid);
+        return articles;
     }
 }
 
