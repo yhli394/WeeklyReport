@@ -2,7 +2,10 @@ package com.liyuehong.weeklyreport.mapper;
 
 import com.liyuehong.weeklyreport.model.Article;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
+import javax.websocket.server.PathParam;
+import java.sql.Date;
 import java.util.List;
 
 @Mapper
@@ -25,4 +28,10 @@ public interface ArticleMapper {
 
     int deleteArticleById(Integer id);
 
+    /**
+     * 按周查询周报
+     * @param time
+     * @return
+     */
+    List<Article> selectByWeek(@Param("t") String t1, @Param("u") String t2);
 }

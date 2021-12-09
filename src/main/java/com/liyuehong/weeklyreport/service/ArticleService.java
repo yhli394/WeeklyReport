@@ -5,6 +5,7 @@ import com.liyuehong.weeklyreport.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -44,9 +45,18 @@ public class ArticleService {
         return i;
     }
 
+    /**
+     * 查询单个用户的所有文章
+     * @param uid
+     * @return
+     */
     public List<Article> selectByUserId(Integer uid){
         List<Article> articles = articleMapper.selectByUserId(uid);
         return articles;
+    }
+
+    public List<Article> selectByWeek(String t1,String t2) {
+        return articleMapper.selectByWeek(t1,t2);
     }
 }
 

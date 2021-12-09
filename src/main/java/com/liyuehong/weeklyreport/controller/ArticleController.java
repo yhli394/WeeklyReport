@@ -11,6 +11,9 @@ import springfox.documentation.annotations.ApiIgnore;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -42,9 +45,24 @@ public class ArticleController {
     }
 
     @ApiOperation("查询本周周报接口")
-    @RequestMapping(value = "/selectAll",method = RequestMethod.GET)
-    public Article selectByWeek(Date time){
-        return new Article();
+    @RequestMapping(value = "/selectAllReports",method = RequestMethod.GET)
+    public List<Article> selectByWeek(Date time){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(time);
+        int i = cal.get(Calendar.DAY_OF_WEEK);
+        if(i==1){
+            cal.add(Calendar.DAY_OF_WEEK,-1);
+        }
+        cal.setFirstDayOfWeek(Calendar.MONDAY);
+        int day = cal.get(Calendar.DAY_OF_WEEK);
+        cal.add(Calendar.DATE,cal.getFirstDayOfWeek()-day);
+        //周一
+        String monday = sdf.format(cal.getTime());
+        cal.add(Calendar.DATE,6);
+        //周日
+        String sunday = sdf.format(cal.getTime());
+        return articleService.selectByWeek(monday,sunday);
     }
 
     @ApiOperation("查询单个用户所有文章接口")
@@ -53,7 +71,6 @@ public class ArticleController {
         List<Article> articles = articleService.selectByUserId(uid);
         return articles;
     }
-
 
 }
 
