@@ -3,25 +3,28 @@ package com.liyuehong.weeklyreport.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.*;
 import springfox.documentation.annotations.ApiIgnore;
 
 import java.util.Date;
 public class Article {
+    @ApiModelProperty(value = "文章的id")
     private Integer id;
-
+    @ApiModelProperty(value = "文章的标题")
     private String title;
     @JsonIgnore
     private Date editDate;
 
+    @ApiModelProperty(value = "文章发表时间")
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date publishDate;
 
+    @ApiModelProperty(value = "用户的id")
     private Integer uid;
     @JsonIgnore
     private Integer state;
 
+    @ApiModelProperty(value = "文章的内容")
     private String content;
 
     public String getContent() {

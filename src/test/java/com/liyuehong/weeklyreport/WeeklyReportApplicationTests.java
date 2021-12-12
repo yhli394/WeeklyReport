@@ -15,8 +15,8 @@ import static java.lang.System.currentTimeMillis;
 @SpringBootTest
 class WeeklyReportApplicationTests {
 
-    @Test
-    void contextLoads() {
+
+    @Test void contextLoads() {
 
     }
 

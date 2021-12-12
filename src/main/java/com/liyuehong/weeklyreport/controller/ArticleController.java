@@ -3,7 +3,9 @@ package com.liyuehong.weeklyreport.controller;
 import com.liyuehong.weeklyreport.model.Article;
 import com.liyuehong.weeklyreport.service.ArticleService;
 import com.liyuehong.weeklyreport.utils.RespMsg;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,8 +36,9 @@ public class ArticleController {
         return newArticle;
     }
 
-    @ApiOperation("删除文章接口")
-    @RequestMapping(value = "/delete/{aid}",method = RequestMethod.DELETE)
+    @ApiImplicitParam(name = "id",value = "文章的id",required = true)
+    @ApiOperation("根据文章的id删除文章")
+    @RequestMapping(value = {"/delete/{id}"},method = {RequestMethod.DELETE})
     public RespMsg deleteArticleById(@PathVariable Integer id){
         int i = articleService.deleteArticleById(id);
         if(i==1){
@@ -44,6 +47,7 @@ public class ArticleController {
         return new RespMsg("删除失败");
     }
 
+    @ApiImplicitParam(name = "time",value = "时间",required = true)
     @ApiOperation("查询本周周报接口")
     @RequestMapping(value = "/selectAllReports",method = RequestMethod.GET)
     public List<Article> selectByWeek(Date time){
@@ -65,12 +69,14 @@ public class ArticleController {
         return articleService.selectByWeek(monday,sunday);
     }
 
-    @ApiOperation("查询单个用户所有文章接口")
+    @ApiOperation("根据用户id查询单个用户所有文章接口")
     @RequestMapping(value = "/select/{uid}",method = RequestMethod.GET)
     public List<Article> selectByUserId(@PathVariable Integer uid){
         List<Article> articles = articleService.selectByUserId(uid);
         return articles;
     }
+
+    // TODO: 2021/12/11 查询所有人周报的接口
 
 }
 
