@@ -30,8 +30,13 @@ public interface ArticleMapper {
 
     /**
      * 按周查询周报
-     * @param time
+     * @param t1
+     * @param t2
      * @return
      */
     List<Article> selectByWeek(@Param("t") String t1, @Param("u") String t2);
+
+    Article showArticle(Integer id);
+
+    List<Article> selectAllArticle();
 }

@@ -76,7 +76,17 @@ public class ArticleController {
         return articles;
     }
 
-    // TODO: 2021/12/11 查询所有人周报的接口
+    @ApiOperation("根据文章id渲染文章")
+    @RequestMapping(value = {"/show/{id}"},method = {RequestMethod.GET})
+    public Article showArticle(@PathVariable Integer id){
+        return articleService.showArticle(id);
+    }
+
+    @ApiOperation("查询所有的文章")
+    @RequestMapping(value = {"/selectAllArticle"},method = {RequestMethod.GET})
+    public List<Article> selectAllArticle(){
+        return articleService.selectAllArticle();
+    }
 
 }
 

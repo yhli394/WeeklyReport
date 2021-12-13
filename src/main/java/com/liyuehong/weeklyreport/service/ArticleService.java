@@ -65,7 +65,15 @@ public class ArticleService {
     public List<Article> selectByWeek(String t1,String t2) {
         return articleMapper.selectByWeek(t1,t2);
     }
-    
+
+    public Article showArticle(Integer id) {
+        Article article = articleMapper.showArticle(id);
+        return article;
+    }
+
+    public List<Article> selectAllArticle(){
+        return articleMapper.selectAllArticle();
+    }
 }
 
 
