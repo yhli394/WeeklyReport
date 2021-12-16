@@ -8,14 +8,14 @@ import springfox.documentation.annotations.ApiIgnore;
 
 import java.util.Date;
 public class Article {
-    @ApiModelProperty(value = "文章的id")
+    @ApiModelProperty(value = "文章的id（第一次提交不用传id过来）")
     private Integer id;
     @ApiModelProperty(value = "文章的标题")
     private String title;
     @JsonIgnore
     private Date editDate;
 
-    @ApiModelProperty(value = "文章发表时间")
+    @ApiModelProperty(value = "文章发表时间（不用传过来，后端做解析）")
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date publishDate;
 

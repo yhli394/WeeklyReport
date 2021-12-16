@@ -1,5 +1,7 @@
 package com.liyuehong.weeklyreport.utils;
 
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -10,6 +12,7 @@ import java.util.Date;
  * @Date 2021/12/9 19:40
  */
 public class Time {
+
     //public static String getTimeInterval(Date date){
     //    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     //    Calendar cal = Calendar.getInstance();

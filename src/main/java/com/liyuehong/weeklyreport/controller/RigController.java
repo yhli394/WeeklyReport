@@ -28,9 +28,9 @@ public class RigController {
     public RespMsg reg(@RequestBody User user){
         int res =userService.addUser(user);
         if(res==0){
-            return new RespMsg(200,"注册成功");
+            return new RespMsg("注册成功");
         }else{
-            return new RespMsg(500,"用户名重复，注册失败!");
+            return new RespMsg("用户名重复，注册失败!");
         }
     }
 

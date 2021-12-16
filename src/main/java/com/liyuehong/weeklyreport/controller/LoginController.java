@@ -25,9 +25,9 @@ public class LoginController {
     public RespMsg login(@RequestBody User user){
         User users =userService.loadUserByUsername(user.getUsername());
         if(users!=null){
-            return new RespMsg(200,"登录成功");
+            return new RespMsg("登录成功");
         }else{
-            return new RespMsg(500,"登录失败!");
+            return new RespMsg("登录失败!");
         }
     }
 

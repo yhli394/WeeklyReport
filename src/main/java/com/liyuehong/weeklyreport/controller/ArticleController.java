@@ -9,8 +9,12 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import springfox.documentation.annotations.ApiIgnore;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -29,11 +33,16 @@ public class ArticleController {
     @Autowired
     ArticleService articleService;
 
-    @ApiOperation("提交文章接口")
+    @ApiOperation("提交或更新文章接口(返回消息中的msg右边的数字是文章的id)")
     @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public Article addNewArticle(@RequestBody Article article) {
-        Article newArticle = articleService.addNewArticle(article);
-        return newArticle;
+    public RespMsg addNewArticle(@RequestBody Article article) {
+        if(article.getContent().isEmpty()){
+            return new RespMsg("error","文章内容不能为空！");
+        }
+        if(articleService.addNewArticle(article)==1){
+            return new RespMsg("success",article.getId()+"");
+        }
+        return new RespMsg("error","文章提交失败，请联系管理员！");
     }
 
     @ApiImplicitParam(name = "id",value = "文章的id",required = true)
@@ -88,6 +97,20 @@ public class ArticleController {
         return articleService.selectAllArticle();
     }
 
+    @ApiOperation(value = "查询所有的用户")
+    @RequestMapping(value = {"/selectAllUser"},method = {RequestMethod.GET})
+    public List<Integer> selectAllUser(){
+        return articleService.selectAllUser();
+    }
+
+    @ApiOperation(value = "上传图片接口")
+    @RequestMapping(value = {"/uploading"},method = {RequestMethod.POST})
+    public void uploadImage(MultipartFile file, HttpServletRequest req) throws IOException {
+        File file1 = new File("D:\\img");
+        file.transferTo(file1);
+        // TODO: 2021/12/16 理解什么是相对路径和绝对路径？
+        //return new RespMsg("上传失败");
+    }
 }
 
 

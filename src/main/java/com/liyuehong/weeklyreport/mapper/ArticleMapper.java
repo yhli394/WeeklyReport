@@ -39,4 +39,7 @@ public interface ArticleMapper {
     Article showArticle(Integer id);
 
     List<Article> selectAllArticle();
+
+    List<Integer> selectAllUser();
+
 }
