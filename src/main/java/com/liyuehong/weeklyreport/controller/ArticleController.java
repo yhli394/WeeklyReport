@@ -11,16 +11,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import springfox.documentation.annotations.ApiIgnore;
+import sun.misc.BASE64Decoder;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.util.Calendar;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author yhli3
@@ -105,12 +109,75 @@ public class ArticleController {
 
     @ApiOperation(value = "上传图片接口")
     @RequestMapping(value = {"/uploading"},method = {RequestMethod.POST})
-    public void uploadImage(MultipartFile file, HttpServletRequest req) throws IOException {
-        File file1 = new File("D:\\img");
-        file.transferTo(file1);
-        // TODO: 2021/12/16 理解什么是相对路径和绝对路径？
-        //return new RespMsg("上传失败");
+    public RespMsg uploadImage(String base64Data,HttpServletRequest req){
+        StringBuffer url = new StringBuffer();
+        //位于base64字符前面的字符串（data:image/xxx;）
+        String dataPre = "";
+        //实体部分数据
+        String data = "";
+        if(base64Data==null||"".equals(base64Data)){
+            return new RespMsg("error","上传失败，图片为空！");
+        }else{
+            //将字符串分隔成字符数组
+            String [] d = base64Data.split("base64,");
+            if(d != null && d.length == 2){
+                dataPre = d[0];
+                data = d[1];
+            }else {
+                return new RespMsg("error","上传失败，数据不合法");
+            }
+        }
+        //图片后缀，用以识别哪种格式数据
+        String suffix = "";
+        //data:image/jpeg;base64,base64编码的jpeg图片数据
+        if("data:image/jpeg;".equalsIgnoreCase(dataPre)){
+            suffix = ".jpg";
+        }else if("data:image/x-icon;".equalsIgnoreCase(dataPre)){
+            //data:image/x-icon;base64,base64编码的icon图片数据
+            suffix = ".ico";
+        }else if("data:image/gif;".equalsIgnoreCase(dataPre)){
+            //data:image/gif;base64,base64编码的gif图片数据
+            suffix = ".gif";
+        }else if("data:image/png;".equalsIgnoreCase(dataPre)){
+            //data:image/png;base64,base64编码的png图片数据
+            suffix = ".png";
+        }else {
+            return new RespMsg("error","上传图片格式不合法");
+        }
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+        //使用uuid给图片重命名
+        String tempFileName=uuid+suffix;
+        //新生成的图片
+        String imgFilePath = "D:\\image\\"+tempFileName;
+        BASE64Decoder decoder = new BASE64Decoder();
+        try {
+            //Base64解码
+            byte[] b = decoder.decodeBuffer(data);
+            for(int i=0;i<b.length;++i) {
+                if(b[i]<0) {
+                    //调整异常数据
+                    b[i]+=256;
+                }
+            }
+            OutputStream out = new FileOutputStream(imgFilePath);
+            out.write(b);
+            out.flush();
+            out.close();
+            //String imgurl="http://xxxxxxxx/"+tempFileName;
+            url.append(req.getScheme())
+                    .append("://")
+                    .append(req.getServerName())
+                    .append(":")
+                    .append(req.getServerPort())
+                    .append(req.getContextPath())
+                    .append(imgFilePath);
+            return new RespMsg("success",url.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new RespMsg("error","上传图片失败");
+        }
     }
+
 }
 
 
