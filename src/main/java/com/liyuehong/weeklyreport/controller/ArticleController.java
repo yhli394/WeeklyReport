@@ -5,23 +5,18 @@ import com.liyuehong.weeklyreport.service.ArticleService;
 import com.liyuehong.weeklyreport.utils.RespMsg;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import springfox.documentation.annotations.ApiIgnore;
 import sun.misc.BASE64Decoder;
 
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.sql.Date;
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-import java.time.DayOfWeek;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
@@ -38,7 +33,7 @@ public class ArticleController {
     ArticleService articleService;
 
     @ApiOperation("提交或更新文章接口(返回消息中的msg右边的数字是文章的id)")
-    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    @PostMapping(value = {"/add"})
     public RespMsg addNewArticle(@RequestBody Article article) {
         if(article.getContent().isEmpty()){
             return new RespMsg("error","文章内容不能为空！");
@@ -110,6 +105,8 @@ public class ArticleController {
     @ApiOperation(value = "上传图片接口")
     @RequestMapping(value = {"/uploading"},method = {RequestMethod.POST})
     public RespMsg uploadImage(String base64Data,HttpServletRequest req){
+        //自定义日期格式
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         StringBuffer url = new StringBuffer();
         //位于base64字符前面的字符串（data:image/xxx;）
         String dataPre = "";
@@ -131,7 +128,7 @@ public class ArticleController {
         String suffix = "";
         //data:image/jpeg;base64,base64编码的jpeg图片数据
         if("data:image/jpeg;".equalsIgnoreCase(dataPre)){
-            suffix = ".jpg";
+            suffix = ".jpeg";
         }else if("data:image/x-icon;".equalsIgnoreCase(dataPre)){
             //data:image/x-icon;base64,base64编码的icon图片数据
             suffix = ".ico";
@@ -141,14 +138,17 @@ public class ArticleController {
         }else if("data:image/png;".equalsIgnoreCase(dataPre)){
             //data:image/png;base64,base64编码的png图片数据
             suffix = ".png";
+        }else if("data:image/jpg;".equalsIgnoreCase(dataPre)){
+            //data:image/jpg;base64,base64编码的png图片数据
+            suffix = ".jpg";
         }else {
             return new RespMsg("error","上传图片格式不合法");
         }
         String uuid = UUID.randomUUID().toString().replaceAll("-", "");
-        //使用uuid给图片重命名
-        String tempFileName=uuid+suffix;
-        //新生成的图片
-        String imgFilePath = "D:\\image\\"+tempFileName;
+        //使用uuid给文件重命名
+        String tempFileName=dtf.format(LocalDateTime.now())+uuid+suffix;
+        //文件保存的地址
+        String imgFilePath = "D:\\article\\images\\"+tempFileName;
         BASE64Decoder decoder = new BASE64Decoder();
         try {
             //Base64解码
@@ -170,13 +170,22 @@ public class ArticleController {
                     .append(":")
                     .append(req.getServerPort())
                     .append(req.getContextPath())
-                    .append(imgFilePath);
+                    .append("/article/images/")
+                    .append(tempFileName);
             return new RespMsg("success",url.toString());
         } catch (IOException e) {
             e.printStackTrace();
             return new RespMsg("error","上传图片失败");
         }
     }
+
+    //@ApiOperation("通过图片地址展示图片")
+    //@PostMapping("/images/{address}")
+    //public BufferedImage showImage(@PathVariable String address) throws IOException {
+    //    //通过流读取本地文件
+    //    FileInputStream fileInputStream = new FileInputStream(new File("D:\\images\\"+address));
+    //    return ImageIO.read(fileInputStream);
+    //}
 
 }
 

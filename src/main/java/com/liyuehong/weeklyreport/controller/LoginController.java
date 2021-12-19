@@ -4,6 +4,7 @@ import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.service.UserService;
 import com.liyuehong.weeklyreport.utils.RespMsg;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,5 +31,7 @@ public class LoginController {
             return new RespMsg("登录失败!");
         }
     }
+
+
 
 }
