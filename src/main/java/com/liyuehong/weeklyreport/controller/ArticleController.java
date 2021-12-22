@@ -6,6 +6,10 @@ import com.liyuehong.weeklyreport.utils.RespMsg;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import sun.misc.BASE64Decoder;
 
@@ -163,7 +167,6 @@ public class ArticleController {
             out.write(b);
             out.flush();
             out.close();
-            //String imgurl="http://xxxxxxxx/"+tempFileName;
             url.append(req.getScheme())
                     .append("://")
                     .append(req.getServerName())
@@ -179,13 +182,47 @@ public class ArticleController {
         }
     }
 
-    //@ApiOperation("通过图片地址展示图片")
-    //@PostMapping("/images/{address}")
-    //public BufferedImage showImage(@PathVariable String address) throws IOException {
-    //    //通过流读取本地文件
-    //    FileInputStream fileInputStream = new FileInputStream(new File("D:\\images\\"+address));
-    //    return ImageIO.read(fileInputStream);
-    //}
+    @ApiOperation("通过图片地址展示图片")
+    @PostMapping(value = "/images/{address}",produces ="application/octet-stream")
+    public byte[] showImage(@PathVariable String address) throws IOException {
+        //通过流读取本地文件
+        //FileInputStream fileInputStream = new FileInputStream(new File("D:\\article\\images\\"+address));
+        byte[] bytes = null;
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        File file = new File("D:\\article\\images\\" + address);
+        BufferedImage read = ImageIO.read(file);
+        ImageIO.write(read, "png", baos);
+        bytes = baos.toByteArray();
+        return bytes;
+    }
+
+    @GetMapping(value = "/image/{image_name}", produces = MediaType.IMAGE_PNG_VALUE)
+    public ResponseEntity<byte[]> getImage(@PathVariable("image_name") String image_name) throws Exception{
+
+        byte[] imageContent ;
+        String path = "D:\\article\\images\\" + image_name;
+        imageContent = fileToByte(new File(path));
+
+        final HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.IMAGE_PNG);
+        return new ResponseEntity<>(imageContent, headers, HttpStatus.OK);
+    }
+
+    public static byte[] fileToByte(File img) throws Exception {
+        byte[] bytes = null;
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        try {
+            BufferedImage bi;
+            bi = ImageIO.read(img);
+            ImageIO.write(bi, "png", baos);
+            bytes = baos.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            baos.close();
+        }
+        return bytes;
+    }
 
 }
 
