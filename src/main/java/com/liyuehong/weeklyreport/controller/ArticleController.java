@@ -106,8 +106,8 @@ public class ArticleController {
         return articleService.selectAllUser();
     }
 
-    @ApiOperation(value = "上传图片接口")
-    @RequestMapping(value = {"/uploading"},method = {RequestMethod.POST})
+    @ApiOperation(value = "上传图片接口，返回图片名")
+    @PostMapping(value = {"/uploading"})
     public RespMsg uploadImage(String base64Data,HttpServletRequest req){
         //自定义日期格式
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -167,38 +167,25 @@ public class ArticleController {
             out.write(b);
             out.flush();
             out.close();
-            url.append(req.getScheme())
-                    .append("://")
-                    .append(req.getServerName())
-                    .append(":")
-                    .append(req.getServerPort())
-                    .append(req.getContextPath())
-                    .append("/article/images/")
-                    .append(tempFileName);
-            return new RespMsg("success",url.toString());
+            //url.append(req.getScheme())
+            //        .append("://")
+            //        .append(req.getServerName())
+            //        .append(":")
+            //        .append(req.getServerPort())
+            //        .append(req.getContextPath())
+            //        .append("/article/images/")
+            //        .append(tempFileName);
+            //return new RespMsg("success",url.toString());
+            return new RespMsg("success",tempFileName);
         } catch (IOException e) {
             e.printStackTrace();
             return new RespMsg("error","上传图片失败");
         }
     }
 
-    @ApiOperation("通过图片地址展示图片")
-    @PostMapping(value = "/images/{address}",produces ="application/octet-stream")
-    public byte[] showImage(@PathVariable String address) throws IOException {
-        //通过流读取本地文件
-        //FileInputStream fileInputStream = new FileInputStream(new File("D:\\article\\images\\"+address));
-        byte[] bytes = null;
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        File file = new File("D:\\article\\images\\" + address);
-        BufferedImage read = ImageIO.read(file);
-        ImageIO.write(read, "png", baos);
-        bytes = baos.toByteArray();
-        return bytes;
-    }
-
+    @ApiOperation(value = "通过传入图片名显示图片")
     @GetMapping(value = "/image/{image_name}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<byte[]> getImage(@PathVariable("image_name") String image_name) throws Exception{
-
         byte[] imageContent ;
         String path = "D:\\article\\images\\" + image_name;
         imageContent = fileToByte(new File(path));
