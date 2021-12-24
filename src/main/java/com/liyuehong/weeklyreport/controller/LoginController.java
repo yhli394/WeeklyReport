@@ -22,14 +22,14 @@ public class LoginController {
     @Autowired
     UserService userService;
 
-    @PostMapping("/login")
-    public RespMsg login(@RequestBody User user){
-        User users =userService.loadUserByUsername(user.getUsername());
-        if(users!=null){
-            return new RespMsg("登录成功");
-        }else{
-            return new RespMsg("登录失败!");
-        }
-    }
+    //@PostMapping("/login")
+    //public RespMsg login(@RequestBody User user){
+    //    User users =userService.loadUserByUsername(user.getUsername());
+    //    if(users!=null){
+    //        return new RespMsg("登录成功");
+    //    }else{
+    //        return new RespMsg("登录失败!");
+    //    }
+    //}
 
 }
