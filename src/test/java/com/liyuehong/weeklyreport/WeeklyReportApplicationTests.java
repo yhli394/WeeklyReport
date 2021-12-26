@@ -4,6 +4,7 @@ import com.sun.istack.internal.NotNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.sql.Array;
 import java.sql.Timestamp;
@@ -24,18 +25,10 @@ class WeeklyReportApplicationTests {
         //map.get(1).add(2);
         map.computeIfAbsent(1,t -> new ArrayList<>());
     }
-    //default V computeIfAbsent(K key,
-    //                          Function<? super K, ? extends V> mappingFunction) {
-    //    Objects.requireNonNull(mappingFunction);
-    //    V v;
-    //    if ((v = get(key)) == null) {
-    //        V newValue;
-    //        if ((newValue = mappingFunction.apply(key)) != null) {
-    //            put(key, newValue);
-    //            return newValue;
-    //        }
-    //    }
-    //
-    //    return v;
-    //}
+    @Test
+    void password(){
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
+        String result = encoder.encode("123456");
+        System.out.println(result);
+    }
 }

@@ -19,7 +19,7 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
   <select id="loadUserByUsername" resultType="com.liyuehong.weeklyreport.model.User">
-    select * from user where username=#{username}
+    select <include refid="Base_Column_List" /> from user where username=#{username}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from user
