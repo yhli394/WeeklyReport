@@ -11,9 +11,9 @@ import java.sql.Date;
 import java.util.List;
 
 
-//@Component
 @Repository
 public interface ArticleMapper {
+
     int insert(Article record);
 
     int insertSelective(Article record);

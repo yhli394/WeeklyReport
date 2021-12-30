@@ -7,6 +7,9 @@ public class Role {
 
     private String nameZh;
 
+    public Role() {
+    }
+
     public String getNameZh() {
         return nameZh;
     }

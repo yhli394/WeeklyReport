@@ -3,6 +3,7 @@ package com.liyuehong.weeklyreport.controller;
 import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.service.UserService;
 import com.liyuehong.weeklyreport.utils.RespMsg;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,13 +25,14 @@ public class RigController {
      * @param user
      * @return
      */
-    @PostMapping("/reg")
-    public RespMsg reg(@RequestBody User user){
-        int res =userService.addUser(user);
-        if(res==0){
-            return new RespMsg("注册成功");
+    @ApiOperation("只需要传用户名和密码即可")
+    @PostMapping("/register")
+    public RespMsg reg(User user){
+        Boolean res =userService.addUser(user);
+        if(res){
+            return new RespMsg("success","注册成功！");
         }else{
-            return new RespMsg("用户名重复，注册失败!");
+            return new RespMsg("error","用户名重复，注册失败!");
         }
     }
 

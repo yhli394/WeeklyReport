@@ -30,7 +30,6 @@ public class User implements UserDetails{
     @JsonIgnore
     private String email;
 
-    @JsonIgnore
     private Date regTime;
 
     private List<Role> roles;
@@ -51,6 +50,7 @@ public class User implements UserDetails{
         this.id = id;
     }
 
+    @Override
     public String getUsername() {
         return username;
     }
@@ -82,27 +82,19 @@ public class User implements UserDetails{
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         ArrayList<GrantedAuthority> list = new ArrayList<>();
-        try {
             for (Role role : roles) {
                 list.add(new SimpleGrantedAuthority("ROLE_"+role.getName()));
             }
             return list;
-        }catch (NullPointerException e){
-            e.getMessage();
-        }
-        return list;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
-    }
-
-    public Byte getEnabled() {
-        return enabled;
     }
 
     public void setEnabled(Byte enabled) {
