@@ -13,15 +13,20 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
 import javax.sql.DataSource;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author yhli3
@@ -29,10 +34,14 @@ import java.util.Arrays;
  * @Date 2021/12/16 10:13
  */
 @Configuration
+@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    CustomSessionInformationExpiredStrategy customSessionInformationExpiredStrategy;
 
     //@Autowired
     //DataSource dataSource;
@@ -57,14 +66,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     //            return authenticationManager;
     //         }
 
-
-
     /**
      * 加密
      * @return
      */
     @Bean
-    BCryptPasswordEncoder bCryptPasswordEncoder(){
+    public BCryptPasswordEncoder bCryptPasswordEncoder(){
         return new BCryptPasswordEncoder();
     }
 
@@ -91,6 +98,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/admin/**").hasRole("admin")
+                .antMatchers("/session/invalid","/session/expired").permitAll()
                 .anyRequest().authenticated()
                 .and()//and 方法表示结束当前标签，上下文回到HttpSecurity，开启新一轮的配置
                 .formLogin()
@@ -100,10 +108,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/login")
                 //登录成功的处理
                 .successHandler((req, resp, authentication) -> {
+                    Map<String, Object> map = new HashMap<>();
                     Object principal = authentication.getPrincipal();
+                    Object details = authentication.getDetails();
+                    map.put("principal",principal);
+                    map.put("details",details);
                     resp.setContentType("application/json;charset=utf-8");
                     PrintWriter out = resp.getWriter();
-                    out.write(new ObjectMapper().writeValueAsString(principal));
+                    //java序列化map对象
+                    out.write(new ObjectMapper().writeValueAsString(map));
+                    //out.write(new ObjectMapper().writeValueAsString(details));
                     out.flush();
                     out.close();
                 })
@@ -128,8 +142,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 })
                 .permitAll()
                 .and()
-                .httpBasic()
-                .and()
                 .cors()
                 .and()
                 .csrf().disable()
@@ -141,7 +153,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                             out.flush();
                             out.close();
                         }
-                );
+                )
+                .and()
+                .sessionManagement()
+                //session失效处理
+                .invalidSessionUrl("/session/invalid")
+                //session并发数
+                .maximumSessions(1)
+                //同一时刻只能登录一个浏览器
+                .maxSessionsPreventsLogin(true);
     }
 
 }

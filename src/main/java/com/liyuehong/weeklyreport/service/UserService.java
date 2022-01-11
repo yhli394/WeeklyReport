@@ -8,11 +8,13 @@ import com.liyuehong.weeklyreport.model.Role;
 import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.utils.RespMsg;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
@@ -60,7 +62,7 @@ public class UserService implements UserDetailsService {
         int i = roleMapper.insertRole(2, user.getId());
         return true;
     }
-
+    // TODO: 2021/12/30 登录认证(session或者token)
     /**
      * 登陆时验证用户身份
      * @param username
@@ -76,6 +78,10 @@ public class UserService implements UserDetailsService {
         //查询用户的角色
         List<Role> roles = roleMapper.getRolesByUid(user.getId());
         user.setRoles(roles);
+        //设置sessionId
+        //Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        //WebAuthenticationDetails details = (WebAuthenticationDetails) authentication.getDetails();
+        //user.setSessionId(details.getSessionId());
         return user;
     }
 

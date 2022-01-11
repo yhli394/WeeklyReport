@@ -1,8 +1,10 @@
 package com.liyuehong.weeklyreport.controller;
 
 import com.liyuehong.weeklyreport.model.Article;
+import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.service.ArticleService;
 import com.liyuehong.weeklyreport.utils.RespMsg;
+import com.liyuehong.weeklyreport.utils.UserUtils;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import sun.misc.BASE64Decoder;
 

@@ -27,8 +27,9 @@ class WeeklyReportApplicationTests {
     }
     @Test
     void password(){
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         String result = encoder.encode("123456");
         System.out.println(result);
     }
+
 }
