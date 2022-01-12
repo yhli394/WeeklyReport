@@ -157,11 +157,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .sessionManagement()
                 //session失效处理
-                .invalidSessionUrl("/session/invalid")
-                //session并发数
-                .maximumSessions(1)
-                //同一时刻只能登录一个浏览器
-                .maxSessionsPreventsLogin(true);
+                .invalidSessionUrl("/session/invalid");
     }
 
 }
