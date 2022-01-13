@@ -1,6 +1,7 @@
 package com.liyuehong.weeklyreport.controller;
 
 import com.liyuehong.weeklyreport.model.Article;
+import com.liyuehong.weeklyreport.model.Image;
 import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.service.ArticleService;
 import com.liyuehong.weeklyreport.utils.RespMsg;
@@ -110,7 +111,8 @@ public class ArticleController {
 
     @ApiOperation(value = "上传图片接口，返回图片名")
     @PostMapping(value = {"/article/uploading"})
-    public RespMsg uploadImage(String base64Data,HttpServletRequest req){
+    public RespMsg uploadImage(@RequestBody Image image, HttpServletRequest req){
+        String base64Data = image.getData();
         //自定义日期格式
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         StringBuffer url = new StringBuffer();
