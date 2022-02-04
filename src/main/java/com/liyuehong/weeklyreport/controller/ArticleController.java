@@ -35,12 +35,13 @@ import java.util.UUID;
  * @Date 2021/11/21 15:23
  */
 @RestController
+@RequestMapping("/article")
 public class ArticleController {
     @Autowired
     ArticleService articleService;
 
     @ApiOperation("提交或更新文章接口(返回消息中的msg右边的数字是文章的id)")
-    @PostMapping(value = {"/article/add"})
+    @PostMapping("/add")
     public RespMsg addNewArticle(@RequestBody Article article) {
         if(article.getContent().isEmpty()){
             return new RespMsg("error","文章内容不能为空！");
@@ -51,20 +52,9 @@ public class ArticleController {
         return new RespMsg("error","文章提交失败，请联系管理员！");
     }
 
-    @ApiImplicitParam(name = "id",value = "文章的id",required = true)
-    @ApiOperation("根据文章的id删除文章")
-    @RequestMapping(value = {"/admin/article/delete/{id}"},method = {RequestMethod.DELETE})
-    public RespMsg deleteArticleById(@PathVariable Integer id){
-        int i = articleService.deleteArticleById(id);
-        if(i==1){
-            return new RespMsg("删除成功");
-        }
-        return new RespMsg("删除失败");
-    }
-
     @ApiImplicitParam(name = "time",value = "时间",required = true)
     @ApiOperation("查询本周周报接口")
-    @RequestMapping(value = "/article/selectAllReports",method = RequestMethod.GET)
+    @GetMapping("/selectAllReports")
     public List<Article> selectByWeek(Date time){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Calendar cal = Calendar.getInstance();
@@ -85,32 +75,32 @@ public class ArticleController {
     }
 
     @ApiOperation("根据用户id查询单个用户所有文章接口")
-    @RequestMapping(value = "/article/select/{uid}",method = RequestMethod.GET)
+    @GetMapping("/select/{uid}")
     public List<Article> selectByUserId(@PathVariable Integer uid){
         List<Article> articles = articleService.selectByUserId(uid);
         return articles;
     }
 
     @ApiOperation("根据文章id渲染文章")
-    @RequestMapping(value = {"/article/show/{id}"},method = {RequestMethod.GET})
+    @GetMapping("/show/{id}")
     public Article showArticle(@PathVariable Integer id){
         return articleService.showArticle(id);
     }
 
     @ApiOperation("查询所有的文章")
-    @RequestMapping(value = {"/article/selectAllArticle"},method = {RequestMethod.GET})
+    @GetMapping("/selectAllArticle")
     public List<Article> selectAllArticle(){
         return articleService.selectAllArticle();
     }
 
     @ApiOperation(value = "查询所有的用户")
-    @RequestMapping(value = {"/article/selectAllUser"},method = {RequestMethod.GET})
+    @GetMapping("/selectAllUser")
     public List<Integer> selectAllUser(){
         return articleService.selectAllUser();
     }
 
     @ApiOperation(value = "上传图片接口，返回图片名")
-    @PostMapping(value = {"/article/uploading"})
+    @PostMapping(value = {"/uploading"})
     public RespMsg uploadImage(@RequestBody Image image, HttpServletRequest req){
         String base64Data = image.getData();
         //自定义日期格式
@@ -188,7 +178,7 @@ public class ArticleController {
     }
 
     @ApiOperation(value = "通过传入图片名显示图片")
-    @GetMapping(value = "/article/image/{image_name}", produces = MediaType.IMAGE_PNG_VALUE)
+    @GetMapping(value = "/image/{image_name}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<byte[]> getImage(@PathVariable("image_name") String image_name) throws Exception{
         byte[] imageContent ;
         String path = "D:\\article\\images\\" + image_name;
