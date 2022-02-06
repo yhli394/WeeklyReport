@@ -5,7 +5,6 @@ import com.liyuehong.weeklyreport.model.Image;
 import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.service.ArticleService;
 import com.liyuehong.weeklyreport.utils.RespMsg;
-import com.liyuehong.weeklyreport.utils.UserUtils;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import sun.misc.BASE64Decoder;
 
@@ -91,12 +89,6 @@ public class ArticleController {
     @GetMapping("/selectAllArticle")
     public List<Article> selectAllArticle(){
         return articleService.selectAllArticle();
-    }
-
-    @ApiOperation(value = "查询所有的用户")
-    @GetMapping("/selectAllUser")
-    public List<Integer> selectAllUser(){
-        return articleService.selectAllUser();
     }
 
     @ApiOperation(value = "上传图片接口，返回图片名")
@@ -180,7 +172,7 @@ public class ArticleController {
     @ApiOperation(value = "通过传入图片名显示图片")
     @GetMapping(value = "/image/{image_name}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<byte[]> getImage(@PathVariable("image_name") String image_name) throws Exception{
-        byte[] imageContent ;
+        byte[] imageContent;
         String path = "D:\\article\\images\\" + image_name;
         imageContent = fileToByte(new File(path));
 

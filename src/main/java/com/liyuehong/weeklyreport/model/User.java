@@ -17,7 +17,6 @@ import java.io.Serializable;
 import java.util.*;
 
 public class User implements UserDetails{
-    @JsonIgnore
     private Integer id;
     @JsonIgnore
     private String sessionId;
@@ -25,11 +24,11 @@ public class User implements UserDetails{
     private String username;
 
     private String password;
-    @JsonIgnore
-    private Byte enabled;
-    @JsonIgnore
-    private String email;
 
+    private Byte enabled;
+
+    private String email;
+    @JsonFormat(pattern ="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date regTime;
 
     private List<Role> roles;

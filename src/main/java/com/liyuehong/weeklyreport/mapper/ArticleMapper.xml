@@ -18,9 +18,9 @@
   <sql id="Blob_Column_List" >
     content
   </sql>
-  <select id="selectAllUser" resultType="java.lang.Integer">
-    SELECT DISTINCT uid FROM article
-  </select>
+  <!--<select id="selectAllUser" resultType="java.lang.Integer">-->
+  <!--  SELECT DISTINCT uid FROM article-->
+  <!--</select>-->
   <select id="selectAllArticle" resultMap="ResultMapWithBLOBs">
     select
     <include refid="Base_Column_List" />

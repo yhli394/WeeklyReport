@@ -90,6 +90,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring().
                 antMatchers("/js/**", "/css/**","/images/**")
                 .antMatchers("/swagger-ui.html")
+                .antMatchers("/webjars/**")//不加访问不了swagger
                 .antMatchers("/v2/**")
                 .antMatchers("/swagger-resources/**");
     }

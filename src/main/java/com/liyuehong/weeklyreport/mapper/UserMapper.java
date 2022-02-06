@@ -31,5 +31,5 @@ public interface UserMapper {
      */
     User loadUserByUsername(String username);
 
-
+    List<User> selectAllUsers();
 }

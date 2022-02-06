@@ -38,6 +38,15 @@ public class UserService implements UserDetailsService {
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
 
+
+    /**
+     * 查询所有用户信息用于后台管理
+     * @return
+     */
+    public List<User> selectAllUsers() {
+        return userMapper.selectAllUsers();
+    }
+
     /**
      * 注册用户
      * @param user

@@ -1,6 +1,7 @@
 package com.liyuehong.weeklyreport.mapper;
 
 import com.liyuehong.weeklyreport.model.Article;
+import com.liyuehong.weeklyreport.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
@@ -44,6 +45,6 @@ public interface ArticleMapper {
 
     List<Article> selectAllArticle();
 
-    List<Integer> selectAllUser();
+//    List<User> selectAllUser();
 
 }

@@ -2,6 +2,7 @@ package com.liyuehong.weeklyreport.service;
 
 import com.liyuehong.weeklyreport.mapper.ArticleMapper;
 import com.liyuehong.weeklyreport.model.Article;
+import com.liyuehong.weeklyreport.model.User;
 import com.sun.xml.internal.bind.v2.TODO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -87,13 +88,6 @@ public class ArticleService {
         return articleMapper.selectAllArticle();
     }
 
-    /**
-     * 查询所有用户
-     * @return
-     */
-    public List<Integer> selectAllUser() {
-        return articleMapper.selectAllUser();
-    }
 }
 
 

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.liyuehong.weeklyreport.mapper.UserMapper">
-  <resultMap id="BaseResultMap" type="com.liyuehong.weeklyreport.mapper.UserMapper" >
-    <id column="id" property="id" jdbcType="INTEGER" />
+  <resultMap id="BaseResultMap" type="com.liyuehong.weeklyreport.model.User" >
+    <id column="uid" property="id" jdbcType="INTEGER" />
     <result column="username" property="username" jdbcType="VARCHAR" />
-    <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="enabled" property="enabled" jdbcType="TINYINT" />
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="regTime" property="regTime" jdbcType="TIMESTAMP" />
+    <collection property="roles" ofType="com.liyuehong.weeklyreport.model.Role">
+      <id column="role" property="nameZh"/>
+    </collection>
   </resultMap>
+
   <sql id="Base_Column_List" >
     id, username, password, enabled, email, regTime
   </sql>
+  <select id="selectAllUsers" resultMap="BaseResultMap">
+    SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,r.`nameZh` AS role FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
