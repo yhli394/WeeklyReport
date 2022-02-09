@@ -18,6 +18,7 @@ import java.util.*;
 
 public class User implements UserDetails{
     private Integer id;
+
     @JsonIgnore
     private String sessionId;
 
@@ -25,7 +26,7 @@ public class User implements UserDetails{
 
     private String password;
 
-    private Byte enabled;
+    private Boolean enabled;
 
     private String email;
     @JsonFormat(pattern ="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
@@ -92,7 +93,11 @@ public class User implements UserDetails{
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 
     public void setUsername(String username) {
@@ -115,10 +120,6 @@ public class User implements UserDetails{
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
-    }
-
-    public void setEnabled(Byte enabled) {
-        this.enabled = enabled;
     }
 
     public String getEmail() {

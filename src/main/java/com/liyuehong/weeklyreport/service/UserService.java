@@ -94,4 +94,17 @@ public class UserService implements UserDetailsService {
         return user;
     }
 
+    public int updateUserRolesById(int uid,int[] rids) {
+        int j = userMapper.deleteUserRolesById(uid);
+        int i = userMapper.updateUserRolesById(uid,rids);
+        return i;
+    }
+
+    public int updateAccountStatus(Integer uid,Boolean enabled) {
+        return userMapper.updateAccountStatus(uid, enabled);
+    }
+
+    public int deleteUserById(Integer uid) {
+        return userMapper.deleteUserById(uid);
+    }
 }

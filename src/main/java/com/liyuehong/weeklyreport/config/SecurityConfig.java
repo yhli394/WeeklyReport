@@ -1,6 +1,7 @@
 package com.liyuehong.weeklyreport.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +16,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
@@ -36,6 +40,9 @@ import java.util.Map;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    MyWebAuthenticationDetailsSource myWebAuthenticationDetailsSource;
 
     @Autowired
     UserService userService;
@@ -103,22 +110,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()//and 方法表示结束当前标签，上下文回到HttpSecurity，开启新一轮的配置
                 .formLogin()
+                //自定义WebAuthenticationDetails认证
+//                .authenticationDetailsSource(myWebAuthenticationDetailsSource)
                 //登录页面地址
                 .loginPage("/login.html")
                 //登录接口地址
                 .loginProcessingUrl("/login")
                 //登录成功的处理
                 .successHandler((req, resp, authentication) -> {
-                    Map<String, Object> map = new HashMap<>();
+//                    Map<String, Object> map = new HashMap<>();
                     Object principal = authentication.getPrincipal();
-                    Object details = authentication.getDetails();
-                    map.put("principal",principal);
-                    map.put("details",details);
+//                    String id = req.getSession().getId();
+//                    Authentication authentication1 = SecurityContextHolder.getContext().getAuthentication();
+//                    String sessionId = ((MyWebAuthenticationDetails) authentication1).getSessionId();
+//                    Object details =authentication.getDetails();
+//                    map.put("principal",principal);
+//                    map.put("details",details);
                     resp.setContentType("application/json;charset=utf-8");
                     PrintWriter out = resp.getWriter();
                     //java序列化map对象
-                    out.write(new ObjectMapper().writeValueAsString(map));
-                    //out.write(new ObjectMapper().writeValueAsString(details));
+//                    out.write(new ObjectMapper().writeValueAsString(map));
+                    out.write(new ObjectMapper().writeValueAsString(principal));
                     out.flush();
                     out.close();
                 })
@@ -157,6 +169,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 )
                 .and()
                 .sessionManagement()
+//                .sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
                 //session失效处理
                 .invalidSessionUrl("/session/invalid");
     }

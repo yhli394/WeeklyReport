@@ -2,12 +2,13 @@ package com.liyuehong.weeklyreport.mapper;
 
 import com.liyuehong.weeklyreport.model.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 @Mapper
 public interface UserMapper {
-    int deleteByPrimaryKey(Integer id);
+    int deleteUserRolesById(Integer id);
 
     /**
      * 注册
@@ -32,4 +33,11 @@ public interface UserMapper {
     User loadUserByUsername(String username);
 
     List<User> selectAllUsers();
+
+    int updateUserRolesById(@Param("uid") int uid, @Param("rids") int[] rids);
+
+    int updateAccountStatus(@Param("uid") Integer uid, @Param("enabled") Boolean enabled);
+
+    int deleteUserById(Integer uid);
+
 }

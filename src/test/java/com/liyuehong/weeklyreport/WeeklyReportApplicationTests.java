@@ -31,5 +31,10 @@ class WeeklyReportApplicationTests {
         String result = encoder.encode("123456");
         System.out.println(result);
     }
+    @Test
+    void decode(){
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
+    }
 
 }

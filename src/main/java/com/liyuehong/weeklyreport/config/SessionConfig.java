@@ -9,7 +9,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
  * @Date 2022/1/11 14:35
  */
 @Configuration
-@EnableRedisHttpSession(redisNamespace = "week:session")
+@EnableRedisHttpSession
 public class SessionConfig {
 
 }

@@ -15,6 +15,15 @@
   <sql id="Base_Column_List" >
     id, username, password, enabled, email, regTime
   </sql>
+  <delete id="deleteUserById">
+    delete from user where id = #{uid}
+  </delete>
+  <insert id="updateUserRolesById">
+    insert into user_role (user_id, role_id) values
+    <foreach item="item" collection="rids" separator=",">
+      (#{uid}, #{item})
+    </foreach>
+  </insert>
   <select id="selectAllUsers" resultMap="BaseResultMap">
     SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,r.`nameZh` AS role FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
   </select>
@@ -27,11 +36,11 @@
   <select id="loadUserByUsername" resultType="com.liyuehong.weeklyreport.model.User">
     select <include refid="Base_Column_List" /> from user where username=#{username}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from user
-    where id = #{id,jdbcType=INTEGER}
+  <delete id="deleteUserRolesById">
+    delete from user_role
+    where user_id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="reg" parameterType="com.liyuehong.weeklyreport.mapper.UserMapper" useGeneratedKeys="true" keyProperty="id">
+  <insert id="reg" useGeneratedKeys="true" keyProperty="id">
     insert into user (id, username, password, 
       enabled, email, regTime
       )
@@ -103,13 +112,9 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.liyuehong.weeklyreport.mapper.UserMapper" >
+  <update id="updateAccountStatus">
     update user
-    set username = #{username,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR},
-      enabled = #{enabled,jdbcType=TINYINT},
-      email = #{email,jdbcType=VARCHAR},
-      regTime = #{regTime,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=INTEGER}
+    set enabled = #{enabled}
+    where id = #{uid}
   </update>
 </mapper>

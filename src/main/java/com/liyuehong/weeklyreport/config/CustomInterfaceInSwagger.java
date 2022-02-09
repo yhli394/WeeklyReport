@@ -45,7 +45,7 @@ public class CustomInterfaceInSwagger implements ApiListingScannerPlugin {
                                 .description("用户名")
                                 .type(new TypeResolver().resolve(String.class))
                                 .name("username")
-                                .defaultValue("user")
+                                .defaultValue("@123")
                                 .parameterType("query")
                                 .parameterAccess("access")
                                 .required(true)
