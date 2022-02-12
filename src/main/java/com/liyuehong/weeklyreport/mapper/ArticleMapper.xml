@@ -8,6 +8,9 @@
     <result column="publishDate" property="publishDate" jdbcType="TIMESTAMP" />
     <result column="uid" property="uid" jdbcType="INTEGER" />
     <result column="state" property="state" jdbcType="INTEGER" />
+    <association property="author" javaType="com.liyuehong.weeklyreport.model.User">
+      <result property="username" column="author"/>
+    </association>
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.liyuehong.weeklyreport.model.Article" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
@@ -17,6 +20,9 @@
   </sql>
   <sql id="Blob_Column_List" >
     content
+  </sql>
+  <sql id="article_sql" >
+    title, editDate, publishDate, uid, state
   </sql>
   <!--<select id="selectAllUser" resultType="java.lang.Integer">-->
   <!--  SELECT DISTINCT uid FROM article-->
@@ -49,10 +55,11 @@
   <!--按周查询周报-->
   <select id="selectByWeek" resultMap="ResultMapWithBLOBs">
     select
-    <include refid="Base_Column_List" />
+    article.id,
+    <include refid="article_sql" />
     ,
-    <include refid="Blob_Column_List" />
-    from article where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN #{t} AND #{u}
+    <include refid="Blob_Column_List" />,user.username as author
+    from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN #{t} AND #{u} and user.id=article.uid
   </select>
   <select id="selectByUserId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select 

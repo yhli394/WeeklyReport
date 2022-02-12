@@ -28,7 +28,12 @@
 6. 修复Swagger接口参数与实际类型参数不匹配
 7. 修复第一次获取sessionId为null的情况
 
-
+### 2022.2.10-2022.2.12
+1. 完善查询所有用户接口
+2. 查询本周周报接口新增返回作者信息
+3. 修复swagger中dataType设置为int带来的问题
+4. 注册接口的参数新增@RequestBody注解
+5. User类中的getAuthorities()方法上加入@JsonIgnore注解
 
 
 

@@ -50,7 +50,7 @@ public class ArticleController {
         return new RespMsg("error","文章提交失败，请联系管理员！");
     }
 
-    @ApiImplicitParam(name = "time",value = "时间",required = true)
+    @ApiImplicitParam(name = "time",value = "时间",required = true,dataType = "Date",defaultValue = "2022-04-07")
     @ApiOperation("查询本周周报接口")
     @GetMapping("/selectAllReports")
     public List<Article> selectByWeek(Date time){
@@ -73,6 +73,7 @@ public class ArticleController {
     }
 
     @ApiOperation("根据用户id查询单个用户所有文章接口")
+    @ApiImplicitParam(name = "uid",value = "用户id",required = true,dataType = "int")
     @GetMapping("/select/{uid}")
     public List<Article> selectByUserId(@PathVariable Integer uid){
         List<Article> articles = articleService.selectByUserId(uid);

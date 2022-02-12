@@ -26,7 +26,7 @@ public class User implements UserDetails{
 
     private String password;
 
-    private Boolean enabled;
+    private boolean enabled;
 
     private String email;
     @JsonFormat(pattern ="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
@@ -96,7 +96,7 @@ public class User implements UserDetails{
         return enabled;
     }
 
-    public void setEnabled(Boolean enabled) {
+    public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -104,13 +104,14 @@ public class User implements UserDetails{
         this.username = username == null ? null : username.trim();
     }
 
+    @JsonIgnore
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         ArrayList<GrantedAuthority> list = new ArrayList<>();
             for (Role role : roles) {
                 list.add(new SimpleGrantedAuthority("ROLE_"+role.getName()));
             }
-            return list;
+            return list==null ? null : list;
     }
 
     @Override

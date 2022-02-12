@@ -11,6 +11,7 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.IntStream;
 
 import static java.lang.System.currentTimeMillis;
 
@@ -23,7 +24,10 @@ class WeeklyReportApplicationTests {
         //    map.put(1,new ArrayList<>());
         //}
         //map.get(1).add(2);
+        map.values();
+        HashSet<Object> objects = new HashSet<>();
         map.computeIfAbsent(1,t -> new ArrayList<>());
+//        IntStream.of().map()
     }
     @Test
     void password(){

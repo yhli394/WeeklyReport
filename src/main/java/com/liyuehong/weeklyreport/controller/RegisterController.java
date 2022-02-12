@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 2021/11/21 19:41
  */
 @RestController
-public class RigController {
+public class RegisterController {
     @Autowired
     UserService userService;
 
@@ -27,10 +27,10 @@ public class RigController {
      * @param user
      * @return
      */
-    @ApiOperation("用户注册接口")
-    @ApiImplicitParams({ @ApiImplicitParam(name = "enabled",value = "必填，默认为1，不用改",required = true,defaultValue ="1",dataType = "int"),@ApiImplicitParam(name = "email",value = "必填",required = true),@ApiImplicitParam(name = "username",value = "必填",required = true),@ApiImplicitParam(name = "password",value = "必填",required = true)})
+    @ApiOperation("用户注册接口,enabled(默认为true即可),username,password,email需要填，其他字段不用填")
+//    @ApiImplicitParams({ @ApiImplicitParam(name = "enabled",value = "必填，默认为1，不用改",required = true,defaultValue ="1",dataType = "int"),@ApiImplicitParam(name = "email",value = "必填",required = true),@ApiImplicitParam(name = "username",value = "必填",required = true),@ApiImplicitParam(name = "password",value = "必填",required = true)})
     @PostMapping("/register")
-    public RespMsg reg(User user){
+    public RespMsg reg(@RequestBody User user){
         Boolean res =userService.addUser(user);
         if(res){
             return new RespMsg("success","注册成功！");

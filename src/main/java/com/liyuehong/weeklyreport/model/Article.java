@@ -27,6 +27,16 @@ public class Article {
     @ApiModelProperty(value = "文章的内容")
     private String content;
 
+    private User author;
+
+    public User getAuthor() {
+        return author==null?null:author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author==null?null:author;
+    }
+
     public String getContent() {
         return content;
     }
