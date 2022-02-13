@@ -34,6 +34,16 @@ public class User implements UserDetails{
 
     private List<Role> roles;
 
+    private String avatarName;
+
+    public String getAvatarName() {
+        return avatarName;
+    }
+
+    public void setAvatarName(String avatarName) {
+        this.avatarName = avatarName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

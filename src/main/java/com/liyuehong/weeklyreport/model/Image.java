@@ -1,5 +1,7 @@
 package com.liyuehong.weeklyreport.model;
 
+import io.swagger.models.auth.In;
+
 /**
  * @author yhli3
  * @classname Image
@@ -7,6 +9,20 @@ package com.liyuehong.weeklyreport.model;
  */
 public class Image {
     private String data;
+
+    private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Image(Integer id) {
+        this.id = id;
+    }
 
     public Image() {
     }

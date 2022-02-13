@@ -117,6 +117,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //登录接口地址
                 .loginProcessingUrl("/login")
                 //登录成功的处理
+                // TODO: 2022/2/13 返回信息增加头像名
                 .successHandler((req, resp, authentication) -> {
 //                    Map<String, Object> map = new HashMap<>();
                     Object principal = authentication.getPrincipal();

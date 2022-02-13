@@ -7,14 +7,29 @@
     <result column="enabled" property="enabled" jdbcType="TINYINT" />
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="regTime" property="regTime" jdbcType="TIMESTAMP" />
+    <result column="avatarName" property="avatarName" jdbcType="VARCHAR" />
     <collection property="roles" ofType="com.liyuehong.weeklyreport.model.Role">
-      <id column="role" property="nameZh"/>
+      <id column="rid" property="id"/>
+      <result column="chineseName" property="nameZh"/>
+      <result column="englishName" property="name"/>
     </collection>
   </resultMap>
 
+  <resultMap id="LoginResultMap" type="com.liyuehong.weeklyreport.model.User" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="enabled" property="enabled" jdbcType="TINYINT" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="regTime" property="regTime" jdbcType="TIMESTAMP" />
+    <result column="avatar_name" property="avatarName" jdbcType="VARCHAR" />
+  </resultMap>
+
   <sql id="Base_Column_List" >
-    id, username, password, enabled, email, regTime
+    id, username, password, enabled, email, regTime, avatar_name
   </sql>
+  <update id="updateAvatarById">
+    UPDATE user SET avatar_name=#{avatar_name} WHERE id=#{id};
+  </update>
   <delete id="deleteUserById">
     delete from user where id = #{uid}
   </delete>
@@ -25,7 +40,7 @@
     </foreach>
   </insert>
   <select id="selectAllUsers" resultMap="BaseResultMap">
-    SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,r.`nameZh` AS role FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+    SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -33,7 +48,7 @@
     from user
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <select id="loadUserByUsername" resultType="com.liyuehong.weeklyreport.model.User">
+  <select id="loadUserByUsername" resultMap="LoginResultMap">
     select <include refid="Base_Column_List" /> from user where username=#{username}
   </select>
   <delete id="deleteUserRolesById">

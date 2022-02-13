@@ -107,4 +107,14 @@ public class UserService implements UserDetailsService {
     public int deleteUserById(Integer uid) {
         return userMapper.deleteUserById(uid);
     }
+
+    /**
+     * 更新用户头像
+     * @param tempFileName
+     * @param id
+     * @return
+     */
+    public int updateAvatarById(String tempFileName, Integer id) {
+        return userMapper.updateAvatarById(tempFileName,id);
+    }
 }

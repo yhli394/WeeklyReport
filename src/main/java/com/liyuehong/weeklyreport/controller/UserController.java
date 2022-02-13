@@ -18,6 +18,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    // TODO: 2022/2/13 返回数据增加头像名字段
     @ApiOperation(value = "查询所有的用户")
     @GetMapping("/selectAllUsers")
     public List<User> selectAllUser(){

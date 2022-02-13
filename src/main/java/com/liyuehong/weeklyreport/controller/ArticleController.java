@@ -4,6 +4,7 @@ import com.liyuehong.weeklyreport.model.Article;
 import com.liyuehong.weeklyreport.model.Image;
 import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.service.ArticleService;
+import com.liyuehong.weeklyreport.service.UserService;
 import com.liyuehong.weeklyreport.utils.RespMsg;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -37,6 +38,9 @@ import java.util.UUID;
 public class ArticleController {
     @Autowired
     ArticleService articleService;
+
+    @Autowired
+    UserService userService;
 
     @ApiOperation("提交或更新文章接口(返回消息中的msg右边的数字是文章的id)")
     @PostMapping("/add")
@@ -92,10 +96,13 @@ public class ArticleController {
         return articleService.selectAllArticle();
     }
 
+    // TODO: 2022/2/13 怎样判定图片是用于文章内部还是用于用户头像？
     @ApiOperation(value = "上传图片接口，返回图片名")
     @PostMapping(value = {"/uploading"})
     public RespMsg uploadImage(@RequestBody Image image, HttpServletRequest req){
         String base64Data = image.getData();
+        //如果id为null，则图片用于写周报，id不为null，则用于用户头像
+        Integer id = image.getId();
         //自定义日期格式
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         StringBuffer url = new StringBuffer();
@@ -138,6 +145,9 @@ public class ArticleController {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "");
         //使用uuid给文件重命名
         String tempFileName=dtf.format(LocalDateTime.now())+uuid+suffix;
+        if(id!=null){
+            int i = userService.updateAvatarById(tempFileName,id);
+        }
         //文件保存的地址
         String imgFilePath = "D:\\article\\images\\"+tempFileName;
         BASE64Decoder decoder = new BASE64Decoder();

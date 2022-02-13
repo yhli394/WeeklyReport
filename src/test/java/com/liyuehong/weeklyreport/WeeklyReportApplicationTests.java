@@ -37,8 +37,10 @@ class WeeklyReportApplicationTests {
     }
     @Test
     void decode(){
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-
+      Integer id =2;
+      if(id==2){
+          System.out.println("true");
+      }
     }
 
 }

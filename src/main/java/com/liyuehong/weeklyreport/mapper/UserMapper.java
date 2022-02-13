@@ -40,4 +40,5 @@ public interface UserMapper {
 
     int deleteUserById(Integer uid);
 
+    int updateAvatarById(@Param("avatar_name") String tempFileName, @Param("id") Integer id);
 }
