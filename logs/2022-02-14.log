@@ -1,0 +1,15 @@
+2022-02-14 00:03:23,703 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_301 on LAPTOP-NUCNNVIC with PID 2792 (D:\GithubRepo\WeeklyReport\target\classes started by Swjtu-Li in D:\GithubRepo\WeeklyReport)
+2022-02-14 00:03:23,705 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-02-14 00:03:27,942 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 4.479 seconds (JVM running for 5.235)
+2022-02-14 00:03:43,047 [http-nio-8082-exec-1] INFO  -[ArticleController.java:67]- 2022-04-07
+2022-02-14 00:03:43,064 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-02-14 00:03:43,085 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-04-04(String), 2022-04-10(String)
+2022-02-14 00:03:43,179 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-02-14 00:03:43,181 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, 第一次周报, null, 2022-04-07 17:36:20, 1, null, <<BLOB>>, admin
+2022-02-14 00:03:43,184 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-02-14 00:05:03,616 [http-nio-8082-exec-3] INFO  -[ArticleController.java:97]- id:1
+2022-02-14 00:05:03,684 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where id=?
+2022-02-14 00:05:03,685 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-02-14 00:05:03,766 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-02-14 00:05:03,766 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, 第一次周报, null, 2022-04-07 17:36:20, 1, null, <<BLOB>>
+2022-02-14 00:05:03,767 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1

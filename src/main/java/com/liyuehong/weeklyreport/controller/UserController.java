@@ -3,6 +3,8 @@ package com.liyuehong.weeklyreport.controller;
 import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.service.UserService;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
@@ -14,6 +16,9 @@ import java.util.List;
 
 @RestController
 public class UserController {
+
+    //UserController.class：获取Class对象
+    private final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     UserService userService;

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--日志配置-->
+<configuration>
+    <!--设置日志文件的保存地址为logs文件夹下，通过${logPath}可以拿到logPath对应的value，即./logs-->
+    <property name="logPath" value="./logs"/>
+
+    <!--appender中的class属性可以指定日志向控制台，普通文件或滚动文件输出-->
+    <!--向控制台输出日志-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger{50} -[%file:%line]- %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--滚动文件日志-->
+    <appender name="rollFileLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--滚动策略，按照时间滚动-TimeBasedRollingPolicy-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--每天生成一个日志文件-->
+            <fileNamePattern>${logPath}/%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--保留最近180天的日志-->
+            <maxHistory>180</maxHistory>
+            <!--用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志-->
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <!--日志输出格式-->
+            <pattern>%d [%thread] %-5level -[%file:%line]- %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--name:指定需要打印日志的某一个包或者具体的某一个类-->
+    <!--level：设置日志输出级别-->
+    <!--addtivity:是否向上级loger传递打印信息。默认是true-->
+    <logger name="com.liyuehong.weeklyreport" level="info" additivity="true">
+        <!--可以有多个appender-ref，即将日志记录到不同的位置-->
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="rollFileLog"/>
+    </logger>
+
+    <!--root节点用于指定基础的日志输出级别-->
+    <root level="info">
+    </root>
+</configuration>

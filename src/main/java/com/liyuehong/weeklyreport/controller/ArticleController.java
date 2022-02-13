@@ -8,6 +8,8 @@ import com.liyuehong.weeklyreport.service.UserService;
 import com.liyuehong.weeklyreport.utils.RespMsg;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -36,6 +38,10 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/article")
 public class ArticleController {
+
+    //UserController.class：获取Class对象
+    private final Logger logger = LoggerFactory.getLogger(ArticleController.class);
+
     @Autowired
     ArticleService articleService;
 
@@ -58,6 +64,7 @@ public class ArticleController {
     @ApiOperation("查询本周周报接口")
     @GetMapping("/selectAllReports")
     public List<Article> selectByWeek(Date time){
+        logger.info(String.valueOf(time));
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Calendar cal = Calendar.getInstance();
         cal.setTime(time);
@@ -87,6 +94,7 @@ public class ArticleController {
     @ApiOperation("根据文章id渲染文章")
     @GetMapping("/show/{id}")
     public Article showArticle(@PathVariable Integer id){
+        logger.info("id:{}",id);
         return articleService.showArticle(id);
     }
 
