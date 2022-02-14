@@ -29,6 +29,20 @@ public class Article {
 
     private User author;
 
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", editDate=" + editDate +
+                ", publishDate=" + publishDate +
+                ", uid=" + uid +
+                ", state=" + state +
+                ", content='" + content + '\'' +
+                ", author=" + author +
+                '}';
+    }
+
     public User getAuthor() {
         return author==null?null:author;
     }

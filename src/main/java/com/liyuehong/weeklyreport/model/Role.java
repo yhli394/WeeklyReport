@@ -9,6 +9,15 @@ public class Role implements Serializable {
 
     private String nameZh;
 
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", nameZh='" + nameZh + '\'' +
+                '}';
+    }
+
     public Role() {
     }
 

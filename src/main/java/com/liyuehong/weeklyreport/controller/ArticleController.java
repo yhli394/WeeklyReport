@@ -40,7 +40,7 @@ import java.util.UUID;
 public class ArticleController {
 
     //UserController.class：获取Class对象
-    private final Logger logger = LoggerFactory.getLogger(ArticleController.class);
+    final static Logger logger = LoggerFactory.getLogger(ArticleController.class);
 
     @Autowired
     ArticleService articleService;
@@ -51,6 +51,7 @@ public class ArticleController {
     @ApiOperation("提交或更新文章接口(返回消息中的msg右边的数字是文章的id)")
     @PostMapping("/add")
     public RespMsg addNewArticle(@RequestBody Article article) {
+        logger.info(article.toString());
         if(article.getContent().isEmpty()){
             return new RespMsg("error","文章内容不能为空！");
         }

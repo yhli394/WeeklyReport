@@ -36,6 +36,21 @@ public class User implements UserDetails{
 
     private String avatarName;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", sessionId='" + sessionId + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", enabled=" + enabled +
+                ", email='" + email + '\'' +
+                ", regTime=" + regTime +
+                ", roles=" + roles +
+                ", avatarName='" + avatarName + '\'' +
+                '}';
+    }
+
     public String getAvatarName() {
         return avatarName;
     }
