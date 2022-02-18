@@ -136,7 +136,7 @@ public class User implements UserDetails{
             for (Role role : roles) {
                 list.add(new SimpleGrantedAuthority("ROLE_"+role.getName()));
             }
-            return list==null ? null : list;
+            return list.isEmpty() ? new ArrayList<>() : list;
     }
 
     @Override

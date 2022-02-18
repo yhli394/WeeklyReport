@@ -5,6 +5,8 @@ import com.liyuehong.weeklyreport.model.Article;
 import com.liyuehong.weeklyreport.model.User;
 import com.sun.xml.internal.bind.v2.TODO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
@@ -17,6 +19,7 @@ import java.util.List;
  * @Date 2021/11/22 20:35
  */
 @Service
+@CacheConfig(cacheNames = "week")
 public class ArticleService {
     @Autowired
     ArticleMapper articleMapper;
@@ -75,6 +78,7 @@ public class ArticleService {
      * @param id
      * @return
      */
+    @Cacheable
     public Article showArticle(Integer id) {
         Article article = articleMapper.showArticle(id);
         return article;
@@ -84,6 +88,7 @@ public class ArticleService {
      * 查询所有文章
      * @return
      */
+    @Cacheable
     public List<Article> selectAllArticle(){
         return articleMapper.selectAllArticle();
     }

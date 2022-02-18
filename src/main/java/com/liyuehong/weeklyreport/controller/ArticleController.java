@@ -61,11 +61,11 @@ public class ArticleController {
         return new RespMsg("error","文章提交失败，请联系管理员！");
     }
 
-    @ApiImplicitParam(name = "time",value = "时间",required = true,dataType = "Date",defaultValue = "2022-04-07")
+    @ApiImplicitParam(name = "time",value = "时间",required = true,dataType = "Date",defaultValue = "2022-02-10")
     @ApiOperation("查询本周周报接口")
     @GetMapping("/selectAllReports")
     public List<Article> selectByWeek(Date time){
-        logger.info(String.valueOf(time));
+        logger.debug(String.valueOf(time));
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Calendar cal = Calendar.getInstance();
         cal.setTime(time);

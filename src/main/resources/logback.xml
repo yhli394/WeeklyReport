@@ -34,13 +34,16 @@
     <!--name:指定需要打印日志的某一个包或者具体的某一个类-->
     <!--level：设置日志输出级别-->
     <!--addtivity:是否向上级loger传递打印信息。默认是true-->
-    <logger name="com.liyuehong.weeklyreport" additivity="true">
+    <!--logger节点可以为单独某个包或者类指定日志的输出级别-->
+    <logger name="com.liyuehong.weeklyreport" level="debug"  additivity="true">
         <!--可以有多个appender-ref，即将日志记录到不同的位置-->
-        <appender-ref ref="STDOUT"/>
-        <appender-ref ref="rollFileLog"/>
+        <!--<appender-ref ref="STDOUT"/>-->
+        <!--<appender-ref ref="rollFileLog"/>-->
     </logger>
 
-    <!--root节点用于指定基础的日志输出级别-->
-    <root level="debug">
+    <!--root节点用于指定基础的日志输出级别(全局配置)-->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="rollFileLog"/>
     </root>
 </configuration>

@@ -8,6 +8,7 @@ import com.liyuehong.weeklyreport.model.Role;
 import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.utils.RespMsg;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
