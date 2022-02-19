@@ -1,11 +1,12 @@
 package com.liyuehong.weeklyreport.config;
 
-import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.CacheErrorHandler;
 import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.context.annotation.Bean;
@@ -13,11 +14,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 import java.lang.reflect.Method;
 import java.time.Duration;
@@ -28,12 +31,21 @@ public class RedisConfig extends CachingConfigurerSupport {
     final static Logger logger = LoggerFactory.getLogger(RedisConfig.class);
 
     FastJsonRedisSerializer<Object> fastJsonRedisSerializer = new FastJsonRedisSerializer<>(Object.class);
-    //缓存管理器。可以管理多个缓存
+    /**
+     * 更换SpringSession中默认的序列化器
+     * @return
+     */
+//    @Bean("springSessionDefaultRedisSerializer")
+//    public RedisSerializer setSerializer(){
+//        return fastJsonRedisSerializer;
+//    }
+
+    //缓存管理器:可以管理多个缓存
     //只有CacheManger才能扫描到cacheable注解
     //spring提供了缓存支持Cache接口，实现了很多个缓存类，其中包括RedisCache。但是我们需要对其进行配置，这里就是配置RedisCache
     @Bean
-    public CacheManager cacheManager(RedisConnectionFactory connectionFactory) {
-        RedisCacheManager cacheManager = RedisCacheManager.RedisCacheManagerBuilder
+    public CacheManager CustomCacheManager(RedisConnectionFactory connectionFactory) {
+        RedisCacheManager customCacheManager = RedisCacheManager.RedisCacheManagerBuilder
                 //Redis链接工厂
                 .fromConnectionFactory(connectionFactory)
                 //缓存配置 通用配置  默认存储一小时
@@ -41,10 +53,10 @@ public class RedisConfig extends CachingConfigurerSupport {
                 //配置同步修改或删除  put/evict
                 .transactionAware()
                 //对于不同的cacheName我们可以设置不同的过期时间
-                .withCacheConfiguration("app:",getCacheConfigurationWithTtl(Duration.ofHours(1)))
-                .withCacheConfiguration("user:",getCacheConfigurationWithTtl(Duration.ofHours(1)))
+                .withCacheConfiguration("week",getCacheConfigurationWithTtl(Duration.ofHours(2)))
+                .withCacheConfiguration("user",getCacheConfigurationWithTtl(Duration.ofHours(1)))
                 .build();
-        return cacheManager;
+        return customCacheManager;
     }
     //缓存的基本配置对象
     private RedisCacheConfiguration getCacheConfigurationWithTtl(Duration duration) {
@@ -58,7 +70,9 @@ public class RedisConfig extends CachingConfigurerSupport {
                 // 不缓存null
                 .disableCachingNullValues()
                 // 设置缓存的过期时间
-                .entryTtl(duration);
+                .entryTtl(duration)
+                //修改redis中key的前缀
+                .computePrefixWith(cacheName -> cacheName+":");
     }
 
     //主键生成策略  不设置主键时的生成策略  类名+方法名+参数

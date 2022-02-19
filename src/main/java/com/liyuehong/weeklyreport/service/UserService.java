@@ -9,6 +9,8 @@ import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.utils.RespMsg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,6 +33,7 @@ import java.util.List;
  * @Date 2021/11/21 16:14
  */
 @Service
+@CacheConfig(cacheNames = "user")
 public class UserService implements UserDetailsService {
     @Autowired
     UserMapper userMapper;
@@ -80,6 +83,7 @@ public class UserService implements UserDetailsService {
      * @throws UsernameNotFoundException
      */
     @Override
+    @Cacheable(key = "#username")
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userMapper.loadUserByUsername(username);
         if(user==null){
@@ -95,6 +99,7 @@ public class UserService implements UserDetailsService {
         return user;
     }
 
+//    @CachePut(key = "#uid")
     public int updateUserRolesById(int uid,int[] rids) {
         int j = userMapper.deleteUserRolesById(uid);
         int i = userMapper.updateUserRolesById(uid,rids);

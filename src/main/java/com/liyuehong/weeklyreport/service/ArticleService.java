@@ -5,8 +5,7 @@ import com.liyuehong.weeklyreport.model.Article;
 import com.liyuehong.weeklyreport.model.User;
 import com.sun.xml.internal.bind.v2.TODO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
@@ -58,6 +57,7 @@ public class ArticleService {
      * @param uid
      * @return
      */
+//    @CacheEvict(key = "#uid")
     public List<Article> selectByUserId(Integer uid){
         List<Article> articles = articleMapper.selectByUserId(uid);
         return articles;
@@ -78,7 +78,7 @@ public class ArticleService {
      * @param id
      * @return
      */
-    @Cacheable
+    @Cacheable(key ="#id")
     public Article showArticle(Integer id) {
         Article article = articleMapper.showArticle(id);
         return article;
