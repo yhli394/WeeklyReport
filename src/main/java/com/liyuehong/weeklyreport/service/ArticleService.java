@@ -4,8 +4,11 @@ import com.liyuehong.weeklyreport.mapper.ArticleMapper;
 import com.liyuehong.weeklyreport.model.Article;
 import com.liyuehong.weeklyreport.model.User;
 import com.sun.xml.internal.bind.v2.TODO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.*;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
@@ -18,16 +21,25 @@ import java.util.List;
  * @Date 2021/11/22 20:35
  */
 @Service
-@CacheConfig(cacheNames = "week")
+//@CacheConfig(cacheNames = "article")
 public class ArticleService {
+
+    private final static Logger logger = LoggerFactory.getLogger(ArticleService.class);
+
     @Autowired
     ArticleMapper articleMapper;
+
+    @Autowired
+    RedisTemplate redisTemplate;
 
     /**
      * 增加/更新文章接口
      * @param article
      * @return
      */
+//    @CachePut(key = "#article.id")
+//    @Caching
+    // TODO: 2022/2/20 咨询蒋师兄增，删，改返回受影响的行数好还是返回实体类的信息好？
     public int addNewArticle(Article article) {
             //如果文章id为空，那么是第一次提交
             if(article.getId()==null){
@@ -78,9 +90,11 @@ public class ArticleService {
      * @param id
      * @return
      */
-    @Cacheable(key ="#id")
+//    @Cacheable(key ="#id")
     public Article showArticle(Integer id) {
         Article article = articleMapper.showArticle(id);
+//        redisTemplate.opsForHash().put(id+"",id+"",article);
+//        logger.debug(redisTemplate.opsForHash().get(id+"",id+"").toString());
         return article;
     }
 
@@ -88,7 +102,8 @@ public class ArticleService {
      * 查询所有文章
      * @return
      */
-    @Cacheable
+    // TODO: 2022/2/20 如何解决缓存和数据库同步更新的问题？
+//    @Cacheable(key = "#result")
     public List<Article> selectAllArticle(){
         return articleMapper.selectAllArticle();
     }

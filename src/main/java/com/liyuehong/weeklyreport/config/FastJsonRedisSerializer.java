@@ -24,7 +24,7 @@ public class FastJsonRedisSerializer<T> implements RedisSerializer<T> {
         // 全局开启AutoType，这里方便开发，使用全局的方式
         ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
         // 建议使用这种方式，小范围指定白名单
-//         ParserConfig.getGlobalInstance().addAccept("me.zhengjie.domain");
+//         ParserConfig.getGlobalInstance().addAccept("com.xxx.xxx");
         // key的序列化采用StringRedisSerializer
     }
 
@@ -33,7 +33,12 @@ public class FastJsonRedisSerializer<T> implements RedisSerializer<T> {
         this.clazz = clazz;
     }
 
-    //序列化 我们存储时，存储的是json对象，而默认存储的是byte类型的，所以在可视化窗口上显示时，看到的是乱码
+    /**
+     * 将序列化时默认存储byte改为默认存储json
+     * @param t
+     * @return
+     * @throws SerializationException
+     */
     @Override
     public byte[] serialize(T t) throws SerializationException {
 //        logger.debug("序列化");
@@ -43,7 +48,12 @@ public class FastJsonRedisSerializer<T> implements RedisSerializer<T> {
         return JSON.toJSONString(t, SerializerFeature.WriteClassName).getBytes(DEFAULT_CHARSET);
     }
 
-    //反序列化
+    /**
+     * 将反序列化时默认存储byte改为默认存储json
+     * @param bytes
+     * @return
+     * @throws SerializationException
+     */
     @Override
     public T deserialize(byte[] bytes) throws SerializationException {
 //        logger.debug("反序列化");

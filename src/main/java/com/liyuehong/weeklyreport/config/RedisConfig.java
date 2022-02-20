@@ -26,6 +26,8 @@ import java.lang.reflect.Method;
 import java.time.Duration;
 
 @Configuration
+//开启基于注解的缓存
+@EnableCaching
 public class RedisConfig extends CachingConfigurerSupport {
 
     final static Logger logger = LoggerFactory.getLogger(RedisConfig.class);
@@ -40,32 +42,38 @@ public class RedisConfig extends CachingConfigurerSupport {
 //        return fastJsonRedisSerializer;
 //    }
 
-    //缓存管理器:可以管理多个缓存
-    //只有CacheManger才能扫描到cacheable注解
-    //spring提供了缓存支持Cache接口，实现了很多个缓存类，其中包括RedisCache。但是我们需要对其进行配置，这里就是配置RedisCache
+    /**
+     * 自定义缓存管理器
+     * @param connectionFactory
+     * @return
+     */
     @Bean
     public CacheManager CustomCacheManager(RedisConnectionFactory connectionFactory) {
         RedisCacheManager customCacheManager = RedisCacheManager.RedisCacheManagerBuilder
                 //Redis链接工厂
                 .fromConnectionFactory(connectionFactory)
-                //缓存配置 通用配置  默认存储一小时
+                //缓存默认存储一小时
                 .cacheDefaults(getCacheConfigurationWithTtl(Duration.ofHours(1)))
                 //配置同步修改或删除  put/evict
                 .transactionAware()
-                //对于不同的cacheName我们可以设置不同的过期时间
-                .withCacheConfiguration("week",getCacheConfigurationWithTtl(Duration.ofHours(2)))
-                .withCacheConfiguration("user",getCacheConfigurationWithTtl(Duration.ofHours(1)))
+                //对于不同的cacheName设置不同的过期时间
+//                .withCacheConfiguration("week",getCacheConfigurationWithTtl(Duration.ofHours(2)))
+//                .withCacheConfiguration("user",getCacheConfigurationWithTtl(Duration.ofHours(1)))
                 .build();
         return customCacheManager;
     }
-    //缓存的基本配置对象
+
+
+    /**
+     * 自定义缓存信息配置
+     * @param duration
+     * @return
+     */
     private RedisCacheConfiguration getCacheConfigurationWithTtl(Duration duration) {
         return RedisCacheConfiguration
                 .defaultCacheConfig()
-                //设置key value的序列化方式
-                // 设置key为String
+                //设置key和value的序列化方式
                 .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
-                // 设置value 为自动转Json的Object
                 .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(fastJsonRedisSerializer))
                 // 不缓存null
                 .disableCachingNullValues()
@@ -75,7 +83,11 @@ public class RedisConfig extends CachingConfigurerSupport {
                 .computePrefixWith(cacheName -> cacheName+":");
     }
 
-    //主键生成策略  不设置主键时的生成策略  类名+方法名+参数
+
+    /**
+     * 不设置主键时的生成策略：类名+方法名+参数
+     * @return
+     */
     @Override
     @Bean
     public KeyGenerator keyGenerator() {
@@ -94,11 +106,14 @@ public class RedisConfig extends CachingConfigurerSupport {
         };
     }
 
-    //缓存的异常处理
+
+    /**
+     * 配置缓存异常处理
+     * @return
+     */
     @Bean
     @Override
     public CacheErrorHandler errorHandler() {
-        // 异常处理，当Redis发生异常时，打印日志，但是程序正常走
         logger.info("初始化 -> [{}]", "Redis CacheErrorHandler");
         return new CacheErrorHandler() {
             @Override
@@ -123,21 +138,30 @@ public class RedisConfig extends CachingConfigurerSupport {
         };
     }
 
-    //操纵缓存的模板
+
+    /**
+     * 自定义redisTemplate
+     * @param factory
+     * @return
+     */
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
-        System.out.println("redisTemplate");
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         redisTemplate.setValueSerializer(fastJsonRedisSerializer);
         redisTemplate.setHashValueSerializer(fastJsonRedisSerializer);
+        redisTemplate.setHashKeySerializer(fastJsonRedisSerializer);
         redisTemplate.setConnectionFactory(factory);
         return redisTemplate;
     }
-    //操纵缓存的模板
+
+    /**
+     * 自定义stringRedisTemplate
+     * @param factory
+     * @return
+     */
     @Bean
     public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory factory) {
-        System.out.println("stringTemplate");
         StringRedisTemplate stringRedisTemplate = new StringRedisTemplate();
         stringRedisTemplate.setKeySerializer(new StringRedisSerializer());
         stringRedisTemplate.setValueSerializer(fastJsonRedisSerializer);

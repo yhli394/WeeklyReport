@@ -37,10 +37,7 @@ class WeeklyReportApplicationTests {
     }
     @Test
     void decode(){
-      Integer id =2;
-      if(id==2){
-          System.out.println("true");
-      }
+        Stack<Object> objects = new Stack<>();
     }
 
 }
