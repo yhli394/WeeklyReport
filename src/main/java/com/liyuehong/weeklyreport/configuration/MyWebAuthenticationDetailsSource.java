@@ -1,4 +1,4 @@
-package com.liyuehong.weeklyreport.config;
+package com.liyuehong.weeklyreport.configuration;
 
 import org.springframework.security.authentication.AuthenticationDetailsSource;
 import org.springframework.stereotype.Component;

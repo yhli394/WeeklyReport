@@ -4,7 +4,7 @@
 2022-02-19 11:46:05,200 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 11:46:05,202 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 11:46:05,227 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-02-19 11:46:05,603 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$e5157bee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 11:46:05,603 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$e5157bee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 11:46:05,907 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 11:46:05,914 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 11:46:05,915 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -94,7 +94,7 @@
 2022-02-19 11:55:14,928 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 11:55:14,930 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 11:55:14,951 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-02-19 11:55:15,255 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 11:55:15,255 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 11:55:15,469 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 11:55:15,476 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 11:55:15,477 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -184,7 +184,7 @@
 2022-02-19 11:59:17,636 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 11:59:17,638 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 11:59:17,659 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-02-19 11:59:17,991 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$ef3fffda] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 11:59:17,991 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$ef3fffda] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 11:59:18,304 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 11:59:18,312 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 11:59:18,313 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -264,7 +264,7 @@
 2022-02-19 12:01:13,041 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 12:01:13,043 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 12:01:13,065 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-02-19 12:01:13,376 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$9acfe933] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 12:01:13,376 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$9acfe933] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 12:01:13,677 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 12:01:13,684 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 12:01:13,685 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -344,7 +344,7 @@
 2022-02-19 12:02:03,627 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 12:02:03,629 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 12:02:03,650 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-02-19 12:02:03,966 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$9e57857f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 12:02:03,966 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$9e57857f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 12:02:04,263 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 12:02:04,271 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 12:02:04,271 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -382,7 +382,7 @@
 2022-02-19 12:06:09,203 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 12:06:09,204 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 12:06:09,225 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-02-19 12:06:09,567 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$df4a2a81] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 12:06:09,567 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$df4a2a81] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 12:06:09,860 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 12:06:09,868 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 12:06:09,868 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -462,7 +462,7 @@
 2022-02-19 12:08:25,662 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 12:08:25,665 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 12:08:25,685 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-02-19 12:08:26,040 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$660a9173] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 12:08:26,040 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$660a9173] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 12:08:26,323 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 12:08:26,331 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 12:08:26,331 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -542,7 +542,7 @@
 2022-02-19 16:56:53,757 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 16:56:53,759 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 16:56:53,779 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-02-19 16:56:54,042 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 16:56:54,042 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 16:56:54,242 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 16:56:54,250 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 16:56:54,251 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -632,7 +632,7 @@
 2022-02-19 17:06:22,172 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 17:06:22,173 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 17:06:22,190 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2022-02-19 17:06:22,501 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 17:06:22,501 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 17:06:22,745 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 17:06:22,751 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 17:06:22,752 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -712,7 +712,7 @@
 2022-02-19 17:22:37,655 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 17:22:37,657 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 17:22:37,673 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-19 17:22:37,924 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$d0d4d267] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 17:22:37,924 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$d0d4d267] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 17:22:38,113 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 17:22:38,120 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 17:22:38,121 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -756,7 +756,7 @@
 2022-02-19 17:38:09,635 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 17:38:09,637 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 17:38:09,655 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-02-19 17:38:09,924 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 17:38:09,924 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 17:38:10,115 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 17:38:10,123 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 17:38:10,124 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -907,7 +907,7 @@ java.lang.ClassCastException: com.alibaba.fastjson.JSONObject cannot be cast to 
 2022-02-19 20:08:47,702 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 20:08:47,703 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 20:08:47,723 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-19 20:08:47,971 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$7ef21901] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 20:08:47,971 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$7ef21901] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 20:08:48,160 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 20:08:48,166 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 20:08:48,166 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -964,7 +964,7 @@ java.lang.ClassCastException: com.alibaba.fastjson.JSONObject cannot be cast to 
 2022-02-19 20:30:11,131 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 20:30:11,133 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 20:30:11,151 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-19 20:30:11,426 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$ab5a8848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 20:30:11,426 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$ab5a8848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 20:30:11,625 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 20:30:11,630 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 20:30:11,631 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -1014,7 +1014,7 @@ java.lang.ClassCastException: com.alibaba.fastjson.JSONObject cannot be cast to 
 2022-02-19 20:48:43,187 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 20:48:43,188 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 20:48:43,208 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-19 20:48:43,493 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$3ffe8d9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 20:48:43,493 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$3ffe8d9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 20:48:43,750 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 20:48:43,756 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 20:48:43,757 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -1056,7 +1056,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:394)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:298)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:588)
-	at com.liyuehong.weeklyreport.config.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
+	at com.liyuehong.weeklyreport.configuration.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashValue(AbstractOperations.java:355)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashMap(AbstractOperations.java:299)
 	at org.springframework.data.redis.core.DefaultHashOperations.entries(DefaultHashOperations.java:247)
@@ -1106,7 +1106,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:394)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:298)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:588)
-	at com.liyuehong.weeklyreport.config.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
+	at com.liyuehong.weeklyreport.configuration.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashValue(AbstractOperations.java:355)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashMap(AbstractOperations.java:299)
 	at org.springframework.data.redis.core.DefaultHashOperations.entries(DefaultHashOperations.java:247)
@@ -1155,7 +1155,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:394)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:298)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:588)
-	at com.liyuehong.weeklyreport.config.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
+	at com.liyuehong.weeklyreport.configuration.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashValue(AbstractOperations.java:355)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashMap(AbstractOperations.java:299)
 	at org.springframework.data.redis.core.DefaultHashOperations.entries(DefaultHashOperations.java:247)
@@ -1204,7 +1204,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:394)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:298)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:588)
-	at com.liyuehong.weeklyreport.config.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
+	at com.liyuehong.weeklyreport.configuration.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashValue(AbstractOperations.java:355)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashMap(AbstractOperations.java:299)
 	at org.springframework.data.redis.core.DefaultHashOperations.entries(DefaultHashOperations.java:247)
@@ -1275,7 +1275,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:394)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:298)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:588)
-	at com.liyuehong.weeklyreport.config.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
+	at com.liyuehong.weeklyreport.configuration.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashValue(AbstractOperations.java:355)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashMap(AbstractOperations.java:299)
 	at org.springframework.data.redis.core.DefaultHashOperations.entries(DefaultHashOperations.java:247)
@@ -1356,7 +1356,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:394)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:298)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:588)
-	at com.liyuehong.weeklyreport.config.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
+	at com.liyuehong.weeklyreport.configuration.FastJsonRedisSerializer.deserialize(FastJsonRedisSerializer.java:54)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashValue(AbstractOperations.java:355)
 	at org.springframework.data.redis.core.AbstractOperations.deserializeHashMap(AbstractOperations.java:299)
 	at org.springframework.data.redis.core.DefaultHashOperations.entries(DefaultHashOperations.java:247)
@@ -1434,7 +1434,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 2022-02-19 20:55:29,921 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 20:55:29,923 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 20:55:29,939 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-19 20:55:30,213 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$7ef21901] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 20:55:30,213 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$7ef21901] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 20:55:30,449 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 20:55:30,456 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 20:55:30,456 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -1483,7 +1483,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 2022-02-19 21:23:07,601 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 21:23:07,603 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 21:23:07,621 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-02-19 21:23:07,892 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$773742bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 21:23:07,892 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$773742bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 21:23:08,093 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 21:23:08,099 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 21:23:08,100 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -1539,7 +1539,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 2022-02-19 21:36:20,936 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 21:36:20,938 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 21:36:20,956 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-19 21:36:21,227 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$c98f47c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 21:36:21,227 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$c98f47c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 21:36:21,422 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 21:36:21,428 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 21:36:21,429 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -1589,7 +1589,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 2022-02-19 21:48:24,705 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 21:48:24,706 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 21:48:24,723 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-19 21:48:24,979 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$c98f47c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 21:48:24,979 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$c98f47c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 21:48:25,174 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 21:48:25,180 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 21:48:25,181 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -1627,7 +1627,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 2022-02-19 21:57:55,159 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-19 21:57:55,161 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-19 21:57:55,178 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-19 21:57:55,449 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$ab5a8848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-19 21:57:55,449 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$ab5a8848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-19 21:57:55,652 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-19 21:57:55,658 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-19 21:57:55,659 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]

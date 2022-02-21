@@ -1,9 +1,7 @@
-package com.liyuehong.weeklyreport.config;
+package com.liyuehong.weeklyreport.configuration;
 
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
-import org.springframework.stereotype.Component;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 

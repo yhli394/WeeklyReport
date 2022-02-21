@@ -37,6 +37,7 @@ import java.util.UUID;
  */
 @RestController
 @RequestMapping("/article")
+@ControllerAdvice
 public class ArticleController {
 
     //UserController.class：获取Class对象

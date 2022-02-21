@@ -1,4 +1,4 @@
-package com.liyuehong.weeklyreport.config;
+package com.liyuehong.weeklyreport.configuration;
 
 import org.springframework.security.web.session.SessionInformationExpiredEvent;
 import org.springframework.security.web.session.SessionInformationExpiredStrategy;

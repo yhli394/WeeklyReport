@@ -7,6 +7,10 @@ import com.liyuehong.weeklyreport.model.Article;
 import com.liyuehong.weeklyreport.model.Role;
 import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.utils.RespMsg;
+import com.sun.deploy.association.RegisterFailedException;
+import org.apache.ibatis.javassist.bytecode.DuplicateMemberException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.*;
 import org.springframework.security.core.Authentication;
@@ -40,6 +44,8 @@ public class UserService implements UserDetailsService {
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    //配置日志
+    private static Logger logger = LoggerFactory.getLogger(UserService.class);
 
     /**
      * 查询所有用户信息用于后台管理
@@ -56,11 +62,12 @@ public class UserService implements UserDetailsService {
      * true表示注册成功
      * false表示注册失败（用户名重复）
      */
-    public Boolean addUser(User user){
+    public Boolean addUser(User user) throws RegisterFailedException {
         //查询数据库中是否已经存在相同的用户名
         User user1 = userMapper.loadUserByUsername(user.getUsername());
         if(user1!=null) {
-            return false;
+            throw new RegisterFailedException();
+//            return false;
         }
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         //添加注册时间
@@ -84,7 +91,9 @@ public class UserService implements UserDetailsService {
 //    @Cacheable(key = "#username")
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userMapper.loadUserByUsername(username);
+        logger.debug("1");
         if(user==null){
+            logger.debug("2");
             throw new UsernameNotFoundException("用户名未找到！");
         }
         //查询用户的角色

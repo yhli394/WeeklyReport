@@ -5819,7 +5819,7 @@ Caused by: java.net.NoRouteToHostException: No route to host: no further informa
 2022-02-18 22:13:21,484 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-18 22:13:21,486 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-18 22:13:21,502 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-18 22:13:21,773 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18 22:13:21,773 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$5fa3058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-18 22:13:21,965 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-18 22:13:21,971 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-18 22:13:21,971 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -5921,7 +5921,7 @@ Caused by: java.net.NoRouteToHostException: No route to host: no further informa
 2022-02-18 22:46:24,807 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-18 22:46:24,809 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-18 22:46:24,825 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2022-02-18 22:46:25,082 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$e5157bee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18 22:46:25,082 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$e5157bee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-18 22:46:25,289 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-18 22:46:25,298 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-18 22:46:25,299 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -6075,7 +6075,7 @@ java.lang.IllegalStateException: No cache could be resolved for 'Builder[public 
 2022-02-18 22:48:11,503 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-18 22:48:11,506 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-18 22:48:11,523 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-02-18 22:48:11,802 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$ab5a8848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18 22:48:11,802 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$ab5a8848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-18 22:48:12,000 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-18 22:48:12,006 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-18 22:48:12,007 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
@@ -6229,7 +6229,7 @@ java.lang.IllegalStateException: No cache could be resolved for 'Builder[public 
 2022-02-18 23:04:43,041 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
 2022-02-18 23:04:43,043 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2022-02-18 23:04:43,059 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2022-02-18 23:04:43,324 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.config.RedisConfig$$EnhancerBySpringCGLIB$$d0d4d267] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18 23:04:43,324 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$d0d4d267] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2022-02-18 23:04:43,527 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
 2022-02-18 23:04:43,536 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
 2022-02-18 23:04:43,537 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]

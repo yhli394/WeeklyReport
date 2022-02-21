@@ -1,11 +1,10 @@
-package com.liyuehong.weeklyreport.config;
+package com.liyuehong.weeklyreport.configuration;
 
 import com.fasterxml.classmate.TypeResolver;
 import com.google.common.collect.Sets;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 import springfox.documentation.builders.OperationBuilder;
 import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.builders.ResponseMessageBuilder;
