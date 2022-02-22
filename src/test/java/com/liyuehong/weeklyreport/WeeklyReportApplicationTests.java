@@ -37,7 +37,10 @@ class WeeklyReportApplicationTests {
     }
     @Test
     void decode(){
-        Stack<Object> objects = new Stack<>();
+        String a ="+";
+        String s ="    -420";
+        String v=s.trim();
+        System.out.println(Integer.parseInt("-42"));
     }
 
 }

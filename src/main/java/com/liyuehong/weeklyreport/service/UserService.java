@@ -1,11 +1,14 @@
 package com.liyuehong.weeklyreport.service;
 
+import com.google.common.collect.ImmutableMap;
+import com.liyuehong.weeklyreport.configuration.BaseException;
 import com.liyuehong.weeklyreport.mapper.ArticleMapper;
 import com.liyuehong.weeklyreport.mapper.RoleMapper;
 import com.liyuehong.weeklyreport.mapper.UserMapper;
 import com.liyuehong.weeklyreport.model.Article;
 import com.liyuehong.weeklyreport.model.Role;
 import com.liyuehong.weeklyreport.model.User;
+import com.liyuehong.weeklyreport.utils.ErrorCode;
 import com.liyuehong.weeklyreport.utils.RespMsg;
 import com.sun.deploy.association.RegisterFailedException;
 import org.apache.ibatis.javassist.bytecode.DuplicateMemberException;
@@ -62,11 +65,11 @@ public class UserService implements UserDetailsService {
      * true表示注册成功
      * false表示注册失败（用户名重复）
      */
-    public Boolean addUser(User user) throws RegisterFailedException {
+    public Boolean addUser(User user) throws BaseException {
         //查询数据库中是否已经存在相同的用户名
         User user1 = userMapper.loadUserByUsername(user.getUsername());
         if(user1!=null) {
-            throw new RegisterFailedException();
+            throw new BaseException(ErrorCode.DUPLICATE_USERNAME, ImmutableMap.of("username:",user1.getUsername()));
 //            return false;
         }
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
@@ -91,9 +94,7 @@ public class UserService implements UserDetailsService {
 //    @Cacheable(key = "#username")
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userMapper.loadUserByUsername(username);
-        logger.debug("1");
         if(user==null){
-            logger.debug("2");
             throw new UsernameNotFoundException("用户名未找到！");
         }
         //查询用户的角色
