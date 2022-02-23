@@ -301,8 +301,8 @@ com.sun.deploy.association.RegisterFailedException: null
 2022-02-22 11:12:05,466 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
 2022-02-22 11:12:05,467 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$16$Fnenz3KKbv8Mh7N6CB2c5uTK8a4JC3wUe/sDV7z8n1Uq1vJdaUZYS, 1, null, null, 2022-02-13e4dd95ba58e34227968acd36250abc9c.png
 2022-02-22 11:12:05,467 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
-2022-02-22 11:12:05,496 [http-nio-8082-exec-3] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.GlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
-java.lang.IllegalStateException: Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<?> com.liyuehong.weeklyreport.configuration.GlobalExceptionHandler.handleAppException(com.liyuehong.weeklyreport.configuration.BaseException,javax.servlet.http.HttpServletRequest): No suitable resolver
+2022-02-22 11:12:05,496 [http-nio-8082-exec-3] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.CustomGlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
+java.lang.IllegalStateException: Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<?> com.liyuehong.weeklyreport.configuration.CustomGlobalExceptionHandler.handleAppException(com.liyuehong.weeklyreport.configuration.UserDefinedException,javax.servlet.http.HttpServletRequest): No suitable resolver
 	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
@@ -554,7 +554,7 @@ com.sun.deploy.association.RegisterFailedException: null
 2022-02-22 11:39:26,332 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$16$Fnenz3KKbv8Mh7N6CB2c5uTK8a4JC3wUe/sDV7z8n1Uq1vJdaUZYS, 1, null, null, 2022-02-13e4dd95ba58e34227968acd36250abc9c.png
 2022-02-22 11:39:26,334 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
 2022-02-22 11:39:26,339 [http-nio-8082-exec-1] ERROR -[GlobalExceptionHandler.java:26]- 用户名重复
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -659,7 +659,7 @@ com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 11:39:26,345 [http-nio-8082-exec-1] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.GlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
+2022-02-22 11:39:26,345 [http-nio-8082-exec-1] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.CustomGlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
 org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
 	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:315)
 	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
@@ -763,8 +763,8 @@ org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acce
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 11:39:26,963 [http-nio-8082-exec-1] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复] with root cause
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+2022-02-22 11:39:26,963 [http-nio-8082-exec-1] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复] with root cause
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -913,7 +913,7 @@ com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
 2022-02-22 11:44:54,940 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$16$Fnenz3KKbv8Mh7N6CB2c5uTK8a4JC3wUe/sDV7z8n1Uq1vJdaUZYS, 1, null, null, 2022-02-13e4dd95ba58e34227968acd36250abc9c.png
 2022-02-22 11:44:54,943 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
 2022-02-22 11:45:51,797 [http-nio-8082-exec-1] ERROR -[GlobalExceptionHandler.java:26]- 用户名重复
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1018,7 +1018,7 @@ com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 11:50:57,338 [http-nio-8082-exec-1] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.GlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
+2022-02-22 11:50:57,338 [http-nio-8082-exec-1] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.CustomGlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
 org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
 	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:315)
 	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
@@ -1122,8 +1122,8 @@ org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acce
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 11:51:23,828 [http-nio-8082-exec-1] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复] with root cause
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+2022-02-22 11:51:23,828 [http-nio-8082-exec-1] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复] with root cause
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1234,7 +1234,7 @@ com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
 2022-02-22 11:52:39,589 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$16$Fnenz3KKbv8Mh7N6CB2c5uTK8a4JC3wUe/sDV7z8n1Uq1vJdaUZYS, 1, null, null, 2022-02-13e4dd95ba58e34227968acd36250abc9c.png
 2022-02-22 11:52:39,590 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
 2022-02-22 11:52:39,590 [http-nio-8082-exec-2] ERROR -[GlobalExceptionHandler.java:26]- 用户名重复
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1339,7 +1339,7 @@ com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 11:53:04,803 [http-nio-8082-exec-2] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.GlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
+2022-02-22 11:53:04,803 [http-nio-8082-exec-2] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.CustomGlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
 org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
 	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:315)
 	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
@@ -1443,8 +1443,8 @@ org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acce
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 11:53:05,344 [http-nio-8082-exec-2] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复] with root cause
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+2022-02-22 11:53:05,344 [http-nio-8082-exec-2] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复] with root cause
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1555,7 +1555,7 @@ com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
 2022-02-22 11:53:14,568 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$16$Fnenz3KKbv8Mh7N6CB2c5uTK8a4JC3wUe/sDV7z8n1Uq1vJdaUZYS, 1, null, null, 2022-02-13e4dd95ba58e34227968acd36250abc9c.png
 2022-02-22 11:53:14,568 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
 2022-02-22 11:53:14,569 [http-nio-8082-exec-3] ERROR -[GlobalExceptionHandler.java:26]- 用户名重复
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1660,7 +1660,7 @@ com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 11:53:24,082 [http-nio-8082-exec-3] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.GlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
+2022-02-22 11:53:24,082 [http-nio-8082-exec-3] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.CustomGlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
 org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
 	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:315)
 	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
@@ -1764,8 +1764,8 @@ org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acce
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 11:53:24,638 [http-nio-8082-exec-3] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复] with root cause
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+2022-02-22 11:53:24,638 [http-nio-8082-exec-3] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复] with root cause
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1876,7 +1876,7 @@ com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
 2022-02-22 11:53:30,080 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$16$Fnenz3KKbv8Mh7N6CB2c5uTK8a4JC3wUe/sDV7z8n1Uq1vJdaUZYS, 1, null, null, 2022-02-13e4dd95ba58e34227968acd36250abc9c.png
 2022-02-22 11:53:30,081 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
 2022-02-22 11:53:30,082 [http-nio-8082-exec-4] ERROR -[GlobalExceptionHandler.java:26]- 用户名重复
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1981,7 +1981,7 @@ com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 12:00:11,839 [http-nio-8082-exec-4] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.GlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
+2022-02-22 12:00:11,839 [http-nio-8082-exec-4] WARN  -[ExceptionHandlerExceptionResolver.java:434]- Failure in @ExceptionHandler com.liyuehong.weeklyreport.configuration.CustomGlobalExceptionHandler#handleAppException(BaseException, HttpServletRequest)
 org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
 	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:315)
 	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
@@ -2085,8 +2085,8 @@ org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acce
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-22 12:00:38,222 [http-nio-8082-exec-4] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复] with root cause
-com.liyuehong.weeklyreport.configuration.BaseException: 用户名重复
+2022-02-22 12:00:38,222 [http-nio-8082-exec-4] ERROR -[DirectJDKLog.java:175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复] with root cause
+com.liyuehong.weeklyreport.configuration.UserDefinedException: 用户名重复
 	at com.liyuehong.weeklyreport.service.UserService.addUser(UserService.java:72)
 	at com.liyuehong.weeklyreport.controller.RegisterController.reg(RegisterController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

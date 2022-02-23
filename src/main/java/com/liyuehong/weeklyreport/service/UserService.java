@@ -1,35 +1,22 @@
 package com.liyuehong.weeklyreport.service;
 
 import com.google.common.collect.ImmutableMap;
-import com.liyuehong.weeklyreport.configuration.BaseException;
-import com.liyuehong.weeklyreport.mapper.ArticleMapper;
+import com.liyuehong.weeklyreport.configuration.CustomException;
 import com.liyuehong.weeklyreport.mapper.RoleMapper;
 import com.liyuehong.weeklyreport.mapper.UserMapper;
-import com.liyuehong.weeklyreport.model.Article;
 import com.liyuehong.weeklyreport.model.Role;
 import com.liyuehong.weeklyreport.model.User;
 import com.liyuehong.weeklyreport.utils.ErrorCode;
-import com.liyuehong.weeklyreport.utils.RespMsg;
-import com.sun.deploy.association.RegisterFailedException;
-import org.apache.ibatis.javassist.bytecode.DuplicateMemberException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.*;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -65,11 +52,11 @@ public class UserService implements UserDetailsService {
      * true表示注册成功
      * false表示注册失败（用户名重复）
      */
-    public Boolean addUser(User user) throws BaseException {
+    public Boolean addUser(User user) throws CustomException {
         //查询数据库中是否已经存在相同的用户名
         User user1 = userMapper.loadUserByUsername(user.getUsername());
         if(user1!=null) {
-            throw new BaseException(ErrorCode.DUPLICATE_USERNAME, ImmutableMap.of("username:",user1.getUsername()));
+            throw new CustomException(ErrorCode.RESOURCE_NOT_FOUND, ImmutableMap.of("user:",user1.getUsername()));
 //            return false;
         }
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());

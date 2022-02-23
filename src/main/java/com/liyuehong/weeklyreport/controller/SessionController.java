@@ -1,6 +1,9 @@
 package com.liyuehong.weeklyreport.controller;
 
+import com.liyuehong.weeklyreport.configuration.CustomGlobalExceptionHandler;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,9 +17,14 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 public class SessionController {
+
+    //打印日志
+    private static Logger logger = LoggerFactory.getLogger(SessionController.class);
+
     @GetMapping("/session/invalid")
     @ResponseStatus
     public String sessionInvalid(){
+        logger.debug("session失效，请重新登录");
         return "session失效，请重新登录";
     }
 
