@@ -49,7 +49,14 @@ public class ArticleController {
     @Autowired
     UserService userService;
 
-    @ApiOperation("提交或更新文章接口(返回消息中的msg右边的数字是文章的id)")
+    @ApiOperation("更新文章")
+    @PutMapping("/updateArticle")
+    public Article updateArticle(@RequestBody Article article){
+        Article updateArticle = articleService.updateArticle(article);
+        return updateArticle;
+    }
+
+    @ApiOperation("创建文章")
     @PostMapping("/add")
     public RespMsg addNewArticle(@RequestBody Article article) {
         logger.info(article.toString());

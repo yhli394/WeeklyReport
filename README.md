@@ -35,7 +35,9 @@
 4. 注册接口的参数新增@RequestBody注解
 5. User类中的getAuthorities()方法上加入@JsonIgnore注解
 
-### 2022.2.21-
+### 2022.2.21-????
+1. 新增全局异常处理功能
+2. 整合redis
 
 
 

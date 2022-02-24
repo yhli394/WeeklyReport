@@ -41,7 +41,7 @@
     <include refid="Blob_Column_List" />
     from article where id=#{id}
   </select>
-  <update id="updateArticle" parameterType="com.liyuehong.weeklyreport.model.Article">
+  <update id="updateArticle">
     UPDATE article SET
     title=#{title},content=#{content},editDate=#{editDate}
     <if test="state==1">
