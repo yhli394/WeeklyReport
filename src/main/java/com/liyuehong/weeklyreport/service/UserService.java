@@ -56,7 +56,7 @@ public class UserService implements UserDetailsService {
         //查询数据库中是否已经存在相同的用户名
         User user1 = userMapper.loadUserByUsername(user.getUsername());
         if(user1!=null) {
-            throw new CustomException(ErrorCode.RESOURCE_NOT_FOUND, ImmutableMap.of("user:",user1.getUsername()));
+            throw new CustomException(ErrorCode.DUPLICATE_USERNAME, ImmutableMap.of("user:",user1.getUsername()));
 //            return false;
         }
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());

@@ -11,6 +11,9 @@ public class ErrorResponse {
     //时间戳
     private Instant timestamp;
 
+    //请求的url
+    private String url;
+    //异常数据
     private Map<String,Object> data;
 
     public Map<String, Object> getData() {
@@ -18,22 +21,6 @@ public class ErrorResponse {
     }
 
     public void setData(Map<String, Object> data) {
-        this.data = data;
-    }
-
-    @Override
-    public String toString() {
-        return "ErrorReponse{" +
-                "code=" + code +
-                ", message='" + message + '\'' +
-                ", timestamp=" + timestamp +
-                '}';
-    }
-
-    public ErrorResponse(int code, String message, Instant timestamp, Map<String, Object> data) {
-        this.code = code;
-        this.message = message;
-        this.timestamp = timestamp;
         this.data = data;
     }
 
@@ -59,5 +46,21 @@ public class ErrorResponse {
 
     public void setTimestamp(Instant timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public ErrorResponse(int code, String message, Instant timestamp, String url, Map<String, Object> data) {
+        this.code = code;
+        this.message = message;
+        this.timestamp = timestamp;
+        this.url = url;
+        this.data = data;
     }
 }

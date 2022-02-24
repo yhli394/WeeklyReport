@@ -42,5 +42,11 @@ class WeeklyReportApplicationTests {
         String v=s.trim();
         System.out.println(Integer.parseInt("-42"));
     }
+    @Test
+    void password1(){
+        int a =10;
+        double b = a;
+        int x = (int) b;
+    }
 
 }

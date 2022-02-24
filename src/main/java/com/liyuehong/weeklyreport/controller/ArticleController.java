@@ -191,10 +191,10 @@ public class ArticleController {
     }
 
     @ApiOperation(value = "通过传入图片名显示图片")
-    @GetMapping(value = "/image/{image_name}", produces = MediaType.IMAGE_PNG_VALUE)
-    public ResponseEntity<byte[]> getImage(@PathVariable("image_name") String image_name) throws Exception{
+    @GetMapping(value = "/image/{imageName}", produces = MediaType.IMAGE_PNG_VALUE)
+    public ResponseEntity<byte[]> getImage(@PathVariable("imageName") String imageName) throws Exception{
         byte[] imageContent;
-        String path = "D:\\article\\images\\" + image_name;
+        String path = "D:\\article\\images\\" + imageName;
         imageContent = fileToByte(new File(path));
 
         final HttpHeaders headers = new HttpHeaders();
