@@ -1,40 +1,22 @@
 package com.liyuehong.weeklyreport.configuration;
 
 import com.google.common.collect.ImmutableMap;
-import com.liyuehong.weeklyreport.utils.ErrorCode;
+import com.liyuehong.weeklyreport.utils.ErrorInfoEnum;
 
 import java.util.Map;
 
 public class CustomException extends RuntimeException{
-    private ErrorCode errorCode;
-    private String message;
-    private Integer code;
+    private ErrorInfoEnum errorInfoEnum;
     private Map<String,Object> data;
 
-    public ErrorCode getErrorCode() {
-        return errorCode;
+    public ErrorInfoEnum getErrorCode() {
+        return errorInfoEnum;
     }
 
-    public void setErrorCode(ErrorCode errorCode) {
-        this.errorCode = errorCode;
+    public void setErrorCode(ErrorInfoEnum errorInfoEnum) {
+        this.errorInfoEnum = errorInfoEnum;
     }
 
-    @Override
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Integer getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
-        this.code = code;
-    }
 
     public Map<String, Object> getData() {
         return data;
@@ -44,15 +26,8 @@ public class CustomException extends RuntimeException{
         this.data = data;
     }
 
-    public CustomException(ErrorCode errorCode){
-        this.errorCode=errorCode;
-        this.message=errorCode.getMessage();
-        this.code=errorCode.getCode();
-    }
-
-
-    public CustomException(ErrorCode errorCode, ImmutableMap<String, Object> of) {
-        this.errorCode=errorCode;
+    public CustomException(ErrorInfoEnum errorInfoEnum, ImmutableMap<String, Object> of) {
+        this.errorInfoEnum = errorInfoEnum;
         this.data=of;
     }
 

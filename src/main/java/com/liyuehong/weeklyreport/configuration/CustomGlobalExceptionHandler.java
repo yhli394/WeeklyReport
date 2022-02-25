@@ -5,12 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.Instant;
-import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 
@@ -38,9 +35,7 @@ public class CustomGlobalExceptionHandler {
         logger.debug(e.getMessage(),e);
         String url = req.getRequestURL().toString();
         CustomException ce = ((CustomException) e);
-        int code = ce.getErrorCode().getCode();
-        String message = ce.getErrorCode().getMessage();
-        return new ErrorResponse(code,message,Instant.now().plusMillis(TimeUnit.HOURS.toMillis(8)),url,ce.getData());
+        return new ErrorResponse(ce.getErrorCode(),Instant.now().plusMillis(TimeUnit.HOURS.toMillis(8)),url,ce.getData());
     }
 
 }

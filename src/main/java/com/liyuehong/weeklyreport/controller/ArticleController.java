@@ -60,9 +60,6 @@ public class ArticleController {
     @PostMapping("/add")
     public RespMsg addNewArticle(@RequestBody Article article) {
         logger.info(article.toString());
-        if(article.getContent().isEmpty()){
-            return new RespMsg("error","文章内容不能为空！");
-        }
         if(articleService.addNewArticle(article)==1){
             return new RespMsg("success",article.getId()+"");
         }

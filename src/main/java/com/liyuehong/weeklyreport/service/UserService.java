@@ -6,7 +6,7 @@ import com.liyuehong.weeklyreport.mapper.RoleMapper;
 import com.liyuehong.weeklyreport.mapper.UserMapper;
 import com.liyuehong.weeklyreport.model.Role;
 import com.liyuehong.weeklyreport.model.User;
-import com.liyuehong.weeklyreport.utils.ErrorCode;
+import com.liyuehong.weeklyreport.utils.ErrorInfoEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,7 +56,7 @@ public class UserService implements UserDetailsService {
         //查询数据库中是否已经存在相同的用户名
         User user1 = userMapper.loadUserByUsername(user.getUsername());
         if(user1!=null) {
-            throw new CustomException(ErrorCode.DUPLICATE_USERNAME, ImmutableMap.of("user:",user1.getUsername()));
+            throw new CustomException(ErrorInfoEnum.DUPLICATE_USERNAME, ImmutableMap.of("user:",user1.getUsername()));
 //            return false;
         }
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());

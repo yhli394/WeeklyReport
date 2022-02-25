@@ -1145,7 +1145,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-19 20:49:47,577 [http-nio-8082-exec-8] ERROR -[DirectJDKLog.java:175]- Exception Processing ErrorPage[errorCode=0, location=/error]
+2022-02-19 20:49:47,577 [http-nio-8082-exec-8] ERROR -[DirectJDKLog.java:175]- Exception Processing ErrorPage[errorInfoEnum=0, location=/error]
 com.alibaba.fastjson.JSONException: autoType is not support. org.springframework.security.web.savedrequest.DefaultSavedRequest
 	at com.alibaba.fastjson.parser.ParserConfig.checkAutoType(ParserConfig.java:1437)
 	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:343)
@@ -1346,7 +1346,7 @@ com.alibaba.fastjson.JSONException: autoType is not support. org.springframework
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-02-19 20:49:51,962 [http-nio-8082-exec-9] ERROR -[DirectJDKLog.java:175]- Exception Processing ErrorPage[errorCode=0, location=/error]
+2022-02-19 20:49:51,962 [http-nio-8082-exec-9] ERROR -[DirectJDKLog.java:175]- Exception Processing ErrorPage[errorInfoEnum=0, location=/error]
 com.alibaba.fastjson.JSONException: autoType is not support. org.springframework.security.web.savedrequest.DefaultSavedRequest
 	at com.alibaba.fastjson.parser.ParserConfig.checkAutoType(ParserConfig.java:1437)
 	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:343)

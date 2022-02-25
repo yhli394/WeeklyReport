@@ -4,13 +4,11 @@ import java.time.Instant;
 import java.util.Map;
 
 public class ErrorResponse {
-    //状态码
-    private int code;
-    //响应信息
-    private String message;
+
+    private ErrorInfoEnum errorInfo;
+
     //时间戳
     private Instant timestamp;
-
     //请求的url
     private String url;
     //异常数据
@@ -22,22 +20,6 @@ public class ErrorResponse {
 
     public void setData(Map<String, Object> data) {
         this.data = data;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 
     public Instant getTimestamp() {
@@ -56,9 +38,16 @@ public class ErrorResponse {
         this.url = url;
     }
 
-    public ErrorResponse(int code, String message, Instant timestamp, String url, Map<String, Object> data) {
-        this.code = code;
-        this.message = message;
+    public ErrorInfoEnum getErrorInfo() {
+        return errorInfo;
+    }
+
+    public void setErrorInfo(ErrorInfoEnum errorInfo) {
+        this.errorInfo = errorInfo;
+    }
+
+    public ErrorResponse(ErrorInfoEnum errorInfo, Instant timestamp, String url, Map<String, Object> data) {
+        this.errorInfo = errorInfo;
         this.timestamp = timestamp;
         this.url = url;
         this.data = data;

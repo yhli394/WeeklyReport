@@ -44,9 +44,6 @@ class WeeklyReportApplicationTests {
     }
     @Test
     void password1(){
-        int a =10;
-        double b = a;
-        int x = (int) b;
     }
 
 }
