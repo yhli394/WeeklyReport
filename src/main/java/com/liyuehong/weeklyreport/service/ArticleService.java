@@ -24,7 +24,7 @@ import java.util.List;
 @CacheConfig(cacheNames = "article")
 public class ArticleService {
 
-    private final static Logger logger = LoggerFactory.getLogger(ArticleService.class);
+    private static Logger logger = LoggerFactory.getLogger(ArticleService.class);
 
     @Autowired
     ArticleMapper articleMapper;

@@ -1,6 +1,7 @@
 package com.liyuehong.weeklyreport;
 
 import com.sun.istack.internal.NotNull;
+import com.sun.jmx.remote.internal.ArrayQueue;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,6 +11,8 @@ import java.sql.Array;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ConcurrentMap;
 import java.util.function.Function;
 import java.util.stream.IntStream;
 
@@ -44,6 +47,9 @@ class WeeklyReportApplicationTests {
     }
     @Test
     void password1(){
+        ArrayList<Object> objects = new ArrayList<>();
+        LinkedList<Object> objects1 = new LinkedList<>();
+        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
     }
 
 }

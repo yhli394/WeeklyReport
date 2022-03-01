@@ -10,6 +10,7 @@ import com.liyuehong.weeklyreport.utils.ErrorInfoEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -34,24 +35,22 @@ public class UserService implements UserDetailsService {
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    //配置日志
+    /**
+     * 配置日志
+     */
     private static Logger logger = LoggerFactory.getLogger(UserService.class);
 
     /**
-     * 查询所有用户信息用于后台管理
-     * @return
+     * @description 查询所有用户信息
+     * @author yhli3 
+     * @param []
+     * @updateTime 2022/2/26 14:50
+     * @return java.util.List<com.liyuehong.weeklyreport.model.User>
      */
     public List<User> selectAllUsers() {
         return userMapper.selectAllUsers();
     }
 
-    /**
-     * 注册用户
-     * @param user
-     * @return
-     * true表示注册成功
-     * false表示注册失败（用户名重复）
-     */
     public Boolean addUser(User user) throws CustomException {
         //查询数据库中是否已经存在相同的用户名
         User user1 = userMapper.loadUserByUsername(user.getUsername());
@@ -71,14 +70,7 @@ public class UserService implements UserDetailsService {
         return true;
     }
     // TODO: 2021/12/30 登录认证(session或者token)
-    /**
-     * 登陆时验证用户身份
-     * @param username
-     * @return
-     * @throws UsernameNotFoundException
-     */
     @Override
-//    @Cacheable(key = "#username")
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userMapper.loadUserByUsername(username);
         if(user==null){
@@ -87,36 +79,41 @@ public class UserService implements UserDetailsService {
         //查询用户的角色
         List<Role> roles = roleMapper.getRolesByUid(user.getId());
         user.setRoles(roles);
-        //设置sessionId
-        //Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        //WebAuthenticationDetails details = (WebAuthenticationDetails) authentication.getDetails();
-        //user.setSessionId(details.getSessionId());
         return user;
     }
 
-//    @CachePut(key = "#uid")
-//    @Caching(evict = @CacheEvict(key = "#uid",beforeInvocation = true),put = @CachePut(key = "#uid"))
+
     public int updateUserRolesById(int uid,int[] rids) {
         int j = userMapper.deleteUserRolesById(uid);
         int i = userMapper.updateUserRolesById(uid,rids);
         return i;
     }
 
+
+    /**
+     * @description
+     * @author yhli3 
+     * @param [uid, enabled]
+     * @updateTime 2022/2/26 14:50
+     * @return int
+     */
     public int updateAccountStatus(Integer uid,Boolean enabled) {
         return userMapper.updateAccountStatus(uid, enabled);
     }
-
+    
     public int deleteUserById(Integer uid) {
         return userMapper.deleteUserById(uid);
     }
-
+    
     /**
-     * 更新用户头像
-     * @param tempFileName
-     * @param id
-     * @return
+     * @description 
+     * @author yhli3 
+     * @param [tempFileName, id]
+     * @updateTime 2022/2/26 14:48
+     * @return int       
      */
     public int updateAvatarById(String tempFileName, Integer id) {
         return userMapper.updateAvatarById(tempFileName,id);
     }
+
 }

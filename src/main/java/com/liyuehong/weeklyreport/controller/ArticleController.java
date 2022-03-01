@@ -40,9 +40,13 @@ import java.util.UUID;
 @ControllerAdvice
 public class ArticleController {
 
-    //UserController.class：获取Class对象
-    final static Logger logger = LoggerFactory.getLogger(ArticleController.class);
 
+    /**
+     * @description UserController.class：获取Class对象
+     * @author yhli3
+     * @updateTime 2022/2/26 15:14
+     */
+    final static Logger logger = LoggerFactory.getLogger(ArticleController.class);
     @Autowired
     ArticleService articleService;
 

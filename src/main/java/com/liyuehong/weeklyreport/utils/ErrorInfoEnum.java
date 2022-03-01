@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum ErrorInfoEnum {
 
+    /**
+     * 自定义异常
+     */
     RESOURCE_NOT_FOUND(404,"未找到该资源","RESOURCE_NOT_FOUND"),
     DUPLICATE_USERNAME(409,"用户名重复，请更换用户名","DUPLICATE_USERNAME"),
     NULL_POINTER_EXCEPTION(404,"传过来的内容为空","NULL_POINTER_EXCEPTION"),
@@ -21,6 +24,7 @@ public enum ErrorInfoEnum {
     public int getCode() {
         return code;
     }
+
 
     public String getMessage() {
         return message;
