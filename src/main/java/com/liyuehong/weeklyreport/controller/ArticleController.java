@@ -167,7 +167,9 @@ public class ArticleController {
             int i = userService.updateAvatarById(tempFileName,id);
         }
         //文件保存的地址
-        String imgFilePath = "D:\\article\\images\\"+tempFileName;
+        // TODO: 2022/3/2 yhli3: 项目部署到Linux服务器上后记得改图片上传的保存地址
+        //String imgFilePath = "D:\\article\\images\\"+tempFileName;
+        String imgFilePath = "/app/images/"+tempFileName;
         BASE64Decoder decoder = new BASE64Decoder();
         try {
             //Base64解码
@@ -202,7 +204,8 @@ public class ArticleController {
     @GetMapping(value = "/image/{imageName}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<byte[]> getImage(@PathVariable("imageName") String imageName) throws Exception{
         byte[] imageContent;
-        String path = "D:\\article\\images\\" + imageName;
+        //String path = "D:\\article\\images\\" + imageName;
+        String path = "/app/images/" + imageName;
         imageContent = fileToByte(new File(path));
 
         final HttpHeaders headers = new HttpHeaders();

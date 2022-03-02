@@ -1046,3 +1046,4 @@
 2022-03-01 21:40:11,521 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 58, 第二周, null, 2022-03-01 19:30:33, 1, null, <<BLOB>>, admin
 2022-03-01 21:40:11,522 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 59, grgewgf, null, 2022-03-01 21:38:33, 1, null, <<BLOB>>, admin
 2022-03-01 21:40:11,523 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 3
+2022-03-01 21:44:48,607 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed

@@ -1,7 +1,5 @@
 package com.liyuehong.weeklyreport;
 
-import com.sun.istack.internal.NotNull;
-import com.sun.jmx.remote.internal.ArrayQueue;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.test.context.SpringBootTest;
