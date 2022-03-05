@@ -1,0 +1,444 @@
+2022-03-05 16:47:47,058 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 16944 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-03-05 16:47:47,061 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-03-05 16:47:47,061 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-03-05 16:47:48,247 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-05 16:47:48,250 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-05 16:47:48,270 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-03-05 16:47:48,536 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$237018f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-05 16:47:48,840 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-03-05 16:47:48,847 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-03-05 16:47:48,847 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-03-05 16:47:48,848 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-03-05 16:47:48,911 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-03-05 16:47:48,911 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 1809 ms
+2022-03-05 16:47:49,396 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-03-05 16:47:49,499 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-03-05 16:47:50,016 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-05 16:47:50,061 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-03-05 16:47:50,171 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-03-05 16:47:50,171 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-03-05 16:47:50,171 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-03-05 16:47:50,172 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-03-05 16:47:50,172 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-03-05 16:47:50,172 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-03-05 16:47:50,172 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-03-05 16:47:50,211 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-05 16:47:50,248 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4def42c3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1570cad0, org.springframework.security.web.header.HeaderWriterFilter@44bbb7c6, org.springframework.web.filter.CorsFilter@72110818, org.springframework.security.web.authentication.logout.LogoutFilter@45d7495e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@50ff7063, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d62472f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e9a10cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6eabe718, org.springframework.security.web.session.SessionManagementFilter@3303e89e, org.springframework.security.web.access.ExceptionTranslationFilter@18715bb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fad51a3]
+2022-03-05 16:47:53,232 [main] WARN  -[AbstractApplicationContext.java:591]- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+2022-03-05 16:47:53,240 [main] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-03-05 16:47:53,394 [main] INFO  -[DirectJDKLog.java:173]- Stopping service [Tomcat]
+2022-03-05 16:47:53,457 [main] INFO  -[ConditionEvaluationReportLoggingListener.java:136]- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-05 16:47:53,479 [main] ERROR -[SpringApplication.java:843]- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.liyuehong.weeklyreport.WeeklyReportApplication.main(WeeklyReportApplication.java:14)
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration$EnableRedisKeyspaceNotificationsInitializer.afterPropertiesSet(RedisHttpSessionConfiguration.java:331)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 16 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 23 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /47.101.198.23:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-03-05 22:11:38,923 [main] INFO  -[AbstractTestContextBootstrapper.java:305]- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests], using SpringBootContextLoader
+2022-03-05 22:11:38,931 [main] INFO  -[AbstractContextLoader.java:264]- Could not detect default resource locations for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-03-05 22:11:38,932 [main] INFO  -[AnnotationConfigContextLoaderUtils.java:83]- Could not detect default configuration classes for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests]: WeeklyReportApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-03-05 22:11:39,054 [main] INFO  -[SpringBootTestContextBootstrapper.java:238]- Found @SpringBootConfiguration com.liyuehong.weeklyreport.WeeklyReportApplication for test class com.liyuehong.weeklyreport.WeeklyReportApplicationTests
+2022-03-05 22:11:39,162 [main] INFO  -[AbstractTestContextBootstrapper.java:245]- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-03-05 22:11:39,190 [main] INFO  -[AbstractTestContextBootstrapper.java:174]- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1787f2a0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7de62196, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@163370c2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@51bf5add, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7905a0b8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@35a3d49f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@389b0789, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13d9cbf5, org.springframework.test.context.event.EventPublishingTestExecutionListener@478db956, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6ca18a14, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@c667f46, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@51bd8b5c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7b50df34, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b410b60, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2462cb01]
+2022-03-05 22:11:39,579 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplicationTests using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 15176 (started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-03-05 22:11:39,580 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-03-05 22:11:39,583 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-03-05 22:11:40,806 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-05 22:11:40,809 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-05 22:11:40,835 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-03-05 22:11:41,351 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$a9fa8cae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-05 22:11:42,009 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-03-05 22:11:42,273 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-03-05 22:11:43,595 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-05 22:11:43,789 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-03-05 22:11:43,975 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-03-05 22:11:43,976 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-03-05 22:11:43,976 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-03-05 22:11:43,977 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-03-05 22:11:43,977 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-03-05 22:11:43,977 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-03-05 22:11:43,978 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-03-05 22:11:44,278 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-05 22:11:44,410 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e4f2300, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a54638b, org.springframework.security.web.header.HeaderWriterFilter@b841713, org.springframework.web.filter.CorsFilter@e706aa, org.springframework.security.web.authentication.logout.LogoutFilter@30704f85, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@40a28bda, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e886caf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1dbff71c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25e6c22a, org.springframework.security.web.session.SessionManagementFilter@4fee14b, org.springframework.security.web.access.ExceptionTranslationFilter@717a8a76, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c8f71a7]
+2022-03-05 22:11:48,148 [main] WARN  -[AbstractApplicationContext.java:591]- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+2022-03-05 22:11:48,310 [main] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-03-05 22:11:48,334 [main] INFO  -[ConditionEvaluationReportLoggingListener.java:136]- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-05 22:11:48,355 [main] ERROR -[SpringApplication.java:843]- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration$EnableRedisKeyspaceNotificationsInitializer.afterPropertiesSet(RedisHttpSessionConfiguration.java:331)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 84 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 91 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /47.101.198.23:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-03-05 22:11:48,359 [main] ERROR -[TestContextManager.java:248]- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1787f2a0] to prepare test instance [com.liyuehong.weeklyreport.WeeklyReportApplicationTests@6d6712b7]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 69 common frames omitted
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration$EnableRedisKeyspaceNotificationsInitializer.afterPropertiesSet(RedisHttpSessionConfiguration.java:331)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 84 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 47.101.198.23:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 91 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /47.101.198.23:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-03-05 22:19:54,952 [main] INFO  -[AbstractTestContextBootstrapper.java:305]- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests], using SpringBootContextLoader
+2022-03-05 22:19:54,959 [main] INFO  -[AbstractContextLoader.java:264]- Could not detect default resource locations for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-03-05 22:19:54,960 [main] INFO  -[AnnotationConfigContextLoaderUtils.java:83]- Could not detect default configuration classes for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests]: WeeklyReportApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-03-05 22:19:55,091 [main] INFO  -[SpringBootTestContextBootstrapper.java:238]- Found @SpringBootConfiguration com.liyuehong.weeklyreport.WeeklyReportApplication for test class com.liyuehong.weeklyreport.WeeklyReportApplicationTests
+2022-03-05 22:19:55,197 [main] INFO  -[AbstractTestContextBootstrapper.java:245]- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-03-05 22:19:55,220 [main] INFO  -[AbstractTestContextBootstrapper.java:174]- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1787f2a0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7de62196, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@163370c2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@51bf5add, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7905a0b8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@35a3d49f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@389b0789, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13d9cbf5, org.springframework.test.context.event.EventPublishingTestExecutionListener@478db956, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6ca18a14, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@c667f46, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@51bd8b5c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7b50df34, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b410b60, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2462cb01]
+2022-03-05 22:19:55,638 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplicationTests using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 16244 (started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-03-05 22:19:55,639 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-03-05 22:19:55,641 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-03-05 22:19:56,817 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-05 22:19:56,820 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-05 22:19:56,849 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-03-05 22:19:57,350 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$d47b34c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-05 22:19:58,024 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-03-05 22:19:58,249 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-03-05 22:19:59,505 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-05 22:19:59,680 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-03-05 22:19:59,851 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-03-05 22:19:59,851 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-03-05 22:19:59,852 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-03-05 22:19:59,852 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-03-05 22:19:59,852 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-03-05 22:19:59,853 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-03-05 22:19:59,853 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-03-05 22:20:00,159 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-05 22:20:00,281 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62ab5e63, org.springframework.security.web.context.SecurityContextPersistenceFilter@1dbff71c, org.springframework.security.web.header.HeaderWriterFilter@1c7843c3, org.springframework.web.filter.CorsFilter@e91facf, org.springframework.security.web.authentication.logout.LogoutFilter@1c0e4262, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@22ae32ba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d949bc4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1218e12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e8f0f98, org.springframework.security.web.session.SessionManagementFilter@7c8f047a, org.springframework.security.web.access.ExceptionTranslationFilter@3fef1e6b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ba46845]
+2022-03-05 22:20:02,025 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-03-05 22:20:02,056 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-03-05 22:20:02,087 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-03-05 22:20:02,207 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-03-05 22:20:02,868 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-03-05 22:20:02,881 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplicationTests in 7.605 seconds (JVM running for 8.742)
+2022-03-05 22:20:03,494 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-03-05 22:25:42,362 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 3248 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-03-05 22:25:42,365 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-03-05 22:25:42,365 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-03-05 22:25:43,466 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-05 22:25:43,468 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-05 22:25:43,488 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-03-05 22:25:43,751 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$237018f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-05 22:25:44,029 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-03-05 22:25:44,036 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-03-05 22:25:44,037 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-03-05 22:25:44,037 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-03-05 22:25:44,128 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-03-05 22:25:44,128 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 1710 ms
+2022-03-05 22:25:44,641 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-03-05 22:25:44,780 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-03-05 22:25:45,313 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-05 22:25:45,361 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-03-05 22:25:45,452 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-03-05 22:25:45,452 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-03-05 22:25:45,452 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-03-05 22:25:45,453 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-03-05 22:25:45,453 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-03-05 22:25:45,453 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-03-05 22:25:45,453 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-03-05 22:25:45,499 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-05 22:25:45,559 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4def42c3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1570cad0, org.springframework.security.web.header.HeaderWriterFilter@44bbb7c6, org.springframework.web.filter.CorsFilter@72110818, org.springframework.security.web.authentication.logout.LogoutFilter@45d7495e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@50ff7063, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d62472f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e9a10cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6eabe718, org.springframework.security.web.session.SessionManagementFilter@3303e89e, org.springframework.security.web.access.ExceptionTranslationFilter@18715bb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fad51a3]
+2022-03-05 22:25:46,643 [main] INFO  -[DirectJDKLog.java:173]- Starting ProtocolHandler ["http-nio-8082"]
+2022-03-05 22:25:46,652 [main] INFO  -[TomcatWebServer.java:220]- Tomcat started on port(s): 8082 (http) with context path ''
+2022-03-05 22:25:46,653 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-03-05 22:25:46,668 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-03-05 22:25:46,695 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-03-05 22:25:46,795 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-03-05 22:25:47,468 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-03-05 22:25:47,482 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 5.437 seconds (JVM running for 6.135)
+2022-03-05 22:25:47,959 [RMI TCP Connection(3)-192.168.196.22] INFO  -[DirectJDKLog.java:173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-05 22:25:47,959 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:525]- Initializing Servlet 'dispatcherServlet'
+2022-03-05 22:25:47,960 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:547]- Completed initialization in 1 ms
+2022-03-05 22:25:55,789 [http-nio-8082-exec-7] DEBUG -[SessionController.java:27]- session失效，请重新登录
+2022-03-05 22:25:59,048 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-03-05 22:25:59,073 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-03-05 22:25:59,172 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-03-05 22:25:59,173 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, null
+2022-03-05 22:25:59,175 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-03-05 22:25:59,177 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-03-05 22:25:59,178 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-03-05 22:25:59,262 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-03-05 22:26:09,920 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed

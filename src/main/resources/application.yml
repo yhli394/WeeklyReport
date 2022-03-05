@@ -1,0 +1,26 @@
+spring:
+  datasource: # 配置数据库
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.101.198.23:3306/week_report?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+
+  redis: # 配置redis
+    host: 47.101.198.23
+    port: 6379
+    password: 123456
+
+server:
+  port: 8082 # 配置端口号
+  max-http-header-size: 10MB # 配置请求头的大小
+  servlet:
+    session:
+      timeout: 1800 # 配置session过期时间，（使用@EnableRedisHttpSession注解，server.servlet.session.timeout=1800会失效）
+
+logging:
+  config: classpath:logback.xml # 设置项目启动后读取的日志配置文件
+  level: # logging.level用来指定具体的包或类下的日志的输出级别
+    com:
+      liyuehong:
+        weeklyreport:
+          mapper: trace
