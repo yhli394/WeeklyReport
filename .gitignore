@@ -13,13 +13,16 @@ target/
 .springBeans
 .sts4-cache
 
+# 自定义
+Dockerfile
+*.yml
+docker-compose.yml
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-*.yml
-Dockerfile
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
