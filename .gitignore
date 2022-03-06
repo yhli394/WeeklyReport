@@ -1,7 +1,4 @@
 HELP.md
-**/Dockerfile
-**/.yml
-**/docker-compose.yml
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -17,7 +14,10 @@ target/
 .sts4-cache
 
 # 自定义
-
+**/Dockerfile
+**/.yml
+**/docker-compose.yml
+*.html
 ### IntelliJ IDEA ###
 .idea
 *.iws
