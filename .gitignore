@@ -14,10 +14,8 @@ target/
 .sts4-cache
 
 # 自定义
-**/Dockerfile
-**/.yml
-**/docker-compose.yml
-*.html
+Dockerfile
+*.yml
 ### IntelliJ IDEA ###
 .idea
 *.iws
