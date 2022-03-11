@@ -28,12 +28,7 @@ public class RegisterController {
     @ApiOperation("用户注册接口,enabled(默认为true即可),username,password,email需要填，其他字段不用填")
 //    @ApiImplicitParams({ @ApiImplicitParam(name = "enabled",value = "必填，默认为1，不用改",required = true,defaultValue ="1",dataType = "int"),@ApiImplicitParam(name = "email",value = "必填",required = true),@ApiImplicitParam(name = "username",value = "必填",required = true),@ApiImplicitParam(name = "password",value = "必填",required = true)})
     @PostMapping(value = "/register")
-    public RespMsg reg(@RequestBody User user) throws CustomException {
-        Boolean res =userService.addUser(user);
-        if(res){
-            return new RespMsg("success","注册成功！");
-        }else{
-            return new RespMsg("error","用户名重复，注册失败!");
-        }
+    public User reg(@RequestBody User user) throws CustomException {
+        return userService.addUser(user);
     }
 }

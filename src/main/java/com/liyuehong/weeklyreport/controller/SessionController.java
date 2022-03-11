@@ -18,7 +18,9 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class SessionController {
 
-    //打印日志
+    /**
+     * 打印日志
+     */
     private static Logger logger = LoggerFactory.getLogger(SessionController.class);
 
     @GetMapping("/session/invalid")

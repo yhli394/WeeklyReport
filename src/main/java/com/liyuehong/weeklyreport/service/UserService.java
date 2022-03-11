@@ -51,7 +51,7 @@ public class UserService implements UserDetailsService {
         return userMapper.selectAllUsers();
     }
 
-    public Boolean addUser(User user) throws CustomException {
+    public User addUser(User user) throws CustomException {
         //查询数据库中是否已经存在相同的用户名
         User user1 = userMapper.loadUserByUsername(user.getUsername());
         if(user1!=null) {
@@ -63,11 +63,13 @@ public class UserService implements UserDetailsService {
         user.setRegTime(timestamp);
         //给密码加密
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        //给用户添加默认头像
+        user.setAvatarName("2022-03-06ca922e80a760458a9ee35552581c45c9.png");
         //注册用户
         int reg = userMapper.reg(user);
         //默认注册的用户角色都为普通用户，即user
         int i = roleMapper.insertRole(2, user.getId());
-        return true;
+        return user;
     }
     // TODO: 2021/12/30 登录认证(session或者token)
     @Override

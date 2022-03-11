@@ -57,10 +57,10 @@
   </delete>
   <insert id="reg" useGeneratedKeys="true" keyProperty="id">
     insert into user (id, username, password, 
-      enabled, email, regTime
+      enabled, email, regTime,avatar_name
       )
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{enabled,jdbcType=TINYINT}, #{email,jdbcType=VARCHAR}, #{regTime,jdbcType=TIMESTAMP}
+      #{enabled,jdbcType=TINYINT}, #{email,jdbcType=VARCHAR}, #{regTime,jdbcType=TIMESTAMP},#{avatarName}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.liyuehong.weeklyreport.mapper.UserMapper" >

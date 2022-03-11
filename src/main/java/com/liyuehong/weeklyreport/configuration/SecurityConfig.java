@@ -13,6 +13,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author yhli3
@@ -88,7 +90,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/admin/**").hasRole("admin")
-                .antMatchers("/session/invalid","/session/expired").permitAll()
+                .antMatchers("/session/invalid","/session/expired","/register").permitAll()
                 .anyRequest().authenticated()
                 .and()//and 方法表示结束当前标签，上下文回到HttpSecurity，开启新一轮的配置
                 .formLogin()
@@ -100,19 +102,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/login")
                 //登录成功的处理
                 .successHandler((req, resp, authentication) -> {
-//                    Map<String, Object> map = new HashMap<>();
+                    Map<String, Object> map = new HashMap<>();
                     Object principal = authentication.getPrincipal();
-//                    String id = req.getSession().getId();
+                    String sessionId = req.getSession().getId();
 //                    Authentication authentication1 = SecurityContextHolder.getContext().getAuthentication();
 //                    String sessionId = ((MyWebAuthenticationDetails) authentication1).getSessionId();
 //                    Object details =authentication.getDetails();
-//                    map.put("principal",principal);
-//                    map.put("details",details);
+                    map.put("userInfo",principal);
+                    map.put("sessionId",sessionId);
                     resp.setContentType("application/json;charset=utf-8");
                     PrintWriter out = resp.getWriter();
                     //java序列化map对象
-//                    out.write(new ObjectMapper().writeValueAsString(map));
-                    out.write(new ObjectMapper().writeValueAsString(principal));
+                    out.write(new ObjectMapper().writeValueAsString(map));
+                    //out.write(new ObjectMapper().writeValueAsString(principal));
                     out.flush();
                     out.close();
                 })
@@ -137,6 +139,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 })
                 .permitAll()
                 .and()
+                //开启SpringSecurity对跨域的支持
                 .cors()
                 .and()
                 .csrf().disable()

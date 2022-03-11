@@ -53,11 +53,21 @@ public class ArticleController {
     @Autowired
     UserService userService;
 
+    @ApiOperation("根据文章的id删除文章")
+    @ApiImplicitParam(name = "id",value = "文章id",required = true,dataType = "int")
+    @DeleteMapping("/delete")
+    public RespMsg deleteArticleById(Integer id){
+        int i = articleService.deleteArticleById(id);
+        if(i==1){
+            return new RespMsg("true","文章删除成功！");
+        }
+        return new RespMsg("false","文章删除失败！");
+    }
+
     @ApiOperation("更新文章")
     @PutMapping("/updateArticle")
     public Article updateArticle(@RequestBody Article article){
-        Article updateArticle = articleService.updateArticle(article);
-        return updateArticle;
+        return articleService.updateArticle(article);
     }
 
     @ApiOperation("创建文章")
@@ -168,8 +178,8 @@ public class ArticleController {
         }
         //文件保存的地址
         // TODO: 2022/3/2 yhli3: 项目部署到Linux服务器上后记得改图片上传的保存地址
-        //String imgFilePath = "D:\\article\\images\\"+tempFileName;
-        String imgFilePath = "/app/images/"+tempFileName;
+        String imgFilePath = "D:\\article\\images\\"+tempFileName;
+        //String imgFilePath = "/app/images/"+tempFileName;
         BASE64Decoder decoder = new BASE64Decoder();
         try {
             //Base64解码
@@ -204,8 +214,8 @@ public class ArticleController {
     @GetMapping(value = "/image/{imageName}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<byte[]> getImage(@PathVariable("imageName") String imageName) throws Exception{
         byte[] imageContent;
-        //String path = "D:\\article\\images\\" + imageName;
-        String path = "/app/images/" + imageName;
+        String path = "D:\\article\\images\\" + imageName;
+        //String path = "/app/images/" + imageName;
         imageContent = fileToByte(new File(path));
 
         final HttpHeaders headers = new HttpHeaders();
