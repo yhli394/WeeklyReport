@@ -1,0 +1,388 @@
+2022-04-11 02:36:19,237 [pool-2-thread-1] ERROR -[TaskUtils.java:95]- Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception; nested exception is io.lettuce.core.RedisException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:271)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1062)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$4(LettuceConnection.java:919)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:665)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker.just(LettuceInvoker.java:94)
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:149)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.sMembers(DefaultedRedisConnection.java:805)
+	at org.springframework.data.redis.core.DefaultSetOperations.lambda$members$10(DefaultSetOperations.java:214)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:222)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultSetOperations.members(DefaultSetOperations.java:214)
+	at org.springframework.data.redis.core.DefaultBoundSetOperations.members(DefaultBoundSetOperations.java:152)
+	at org.springframework.session.data.redis.RedisSessionExpirationPolicy.cleanExpiredSessions(RedisSessionExpirationPolicy.java:129)
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.cleanupExpiredSessions(RedisIndexedSessionRepository.java:407)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.lettuce.core.RedisException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at io.lettuce.core.internal.Exceptions.bubble(Exceptions.java:83)
+	at io.lettuce.core.internal.Futures.awaitOrCancel(Futures.java:250)
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1060)
+	... 22 common frames omitted
+Caused by: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+2022-04-11 02:36:19,326 [lettuce-eventExecutorLoop-1-3] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-11 02:36:26,553 [lettuce-nioEventLoop-4-5] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379
+2022-04-11 10:33:19,270 [pool-2-thread-1] ERROR -[TaskUtils.java:95]- Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception; nested exception is io.lettuce.core.RedisException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:271)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1062)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$4(LettuceConnection.java:919)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:665)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker.just(LettuceInvoker.java:94)
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:149)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.sMembers(DefaultedRedisConnection.java:805)
+	at org.springframework.data.redis.core.DefaultSetOperations.lambda$members$10(DefaultSetOperations.java:214)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:222)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultSetOperations.members(DefaultSetOperations.java:214)
+	at org.springframework.data.redis.core.DefaultBoundSetOperations.members(DefaultBoundSetOperations.java:152)
+	at org.springframework.session.data.redis.RedisSessionExpirationPolicy.cleanExpiredSessions(RedisSessionExpirationPolicy.java:129)
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.cleanupExpiredSessions(RedisIndexedSessionRepository.java:407)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.lettuce.core.RedisException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at io.lettuce.core.internal.Exceptions.bubble(Exceptions.java:83)
+	at io.lettuce.core.internal.Futures.awaitOrCancel(Futures.java:250)
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1060)
+	... 22 common frames omitted
+Caused by: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+2022-04-11 10:33:19,331 [lettuce-eventExecutorLoop-1-5] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-11 10:33:19,740 [lettuce-nioEventLoop-4-6] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379
+2022-04-11 13:44:19,241 [pool-2-thread-1] ERROR -[TaskUtils.java:95]- Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception; nested exception is io.lettuce.core.RedisException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:271)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1062)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$4(LettuceConnection.java:919)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:665)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker.just(LettuceInvoker.java:94)
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:149)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.sMembers(DefaultedRedisConnection.java:805)
+	at org.springframework.data.redis.core.DefaultSetOperations.lambda$members$10(DefaultSetOperations.java:214)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:222)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultSetOperations.members(DefaultSetOperations.java:214)
+	at org.springframework.data.redis.core.DefaultBoundSetOperations.members(DefaultBoundSetOperations.java:152)
+	at org.springframework.session.data.redis.RedisSessionExpirationPolicy.cleanExpiredSessions(RedisSessionExpirationPolicy.java:129)
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.cleanupExpiredSessions(RedisIndexedSessionRepository.java:407)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.lettuce.core.RedisException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at io.lettuce.core.internal.Exceptions.bubble(Exceptions.java:83)
+	at io.lettuce.core.internal.Futures.awaitOrCancel(Futures.java:250)
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1060)
+	... 22 common frames omitted
+Caused by: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+2022-04-11 13:44:19,332 [lettuce-eventExecutorLoop-1-3] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-11 13:44:19,438 [lettuce-nioEventLoop-4-8] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379
+2022-04-11 15:15:19,271 [pool-2-thread-1] ERROR -[TaskUtils.java:95]- Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception; nested exception is io.lettuce.core.RedisException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:271)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1062)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$4(LettuceConnection.java:919)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:665)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker.just(LettuceInvoker.java:94)
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:149)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.sMembers(DefaultedRedisConnection.java:805)
+	at org.springframework.data.redis.core.DefaultSetOperations.lambda$members$10(DefaultSetOperations.java:214)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:222)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultSetOperations.members(DefaultSetOperations.java:214)
+	at org.springframework.data.redis.core.DefaultBoundSetOperations.members(DefaultBoundSetOperations.java:152)
+	at org.springframework.session.data.redis.RedisSessionExpirationPolicy.cleanExpiredSessions(RedisSessionExpirationPolicy.java:129)
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.cleanupExpiredSessions(RedisIndexedSessionRepository.java:407)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.lettuce.core.RedisException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at io.lettuce.core.internal.Exceptions.bubble(Exceptions.java:83)
+	at io.lettuce.core.internal.Futures.awaitOrCancel(Futures.java:250)
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1060)
+	... 22 common frames omitted
+Caused by: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+2022-04-11 15:15:19,331 [lettuce-eventExecutorLoop-1-8] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-11 15:15:19,486 [lettuce-nioEventLoop-4-7] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379
+2022-04-11 17:11:35,770 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-04-11 17:11:42,864 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 28296 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-04-11 17:11:42,867 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-04-11 17:11:42,867 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-04-11 17:11:44,280 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-11 17:11:44,282 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-11 17:11:44,306 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-04-11 17:11:44,631 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$4a2a7574] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-11 17:11:44,928 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-04-11 17:11:44,936 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-04-11 17:11:44,936 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-04-11 17:11:44,936 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-04-11 17:11:45,003 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-04-11 17:11:45,003 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 2095 ms
+2022-04-11 17:11:45,601 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-04-11 17:11:45,714 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-04-11 17:11:46,249 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-11 17:11:46,290 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-04-11 17:11:46,381 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-04-11 17:11:46,381 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-04-11 17:11:46,381 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-04-11 17:11:46,381 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-04-11 17:11:46,382 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-04-11 17:11:46,382 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-04-11 17:11:46,382 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-04-11 17:11:46,430 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-11 17:11:46,470 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16b64a03, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e239337, org.springframework.security.web.header.HeaderWriterFilter@1657b017, org.springframework.web.filter.CorsFilter@1584c019, org.springframework.security.web.authentication.logout.LogoutFilter@6903ed0e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2499b971, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fcf9525, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b021664, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3688baab, org.springframework.security.web.session.SessionManagementFilter@44864536, org.springframework.security.web.access.ExceptionTranslationFilter@721fc2e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45571cfc]
+2022-04-11 17:11:47,825 [main] INFO  -[DirectJDKLog.java:173]- Starting ProtocolHandler ["http-nio-8082"]
+2022-04-11 17:11:47,834 [main] INFO  -[TomcatWebServer.java:220]- Tomcat started on port(s): 8082 (http) with context path ''
+2022-04-11 17:11:47,835 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-04-11 17:11:47,849 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-04-11 17:11:47,874 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-04-11 17:11:47,981 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-04-11 17:11:48,651 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-04-11 17:11:48,663 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 6.119 seconds (JVM running for 7.18)
+2022-04-11 17:11:48,813 [RMI TCP Connection(3)-192.168.196.22] INFO  -[DirectJDKLog.java:173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-11 17:11:48,814 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:525]- Initializing Servlet 'dispatcherServlet'
+2022-04-11 17:11:48,815 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:547]- Completed initialization in 1 ms
+2022-04-11 17:11:52,634 [http-nio-8082-exec-7] DEBUG -[SessionController.java:29]- session失效，请重新登录
+2022-04-11 17:12:53,229 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-11 17:12:53,269 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: (String)
+2022-04-11 17:12:53,396 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-04-11 17:13:28,381 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-11 17:13:28,382 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-04-11 17:13:28,451 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-04-11 17:13:28,451 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-04-11 17:13:28,454 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-11 17:13:28,457 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-04-11 17:13:28,458 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-04-11 17:13:28,543 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-04-11 17:13:28,544 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-04-11 17:13:28,545 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-04-11 17:13:28,545 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-04-11 17:13:35,022 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-11 17:13:35,023 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: (String)
+2022-04-11 17:13:35,104 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-04-11 17:15:38,799 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-11 17:15:38,801 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: (String)
+2022-04-11 17:15:38,889 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-04-11 17:17:44,935 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-04-11 17:17:49,415 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 33920 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-04-11 17:17:49,418 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-04-11 17:17:49,418 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-04-11 17:17:50,596 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-11 17:17:50,598 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-11 17:17:50,619 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-04-11 17:17:50,891 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$ae6c11ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-11 17:17:51,199 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-04-11 17:17:51,207 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-04-11 17:17:51,207 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-04-11 17:17:51,208 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-04-11 17:17:51,274 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-04-11 17:17:51,275 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 1802 ms
+2022-04-11 17:17:51,806 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-04-11 17:17:51,928 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-04-11 17:17:52,494 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-11 17:17:52,538 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-04-11 17:17:52,619 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-04-11 17:17:52,620 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-04-11 17:17:52,620 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-04-11 17:17:52,620 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-04-11 17:17:52,620 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-04-11 17:17:52,620 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-04-11 17:17:52,620 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-04-11 17:17:52,658 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-11 17:17:52,695 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6003220a, org.springframework.security.web.context.SecurityContextPersistenceFilter@455f4483, org.springframework.security.web.header.HeaderWriterFilter@1a536164, org.springframework.web.filter.CorsFilter@16b64a03, org.springframework.security.web.authentication.logout.LogoutFilter@79f1e22e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@699e0bf0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7996d0d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15d65fcf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1584c019, org.springframework.security.web.session.SessionManagementFilter@368424db, org.springframework.security.web.access.ExceptionTranslationFilter@3df77dfa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f0c45f4]
+2022-04-11 17:17:54,085 [main] INFO  -[DirectJDKLog.java:173]- Starting ProtocolHandler ["http-nio-8082"]
+2022-04-11 17:17:54,121 [main] INFO  -[TomcatWebServer.java:220]- Tomcat started on port(s): 8082 (http) with context path ''
+2022-04-11 17:17:54,123 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-04-11 17:17:54,141 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-04-11 17:17:54,166 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-04-11 17:17:54,268 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-04-11 17:17:54,931 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-04-11 17:17:54,941 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 5.887 seconds (JVM running for 6.744)
+2022-04-11 17:17:55,791 [RMI TCP Connection(3)-192.168.196.22] INFO  -[DirectJDKLog.java:173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-11 17:17:55,791 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:525]- Initializing Servlet 'dispatcherServlet'
+2022-04-11 17:17:55,793 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:547]- Completed initialization in 2 ms
+2022-04-11 17:17:59,673 [http-nio-8082-exec-7] DEBUG -[SessionController.java:29]- session失效，请重新登录
+2022-04-11 17:18:21,408 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-11 17:18:21,431 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: (String)
+2022-04-11 17:18:21,553 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-04-11 22:19:01,569 [lettuce-nioEventLoop-4-3] INFO  -[AbstractInternalLogger.java:217]- null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-04-11 22:19:01,569 [lettuce-nioEventLoop-4-1] INFO  -[AbstractInternalLogger.java:217]- null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-04-11 22:19:01,569 [lettuce-nioEventLoop-4-2] INFO  -[AbstractInternalLogger.java:217]- null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-04-11 22:19:01,689 [lettuce-eventExecutorLoop-1-4] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-11 22:19:01,689 [lettuce-eventExecutorLoop-1-5] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-11 22:19:01,689 [lettuce-eventExecutorLoop-1-6] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-11 22:19:01,964 [lettuce-nioEventLoop-4-4] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379
+2022-04-11 22:19:01,964 [lettuce-nioEventLoop-4-5] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379
+2022-04-11 22:19:01,974 [lettuce-nioEventLoop-4-6] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379

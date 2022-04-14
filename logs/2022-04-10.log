@@ -1,0 +1,177 @@
+2022-04-10 10:37:49,259 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 30144 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-04-10 10:37:49,263 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-04-10 10:37:49,263 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-04-10 10:37:50,342 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-10 10:37:50,344 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-10 10:37:50,364 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-04-10 10:37:50,690 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$652a480e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-10 10:37:51,012 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-04-10 10:37:51,020 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-04-10 10:37:51,020 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-04-10 10:37:51,021 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-04-10 10:37:51,097 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-04-10 10:37:51,097 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 1779 ms
+2022-04-10 10:37:51,649 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-04-10 10:37:51,760 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-04-10 10:37:52,386 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-10 10:37:52,456 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-04-10 10:37:52,560 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-04-10 10:37:52,560 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-04-10 10:37:52,561 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-04-10 10:37:52,561 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-04-10 10:37:52,561 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-04-10 10:37:52,561 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-04-10 10:37:52,561 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-04-10 10:37:52,604 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-10 10:37:52,646 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1584c019, org.springframework.security.web.context.SecurityContextPersistenceFilter@7996d0d4, org.springframework.security.web.header.HeaderWriterFilter@368424db, org.springframework.web.filter.CorsFilter@3688baab, org.springframework.security.web.authentication.logout.LogoutFilter@e154848, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@36d697ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@300bb303, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f59da34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fe2dd02, org.springframework.security.web.session.SessionManagementFilter@455f4483, org.springframework.security.web.access.ExceptionTranslationFilter@63187d63, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@faec277]
+2022-04-10 10:37:54,057 [main] INFO  -[DirectJDKLog.java:173]- Starting ProtocolHandler ["http-nio-8082"]
+2022-04-10 10:37:54,083 [main] INFO  -[TomcatWebServer.java:220]- Tomcat started on port(s): 8082 (http) with context path ''
+2022-04-10 10:37:54,084 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-04-10 10:37:54,099 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-04-10 10:37:54,124 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-04-10 10:37:54,212 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-04-10 10:37:54,887 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-04-10 10:37:54,906 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 6.084 seconds (JVM running for 7.024)
+2022-04-10 10:37:55,604 [RMI TCP Connection(3)-192.168.196.22] INFO  -[DirectJDKLog.java:173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-10 10:37:55,604 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:525]- Initializing Servlet 'dispatcherServlet'
+2022-04-10 10:37:55,606 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:547]- Completed initialization in 2 ms
+2022-04-10 15:02:54,594 [http-nio-8082-exec-5] DEBUG -[SessionController.java:29]- session失效，请重新登录
+2022-04-10 15:03:15,278 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-10 15:03:15,327 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-04-10 15:03:15,437 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-04-10 15:03:15,438 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-04-10 15:03:15,441 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-10 15:03:15,444 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-04-10 15:03:15,446 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-04-10 15:03:15,522 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-04-10 15:03:15,523 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-04-10 15:03:15,524 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-04-10 15:03:15,525 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-04-10 15:03:16,111 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-10 15:03:16,113 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-04-10 15:03:16,190 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-04-10 15:03:16,191 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-04-10 15:03:16,192 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-10 15:03:16,194 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-04-10 15:03:16,195 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-04-10 15:03:16,275 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-04-10 15:03:16,276 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-04-10 15:03:16,277 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-04-10 15:03:16,279 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-04-10 15:03:17,107 [http-nio-8082-exec-6] DEBUG -[ArticleController.java:87]- 2022-04-10
+2022-04-10 15:03:17,122 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-04-10 15:03:17,124 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-04-04(String), 2022-04-10(String)
+2022-04-10 15:03:17,197 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-04-10 15:03:17,202 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, 李岳洪的周报, null, 2022-04-07 17:16:11, 1, null, <<BLOB>>, admin
+2022-04-10 15:03:17,205 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-10 15:03:22,433 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-04-10 15:03:22,435 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-04-10 15:03:22,517 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-04-10 15:03:22,518 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-04-10 15:03:22,521 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-04-10 15:03:22,524 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-10 15:03:22,527 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-10 15:03:22,527 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-10 15:03:22,528 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-10 15:03:22,529 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-04-10 15:03:22,531 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-04-10 15:03:22,531 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 8
+2022-04-10 18:00:37,310 [http-nio-8082-exec-6] DEBUG -[SessionController.java:29]- session失效，请重新登录
+2022-04-10 18:00:56,190 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-10 18:00:56,192 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-04-10 18:00:56,267 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-04-10 18:00:56,268 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-04-10 18:00:56,270 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-10 18:00:56,272 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-04-10 18:00:56,273 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-04-10 18:00:56,347 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-04-10 18:00:56,348 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-04-10 18:00:56,349 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-04-10 18:00:56,351 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-04-10 18:00:57,717 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-04-10 18:00:57,719 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-04-10 18:00:57,808 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-04-10 18:00:57,810 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-04-10 18:00:57,811 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-04-10 18:00:57,815 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-10 18:00:57,818 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-10 18:00:57,820 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-10 18:00:57,821 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-10 18:00:57,824 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-04-10 18:00:57,828 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-04-10 18:00:57,830 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 8
+2022-04-10 20:24:15,088 [lettuce-nioEventLoop-4-1] INFO  -[AbstractInternalLogger.java:217]- null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-04-10 20:24:15,088 [lettuce-nioEventLoop-4-3] INFO  -[AbstractInternalLogger.java:217]- null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-04-10 20:24:15,088 [lettuce-nioEventLoop-4-2] INFO  -[AbstractInternalLogger.java:217]- null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-04-10 20:24:15,176 [lettuce-eventExecutorLoop-1-5] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-10 20:24:15,176 [lettuce-eventExecutorLoop-1-4] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-10 20:24:15,176 [lettuce-eventExecutorLoop-1-3] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was /47.101.198.23:6379
+2022-04-10 20:24:25,295 [lettuce-nioEventLoop-4-5] WARN  -[AbstractInternalLogger.java:151]- Cannot reconnect to [47.101.198.23:6379]: connection timed out: /47.101.198.23:6379
+2022-04-10 20:24:25,295 [lettuce-nioEventLoop-4-4] WARN  -[AbstractInternalLogger.java:151]- Cannot reconnect to [47.101.198.23:6379]: connection timed out: /47.101.198.23:6379
+2022-04-10 20:24:25,295 [lettuce-nioEventLoop-4-6] WARN  -[AbstractInternalLogger.java:151]- Cannot reconnect to [47.101.198.23:6379]: connection timed out: /47.101.198.23:6379
+2022-04-10 20:24:25,326 [lettuce-eventExecutorLoop-1-7] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was 47.101.198.23:6379
+2022-04-10 20:24:25,326 [lettuce-eventExecutorLoop-1-1] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was 47.101.198.23:6379
+2022-04-10 20:24:25,326 [lettuce-eventExecutorLoop-1-6] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was 47.101.198.23:6379
+2022-04-10 20:24:35,333 [lettuce-nioEventLoop-4-1] WARN  -[AbstractInternalLogger.java:151]- Cannot reconnect to [47.101.198.23:6379]: connection timed out: /47.101.198.23:6379
+2022-04-10 20:24:35,349 [lettuce-nioEventLoop-4-7] WARN  -[AbstractInternalLogger.java:151]- Cannot reconnect to [47.101.198.23:6379]: connection timed out: /47.101.198.23:6379
+2022-04-10 20:24:35,349 [lettuce-nioEventLoop-4-8] WARN  -[AbstractInternalLogger.java:151]- Cannot reconnect to [47.101.198.23:6379]: connection timed out: /47.101.198.23:6379
+2022-04-10 20:24:35,428 [lettuce-eventExecutorLoop-1-2] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was 47.101.198.23:6379
+2022-04-10 20:24:35,428 [lettuce-eventExecutorLoop-1-3] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was 47.101.198.23:6379
+2022-04-10 20:24:35,428 [lettuce-eventExecutorLoop-1-8] INFO  -[AbstractInternalLogger.java:171]- Reconnecting, last destination was 47.101.198.23:6379
+2022-04-10 20:24:35,545 [lettuce-nioEventLoop-4-3] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379
+2022-04-10 20:24:35,546 [lettuce-nioEventLoop-4-2] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379
+2022-04-10 20:24:35,550 [lettuce-nioEventLoop-4-4] INFO  -[ReconnectionHandler.java:164]- Reconnected to 47.101.198.23:6379

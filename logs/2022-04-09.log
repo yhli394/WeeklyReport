@@ -1,0 +1,328 @@
+2022-04-09 21:38:11,328 [main] INFO  -[WebMvcConfig.java:37]- null
+2022-04-09 21:42:08,770 [main] INFO  -[AbstractTestContextBootstrapper.java:305]- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests], using SpringBootContextLoader
+2022-04-09 21:42:08,779 [main] INFO  -[AbstractContextLoader.java:264]- Could not detect default resource locations for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-04-09 21:42:08,781 [main] INFO  -[AnnotationConfigContextLoaderUtils.java:83]- Could not detect default configuration classes for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests]: WeeklyReportApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-04-09 21:42:09,060 [main] INFO  -[SpringBootTestContextBootstrapper.java:238]- Found @SpringBootConfiguration com.liyuehong.weeklyreport.WeeklyReportApplication for test class com.liyuehong.weeklyreport.WeeklyReportApplicationTests
+2022-04-09 21:42:09,206 [main] INFO  -[AbstractTestContextBootstrapper.java:245]- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-04-09 21:42:09,279 [main] INFO  -[AbstractTestContextBootstrapper.java:174]- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1b410b60, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2462cb01, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@19b843ba, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@64ec96c6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77659b30, org.springframework.test.context.support.DirtiesContextTestExecutionListener@456d6c1e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1e13529a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1ec9bd38, org.springframework.test.context.event.EventPublishingTestExecutionListener@452e19ca, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6b0d80ed, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6f8e8894, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3cfdd820, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@928763c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@e25951c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@15f47664]
+2022-04-09 21:42:09,694 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplicationTests using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 22732 (started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-04-09 21:42:09,694 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-04-09 21:42:09,696 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-04-09 21:42:11,648 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-09 21:42:11,651 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-09 21:42:11,721 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2022-04-09 21:42:12,554 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$d1756fd9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-09 21:42:13,374 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-04-09 21:42:13,901 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-04-09 21:42:15,916 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-09 21:42:16,118 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-04-09 21:42:16,362 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-04-09 21:42:16,363 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-04-09 21:42:16,363 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-04-09 21:42:16,363 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-04-09 21:42:16,364 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-04-09 21:42:16,364 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-04-09 21:42:16,364 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-04-09 21:42:16,744 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-09 21:42:16,935 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35ceec81, org.springframework.security.web.context.SecurityContextPersistenceFilter@32f308c6, org.springframework.security.web.header.HeaderWriterFilter@5d3b6585, org.springframework.web.filter.CorsFilter@d13379e, org.springframework.security.web.authentication.logout.LogoutFilter@6533629, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5bd3ca3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@698ac187, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6fd9dbe6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c8df667, org.springframework.security.web.session.SessionManagementFilter@2e93108a, org.springframework.security.web.access.ExceptionTranslationFilter@563843f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c64339f]
+2022-04-09 21:42:19,175 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-04-09 21:42:19,221 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-04-09 21:42:19,255 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-04-09 21:42:19,407 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-04-09 21:42:20,068 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-04-09 21:42:20,078 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplicationTests in 10.741 seconds (JVM running for 12.483)
+2022-04-09 21:42:20,649 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-04-09 21:42:53,073 [main] INFO  -[AbstractTestContextBootstrapper.java:305]- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests], using SpringBootContextLoader
+2022-04-09 21:42:53,085 [main] INFO  -[AbstractContextLoader.java:264]- Could not detect default resource locations for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-04-09 21:42:53,086 [main] INFO  -[AnnotationConfigContextLoaderUtils.java:83]- Could not detect default configuration classes for test class [com.liyuehong.weeklyreport.WeeklyReportApplicationTests]: WeeklyReportApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-04-09 21:42:53,235 [main] INFO  -[SpringBootTestContextBootstrapper.java:238]- Found @SpringBootConfiguration com.liyuehong.weeklyreport.WeeklyReportApplication for test class com.liyuehong.weeklyreport.WeeklyReportApplicationTests
+2022-04-09 21:42:53,369 [main] INFO  -[AbstractTestContextBootstrapper.java:245]- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-04-09 21:42:53,395 [main] INFO  -[AbstractTestContextBootstrapper.java:174]- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1b410b60, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2462cb01, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@19b843ba, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@64ec96c6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77659b30, org.springframework.test.context.support.DirtiesContextTestExecutionListener@456d6c1e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1e13529a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1ec9bd38, org.springframework.test.context.event.EventPublishingTestExecutionListener@452e19ca, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6b0d80ed, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6f8e8894, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3cfdd820, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@928763c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@e25951c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@15f47664]
+2022-04-09 21:42:53,920 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplicationTests using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 28112 (started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-04-09 21:42:53,921 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-04-09 21:42:53,924 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-04-09 21:42:55,189 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-09 21:42:55,194 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-09 21:42:55,224 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-04-09 21:42:55,772 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$d1756fd9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-09 21:42:56,513 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-04-09 21:42:56,770 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-04-09 21:42:58,253 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-09 21:42:58,432 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-04-09 21:42:58,631 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-04-09 21:42:58,632 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-04-09 21:42:58,632 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-04-09 21:42:58,633 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-04-09 21:42:58,633 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-04-09 21:42:58,633 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-04-09 21:42:58,634 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-04-09 21:42:59,063 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-09 21:42:59,199 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35ceec81, org.springframework.security.web.context.SecurityContextPersistenceFilter@32f308c6, org.springframework.security.web.header.HeaderWriterFilter@5d3b6585, org.springframework.web.filter.CorsFilter@d13379e, org.springframework.security.web.authentication.logout.LogoutFilter@6533629, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5bd3ca3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@698ac187, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6fd9dbe6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c8df667, org.springframework.security.web.session.SessionManagementFilter@2e93108a, org.springframework.security.web.access.ExceptionTranslationFilter@563843f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c64339f]
+2022-04-09 21:43:01,089 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-04-09 21:43:01,115 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-04-09 21:43:01,149 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-04-09 21:43:01,259 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-04-09 21:43:01,950 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-04-09 21:43:01,961 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplicationTests in 8.488 seconds (JVM running for 9.867)
+2022-04-09 21:43:02,453 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-04-09 21:44:55,379 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 28848 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-04-09 21:44:55,383 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-04-09 21:44:55,383 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-04-09 21:44:56,546 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-09 21:44:56,549 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-09 21:44:56,573 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-04-09 21:44:56,857 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$31c1cfe8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-09 21:44:57,279 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-04-09 21:44:57,292 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-04-09 21:44:57,293 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-04-09 21:44:57,293 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-04-09 21:44:57,369 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-04-09 21:44:57,369 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 1918 ms
+2022-04-09 21:44:57,969 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-04-09 21:44:58,086 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-04-09 21:44:58,613 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-09 21:44:58,656 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-04-09 21:44:58,729 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-04-09 21:44:58,730 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-04-09 21:44:58,730 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-04-09 21:44:58,730 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-04-09 21:44:58,730 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-04-09 21:44:58,730 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-04-09 21:44:58,731 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-04-09 21:44:58,782 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-09 21:44:58,830 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6003220a, org.springframework.security.web.context.SecurityContextPersistenceFilter@455f4483, org.springframework.security.web.header.HeaderWriterFilter@1a536164, org.springframework.web.filter.CorsFilter@16b64a03, org.springframework.security.web.authentication.logout.LogoutFilter@79f1e22e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@699e0bf0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7996d0d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15d65fcf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1584c019, org.springframework.security.web.session.SessionManagementFilter@368424db, org.springframework.security.web.access.ExceptionTranslationFilter@3df77dfa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f0c45f4]
+2022-04-09 21:44:59,939 [main] INFO  -[DirectJDKLog.java:173]- Starting ProtocolHandler ["http-nio-8082"]
+2022-04-09 21:44:59,952 [main] INFO  -[TomcatWebServer.java:220]- Tomcat started on port(s): 8082 (http) with context path ''
+2022-04-09 21:44:59,953 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-04-09 21:44:59,968 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-04-09 21:45:00,018 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-04-09 21:45:00,110 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-04-09 21:45:00,812 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-04-09 21:45:00,826 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 5.98 seconds (JVM running for 7.013)
+2022-04-09 21:45:01,213 [RMI TCP Connection(5)-192.168.196.22] INFO  -[DirectJDKLog.java:173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-09 21:45:01,213 [RMI TCP Connection(5)-192.168.196.22] INFO  -[FrameworkServlet.java:525]- Initializing Servlet 'dispatcherServlet'
+2022-04-09 21:45:01,215 [RMI TCP Connection(5)-192.168.196.22] INFO  -[FrameworkServlet.java:547]- Completed initialization in 2 ms
+2022-04-09 21:49:28,146 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-04-09 21:49:31,251 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 536 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-04-09 21:49:31,254 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-04-09 21:49:31,254 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-04-09 21:49:32,328 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-09 21:49:32,333 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-09 21:49:32,369 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-04-09 21:49:32,656 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$652a480e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-09 21:49:32,965 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-04-09 21:49:32,972 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-04-09 21:49:32,972 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-04-09 21:49:32,973 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-04-09 21:49:33,038 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-04-09 21:49:33,038 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 1730 ms
+2022-04-09 21:49:33,615 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-04-09 21:49:33,760 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-04-09 21:49:34,344 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-09 21:49:34,386 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-04-09 21:49:34,459 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-04-09 21:49:34,460 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-04-09 21:49:34,460 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-04-09 21:49:34,460 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-04-09 21:49:34,460 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-04-09 21:49:34,460 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-04-09 21:49:34,460 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-04-09 21:49:34,498 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-09 21:49:34,537 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1584c019, org.springframework.security.web.context.SecurityContextPersistenceFilter@7996d0d4, org.springframework.security.web.header.HeaderWriterFilter@368424db, org.springframework.web.filter.CorsFilter@3688baab, org.springframework.security.web.authentication.logout.LogoutFilter@e154848, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@36d697ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@300bb303, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f59da34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fe2dd02, org.springframework.security.web.session.SessionManagementFilter@455f4483, org.springframework.security.web.access.ExceptionTranslationFilter@63187d63, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@faec277]
+2022-04-09 21:49:35,811 [main] INFO  -[DirectJDKLog.java:173]- Starting ProtocolHandler ["http-nio-8082"]
+2022-04-09 21:49:35,821 [main] INFO  -[TomcatWebServer.java:220]- Tomcat started on port(s): 8082 (http) with context path ''
+2022-04-09 21:49:35,823 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-04-09 21:49:35,849 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-04-09 21:49:35,880 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-04-09 21:49:35,992 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-04-09 21:49:36,689 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-04-09 21:49:36,711 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 5.804 seconds (JVM running for 6.573)
+2022-04-09 21:49:37,030 [RMI TCP Connection(1)-192.168.196.22] INFO  -[DirectJDKLog.java:173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-09 21:49:37,030 [RMI TCP Connection(1)-192.168.196.22] INFO  -[FrameworkServlet.java:525]- Initializing Servlet 'dispatcherServlet'
+2022-04-09 21:49:37,032 [RMI TCP Connection(1)-192.168.196.22] INFO  -[FrameworkServlet.java:547]- Completed initialization in 1 ms
+2022-04-09 21:49:45,187 [http-nio-8082-exec-6] DEBUG -[SessionController.java:29]- session失效，请重新登录
+2022-04-09 21:49:45,638 [http-nio-8082-exec-8] DEBUG -[SessionController.java:29]- session失效，请重新登录
+2022-04-09 21:50:23,408 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-09 21:50:23,439 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-04-09 21:50:23,550 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-04-09 21:50:23,551 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-04-09 21:50:23,556 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-09 21:50:23,561 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-04-09 21:50:23,563 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-04-09 21:50:23,612 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-04-09 21:50:23,613 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-04-09 21:50:23,614 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-04-09 21:50:23,615 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-04-09 21:50:24,574 [http-nio-8082-exec-2] DEBUG -[ArticleController.java:87]- 2022-04-09
+2022-04-09 21:50:24,582 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-04-09 21:50:24,583 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-04-04(String), 2022-04-10(String)
+2022-04-09 21:50:24,638 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-04-09 21:50:24,641 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, 李岳洪的周报, null, 2022-04-07 17:16:11, 1, null, <<BLOB>>, admin
+2022-04-09 21:50:24,642 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-09 21:50:25,051 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-04-09 21:50:25,052 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-04-09 21:50:25,167 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-04-09 21:50:25,168 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-04-09 21:50:25,172 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-04-09 21:50:25,174 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:50:25,177 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:50:25,179 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:50:25,182 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:50:25,184 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-04-09 21:50:25,187 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-04-09 21:50:25,189 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 8
+2022-04-09 21:50:28,993 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-04-09 21:50:28,994 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-04-09 21:50:29,046 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-04-09 21:50:29,048 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, string5888, null, 2022-03-15 16:10:49, 1, null, <<BLOB>>
+2022-04-09 21:50:29,051 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, 111, null, 2022-03-06 14:43:53, 1, null, <<BLOB>>
+2022-04-09 21:50:29,054 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 7, 222, null, 2022-03-08 19:20:37, 1, null, <<BLOB>>
+2022-04-09 21:50:29,056 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 8, 45, null, 2022-03-08 19:21:17, 1, null, <<BLOB>>
+2022-04-09 21:50:29,058 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, 99, null, 2022-03-08 19:22:15, 1, null, <<BLOB>>
+2022-04-09 21:50:29,060 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, 10, null, 2022-03-09 22:47:51, 1, null, <<BLOB>>
+2022-04-09 21:50:29,062 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, 李岳洪的周报, null, 2022-03-09 22:53:11, 1, null, <<BLOB>>
+2022-04-09 21:50:29,064 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, 李岳洪的周报, null, 2022-03-10 16:08:52, 1, null, <<BLOB>>
+2022-04-09 21:50:29,068 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, jgjgyjh, null, 2022-03-10 16:33:20, 1, null, <<BLOB>>
+2022-04-09 21:50:29,070 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, 李岳洪的周报, null, 2022-04-07 17:16:11, 1, null, <<BLOB>>
+2022-04-09 21:50:29,071 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-04-09 21:50:34,089 [http-nio-8082-exec-6] DEBUG -[ArticleController.java:87]- 2022-04-09
+2022-04-09 21:50:34,090 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-04-09 21:50:34,091 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-04-04(String), 2022-04-10(String)
+2022-04-09 21:50:34,182 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-04-09 21:50:34,183 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, 李岳洪的周报, null, 2022-04-07 17:16:11, 1, null, <<BLOB>>, admin
+2022-04-09 21:50:34,184 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-09 21:51:48,424 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-04-09 21:51:59,138 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 33348 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-04-09 21:51:59,143 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-04-09 21:51:59,143 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-04-09 21:52:00,299 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-09 21:52:00,301 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-09 21:52:00,323 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-04-09 21:52:00,598 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$652a480e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-09 21:52:00,888 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-04-09 21:52:00,895 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-04-09 21:52:00,896 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-04-09 21:52:00,896 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-04-09 21:52:00,968 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-04-09 21:52:00,968 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 1773 ms
+2022-04-09 21:52:01,603 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-04-09 21:52:01,730 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-04-09 21:52:02,254 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-09 21:52:02,297 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-04-09 21:52:02,392 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-04-09 21:52:02,393 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-04-09 21:52:02,393 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-04-09 21:52:02,393 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-04-09 21:52:02,394 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-04-09 21:52:02,394 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-04-09 21:52:02,394 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-04-09 21:52:02,449 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-09 21:52:02,493 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1584c019, org.springframework.security.web.context.SecurityContextPersistenceFilter@7996d0d4, org.springframework.security.web.header.HeaderWriterFilter@368424db, org.springframework.web.filter.CorsFilter@3688baab, org.springframework.security.web.authentication.logout.LogoutFilter@e154848, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@36d697ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@300bb303, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f59da34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fe2dd02, org.springframework.security.web.session.SessionManagementFilter@455f4483, org.springframework.security.web.access.ExceptionTranslationFilter@63187d63, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@faec277]
+2022-04-09 21:52:03,819 [main] INFO  -[DirectJDKLog.java:173]- Starting ProtocolHandler ["http-nio-8082"]
+2022-04-09 21:52:03,829 [main] INFO  -[TomcatWebServer.java:220]- Tomcat started on port(s): 8082 (http) with context path ''
+2022-04-09 21:52:03,830 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-04-09 21:52:03,850 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-04-09 21:52:03,903 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-04-09 21:52:04,001 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-04-09 21:52:04,688 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-04-09 21:52:04,695 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 5.963 seconds (JVM running for 6.798)
+2022-04-09 21:52:05,320 [RMI TCP Connection(3)-192.168.196.22] INFO  -[DirectJDKLog.java:173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-09 21:52:05,321 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:525]- Initializing Servlet 'dispatcherServlet'
+2022-04-09 21:52:05,323 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:547]- Completed initialization in 2 ms
+2022-04-09 21:52:16,741 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-09 21:52:16,763 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-04-09 21:52:16,849 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-04-09 21:52:16,850 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-04-09 21:52:16,854 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-09 21:52:16,857 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-04-09 21:52:16,858 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-04-09 21:52:16,910 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-04-09 21:52:16,910 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-04-09 21:52:16,911 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-04-09 21:52:16,911 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-04-09 21:52:17,878 [http-nio-8082-exec-2] DEBUG -[ArticleController.java:87]- 2022-04-09
+2022-04-09 21:52:17,885 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-04-09 21:52:17,886 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-04-04(String), 2022-04-10(String)
+2022-04-09 21:52:17,941 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-04-09 21:52:17,945 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, 李岳洪的周报, null, 2022-04-07 17:16:11, 1, null, <<BLOB>>, admin
+2022-04-09 21:52:17,948 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-09 21:52:18,315 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-04-09 21:52:18,316 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-04-09 21:52:18,370 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-04-09 21:52:18,371 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-04-09 21:52:18,373 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-04-09 21:52:18,374 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:52:18,377 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:52:18,379 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:52:18,381 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:52:18,382 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-04-09 21:52:18,386 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-04-09 21:52:18,388 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 8
+2022-04-09 21:54:17,174 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
+2022-04-09 21:54:22,263 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 31912 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-04-09 21:54:22,266 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-04-09 21:54:22,266 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-04-09 21:54:23,411 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-09 21:54:23,412 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-09 21:54:23,439 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-04-09 21:54:23,734 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$652a480e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-09 21:54:24,070 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-04-09 21:54:24,077 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-04-09 21:54:24,078 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-04-09 21:54:24,078 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-04-09 21:54:24,148 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-04-09 21:54:24,148 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 1831 ms
+2022-04-09 21:54:24,705 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-04-09 21:54:24,838 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-04-09 21:54:25,474 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-09 21:54:25,543 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-04-09 21:54:25,632 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-04-09 21:54:25,632 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-04-09 21:54:25,633 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-04-09 21:54:25,633 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-04-09 21:54:25,633 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-04-09 21:54:25,633 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-04-09 21:54:25,633 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-04-09 21:54:25,712 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-09 21:54:25,767 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1584c019, org.springframework.security.web.context.SecurityContextPersistenceFilter@7996d0d4, org.springframework.security.web.header.HeaderWriterFilter@368424db, org.springframework.web.filter.CorsFilter@3688baab, org.springframework.security.web.authentication.logout.LogoutFilter@e154848, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@36d697ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@300bb303, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f59da34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fe2dd02, org.springframework.security.web.session.SessionManagementFilter@455f4483, org.springframework.security.web.access.ExceptionTranslationFilter@63187d63, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@faec277]
+2022-04-09 21:54:26,932 [main] INFO  -[DirectJDKLog.java:173]- Starting ProtocolHandler ["http-nio-8082"]
+2022-04-09 21:54:26,958 [main] INFO  -[TomcatWebServer.java:220]- Tomcat started on port(s): 8082 (http) with context path ''
+2022-04-09 21:54:26,959 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-04-09 21:54:26,974 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-04-09 21:54:27,001 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-04-09 21:54:27,095 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-04-09 21:54:27,794 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-04-09 21:54:27,807 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 5.928 seconds (JVM running for 6.879)
+2022-04-09 21:54:28,454 [RMI TCP Connection(3)-192.168.196.22] INFO  -[DirectJDKLog.java:173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-09 21:54:28,455 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:525]- Initializing Servlet 'dispatcherServlet'
+2022-04-09 21:54:28,457 [RMI TCP Connection(3)-192.168.196.22] INFO  -[FrameworkServlet.java:547]- Completed initialization in 2 ms
+2022-04-09 21:54:34,066 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-04-09 21:54:34,087 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-04-09 21:54:34,172 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-04-09 21:54:34,173 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-04-09 21:54:34,178 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-09 21:54:34,183 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-04-09 21:54:34,185 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-04-09 21:54:34,236 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-04-09 21:54:34,237 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-04-09 21:54:34,238 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-04-09 21:54:34,238 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-04-09 21:54:35,246 [http-nio-8082-exec-2] DEBUG -[ArticleController.java:87]- 2022-04-09
+2022-04-09 21:54:35,251 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-04-09 21:54:35,252 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-04-04(String), 2022-04-10(String)
+2022-04-09 21:54:35,303 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-04-09 21:54:35,305 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, 李岳洪的周报, null, 2022-04-07 17:16:11, 1, null, <<BLOB>>, admin
+2022-04-09 21:54:35,307 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-04-09 21:54:35,666 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-04-09 21:54:35,667 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-04-09 21:54:35,731 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-04-09 21:54:35,732 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-04-09 21:54:35,736 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-04-09 21:54:35,737 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:54:35,741 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:54:35,743 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:54:35,745 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-04-09 21:54:35,747 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-04-09 21:54:35,749 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-04-09 21:54:35,752 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 8
+2022-04-09 22:01:56,658 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed

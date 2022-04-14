@@ -1,8 +1,15 @@
 package com.liyuehong.weeklyreport.configuration;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import java.util.Arrays;
+
 
 /**
  * @author yhli3
@@ -10,12 +17,40 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Date 2021/12/25 20:47
  */
 @Configuration
+@Component
+@ConfigurationProperties(prefix = "cross")
 public class WebMvcConfig implements WebMvcConfigurer {
+
+    private String[] crossLists;
+
+    public String[] getCrossLists() {
+        return crossLists;
+    }
+
+    public void setCrossLists(String[] crossLists) {
+        this.crossLists = crossLists;
+    }
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("*")
+                .allowedOrigins(crossLists)
                 .allowedMethods("*")
+                .allowCredentials(true)
                 .allowedHeaders("*");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
