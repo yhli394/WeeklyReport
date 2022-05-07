@@ -35,7 +35,7 @@ public class CustomInterfaceInSwagger implements ApiListingScannerPlugin {
                 .summary("用户名密码登录")
                 .notes("username/password登录")
                 // 接收参数格式
-                .consumes(Sets.newHashSet(MediaType.APPLICATION_FORM_URLENCODED_VALUE))
+                .consumes(Sets.newHashSet(MediaType.APPLICATION_JSON_VALUE))
                 // 返回参数格式
                 .produces(Sets.newHashSet(MediaType.APPLICATION_JSON_VALUE))
                 .tags(Sets.newHashSet("Login"))

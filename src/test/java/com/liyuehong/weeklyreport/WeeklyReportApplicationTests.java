@@ -1,10 +1,12 @@
 package com.liyuehong.weeklyreport;
 
+import com.liyuehong.weeklyreport.configuration.WebMvcConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import javax.annotation.Resource;
 import java.sql.Array;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -18,6 +20,16 @@ import static java.lang.System.currentTimeMillis;
 
 @SpringBootTest
 class WeeklyReportApplicationTests {
+
+    @Resource
+    private WebMvcConfig webMvcConfig;
+
+    @Test
+    public void test(){
+        System.out.println(Arrays.toString(webMvcConfig.getCrossLists()));
+    }
+
+
 
     @Test void contextLoads() {
         Map<Integer, List<Integer>> map = new HashMap<>();
@@ -47,7 +59,20 @@ class WeeklyReportApplicationTests {
     void password1(){
         ArrayList<Object> objects = new ArrayList<>();
         LinkedList<Object> objects1 = new LinkedList<>();
-        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+        HashMap<Object, Object> map = new HashMap<>();
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,7 +22,7 @@
             <!--保留最近180天的日志-->
             <maxHistory>180</maxHistory>
             <!--用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志-->
-            <totalSizeCap>500MB</totalSizeCap>
+            <totalSizeCap>200MB</totalSizeCap>
         </rollingPolicy>
         <encoder>
             <!--日志输出格式-->
