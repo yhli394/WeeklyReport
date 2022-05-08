@@ -17,6 +17,7 @@ target/
 Dockerfile
 *.yml
 *.xml
+*.log
 ### IntelliJ IDEA ###
 .idea
 *.iws

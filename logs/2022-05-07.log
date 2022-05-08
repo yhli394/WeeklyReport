@@ -1949,4 +1949,511 @@ date: 2022-5-7
 2022-05-07 16:53:38,714 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
 2022-05-07 16:53:38,714 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 18, hu, null, 2022-05-07 16:34:58, 16, null, <<BLOB>>, hu
 2022-05-07 16:53:38,715 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 4
+2022-05-07 16:15:19,487 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_291 on DESKTOP-AF5B2DF with PID 40188 (E:\MyGitHubRepository\WeeklyReport\target\classes started by yhli3 in E:\MyGitHubRepository\WeeklyReport)
+2022-05-07 16:15:19,489 [main] DEBUG -[StartupInfoLogger.java:56]- Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-05-07 16:15:19,489 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
+2022-05-07 16:15:20,737 [main] INFO  -[RepositoryConfigurationDelegate.java:262]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-07 16:15:20,738 [main] INFO  -[RepositoryConfigurationDelegate.java:132]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-07 16:15:20,761 [main] INFO  -[RepositoryConfigurationDelegate.java:201]- Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-05-07 16:15:21,071 [main] INFO  -[PostProcessorRegistrationDelegate.java:376]- Bean 'redisConfig' of type [com.liyuehong.weeklyreport.configuration.RedisConfig$$EnhancerBySpringCGLIB$$1bf785cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-07 16:15:21,372 [main] INFO  -[TomcatWebServer.java:108]- Tomcat initialized with port(s): 8082 (http)
+2022-05-07 16:15:21,379 [main] INFO  -[DirectJDKLog.java:173]- Initializing ProtocolHandler ["http-nio-8082"]
+2022-05-07 16:15:21,380 [main] INFO  -[DirectJDKLog.java:173]- Starting service [Tomcat]
+2022-05-07 16:15:21,380 [main] INFO  -[DirectJDKLog.java:173]- Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-05-07 16:15:21,962 [main] INFO  -[DirectJDKLog.java:173]- Initializing Spring embedded WebApplicationContext
+2022-05-07 16:15:21,962 [main] INFO  -[ServletWebServerApplicationContext.java:290]- Root WebApplicationContext: initialization completed in 2432 ms
+2022-05-07 16:15:22,525 [main] INFO  -[DruidDataSourceAutoConfigure.java:56]- Init DruidDataSource
+2022-05-07 16:15:22,654 [main] INFO  -[DruidDataSource.java:930]- {dataSource-1} inited
+2022-05-07 16:15:23,252 [main] INFO  -[EndpointLinksResolver.java:58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-05-07 16:15:23,300 [main] INFO  -[RedisConfig.java:113]- 初始化 -> [Redis CacheErrorHandler]
+2022-05-07 16:15:23,379 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/js/**'] with []
+2022-05-07 16:15:23,380 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/css/**'] with []
+2022-05-07 16:15:23,380 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/images/**'] with []
+2022-05-07 16:15:23,380 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-05-07 16:15:23,380 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/webjars/**'] with []
+2022-05-07 16:15:23,380 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/v2/**'] with []
+2022-05-07 16:15:23,380 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-05-07 16:15:23,430 [main] INFO  -[PropertySourcedRequestMappingHandlerMapping.java:69]- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-07 16:15:23,475 [main] INFO  -[DefaultSecurityFilterChain.java:51]- Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63553e9f, org.springframework.security.web.context.SecurityContextPersistenceFilter@5beb6be2, org.springframework.security.web.header.HeaderWriterFilter@22ca1242, org.springframework.web.filter.CorsFilter@218df7d6, org.springframework.security.web.authentication.logout.LogoutFilter@406ad6d5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@283d3628, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1182d1df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@350bbd5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@295b07e0, org.springframework.security.web.session.SessionManagementFilter@78288f83, org.springframework.security.web.access.ExceptionTranslationFilter@6eeb29c0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9205c0a]
+2022-05-07 16:15:24,919 [main] INFO  -[DirectJDKLog.java:173]- Starting ProtocolHandler ["http-nio-8082"]
+2022-05-07 16:15:24,928 [main] INFO  -[TomcatWebServer.java:220]- Tomcat started on port(s): 8082 (http) with context path ''
+2022-05-07 16:15:24,929 [main] INFO  -[DocumentationPluginsBootstrapper.java:160]- Context refreshed
+2022-05-07 16:15:24,944 [main] INFO  -[DocumentationPluginsBootstrapper.java:163]- Found 1 custom documentation plugin(s)
+2022-05-07 16:15:25,150 [main] INFO  -[ApiListingReferenceScanner.java:41]- Scanning for api listing references
+2022-05-07 16:15:25,239 [main] WARN  -[ParameterDataTypeReader.java:92]- Trying to infer dataType int[]
+2022-05-07 16:15:25,954 [main] INFO  -[ScheduledAnnotationBeanPostProcessor.java:309]- No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-05-07 16:15:25,974 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 6.803 seconds (JVM running for 10.021)
+2022-05-07 16:15:26,718 [RMI TCP Connection(1)-192.168.196.22] INFO  -[DirectJDKLog.java:173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-07 16:15:26,718 [RMI TCP Connection(1)-192.168.196.22] INFO  -[FrameworkServlet.java:525]- Initializing Servlet 'dispatcherServlet'
+2022-05-07 16:15:26,722 [RMI TCP Connection(1)-192.168.196.22] INFO  -[FrameworkServlet.java:547]- Completed initialization in 3 ms
+2022-05-07 16:16:33,767 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:16:33,790 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-05-07 16:16:33,889 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-05-07 16:16:33,891 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, string5888, null, 2022-03-15 16:10:49, 1, null, <<BLOB>>
+2022-05-07 16:16:33,893 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, 111, null, 2022-03-06 14:43:53, 1, null, <<BLOB>>
+2022-05-07 16:16:33,894 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 7, 222, null, 2022-03-08 19:20:37, 1, null, <<BLOB>>
+2022-05-07 16:16:33,895 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 8, 45, null, 2022-03-08 19:21:17, 1, null, <<BLOB>>
+2022-05-07 16:16:33,895 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, 99, null, 2022-03-08 19:22:15, 1, null, <<BLOB>>
+2022-05-07 16:16:33,896 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, 10, null, 2022-03-09 22:47:51, 1, null, <<BLOB>>
+2022-05-07 16:16:33,897 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, 李岳洪的周报, null, 2022-03-09 22:53:11, 1, null, <<BLOB>>
+2022-05-07 16:16:33,898 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, 李岳洪的周报, null, 2022-03-10 16:08:52, 1, null, <<BLOB>>
+2022-05-07 16:16:33,899 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, jgjgyjh, null, 2022-03-10 16:33:20, 1, null, <<BLOB>>
+2022-05-07 16:16:33,900 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, 李岳洪的周报, null, 2022-04-07 17:16:11, 1, null, <<BLOB>>
+2022-05-07 16:16:33,901 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小王的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>
+2022-05-07 16:16:33,902 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, 小李的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>
+2022-05-07 16:16:33,903 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>
+2022-05-07 16:16:33,903 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 13
+2022-05-07 16:16:34,564 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:16:34,566 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-05-07 16:16:34,644 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-05-07 16:16:34,645 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, string5888, null, 2022-03-15 16:10:49, 1, null, <<BLOB>>
+2022-05-07 16:16:34,647 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, 111, null, 2022-03-06 14:43:53, 1, null, <<BLOB>>
+2022-05-07 16:16:34,648 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 7, 222, null, 2022-03-08 19:20:37, 1, null, <<BLOB>>
+2022-05-07 16:16:34,651 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 8, 45, null, 2022-03-08 19:21:17, 1, null, <<BLOB>>
+2022-05-07 16:16:34,653 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, 99, null, 2022-03-08 19:22:15, 1, null, <<BLOB>>
+2022-05-07 16:16:34,654 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, 10, null, 2022-03-09 22:47:51, 1, null, <<BLOB>>
+2022-05-07 16:16:34,657 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, 李岳洪的周报, null, 2022-03-09 22:53:11, 1, null, <<BLOB>>
+2022-05-07 16:16:34,659 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, 李岳洪的周报, null, 2022-03-10 16:08:52, 1, null, <<BLOB>>
+2022-05-07 16:16:34,661 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, jgjgyjh, null, 2022-03-10 16:33:20, 1, null, <<BLOB>>
+2022-05-07 16:16:34,663 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, 李岳洪的周报, null, 2022-04-07 17:16:11, 1, null, <<BLOB>>
+2022-05-07 16:16:34,665 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小王的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>
+2022-05-07 16:16:34,666 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, 小李的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>
+2022-05-07 16:16:34,668 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>
+2022-05-07 16:16:34,669 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 13
+2022-05-07 16:17:57,736 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:17:57,736 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:17:57,812 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:17:57,813 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:17:57,815 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:17:57,816 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:17:57,817 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:17:57,818 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:17:57,819 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:17:57,819 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:17:57,820 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:17:57,821 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:17:57,822 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 9
+2022-05-07 16:28:40,305 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:28:40,307 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-05-07 16:28:40,381 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-05-07 16:28:40,381 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-05-07 16:28:40,383 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:28:40,385 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-05-07 16:28:40,386 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-05-07 16:28:40,459 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-05-07 16:28:40,460 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-05-07 16:28:40,460 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-05-07 16:28:40,461 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-05-07 16:28:41,866 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:28:41,868 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:28:41,874 [http-nio-8082-exec-10] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:28:41,951 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:28:41,952 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:28:41,953 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:28:41,954 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:28:41,956 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:28:41,957 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:28:41,960 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:28:41,961 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:28:41,962 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:28:41,965 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:28:41,966 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 9
+2022-05-07 16:28:41,968 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:28:41,969 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:28:42,048 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:28:42,050 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小王的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:28:42,051 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, 小李的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:28:42,053 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:28:42,054 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 3
+2022-05-07 16:28:58,073 [http-nio-8082-exec-1] INFO  -[ArticleController.java:117]- id:15
+2022-05-07 16:28:58,164 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where id=?
+2022-05-07 16:28:58,165 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 15(Integer)
+2022-05-07 16:28:58,258 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-05-07 16:28:58,259 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小王的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>
+2022-05-07 16:28:58,259 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:29:17,772 [http-nio-8082-exec-3] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:29:17,772 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:29:17,773 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:29:17,842 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:29:17,843 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小王的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:29:17,844 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, 小李的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:29:17,845 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:29:17,845 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 3
+2022-05-07 16:29:27,022 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:29:27,024 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-05-07 16:29:27,099 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-05-07 16:29:27,101 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, string5888, null, 2022-03-15 16:10:49, 1, null, <<BLOB>>
+2022-05-07 16:29:27,102 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, 111, null, 2022-03-06 14:43:53, 1, null, <<BLOB>>
+2022-05-07 16:29:27,104 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 7, 222, null, 2022-03-08 19:20:37, 1, null, <<BLOB>>
+2022-05-07 16:29:27,106 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 8, 45, null, 2022-03-08 19:21:17, 1, null, <<BLOB>>
+2022-05-07 16:29:27,107 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, 99, null, 2022-03-08 19:22:15, 1, null, <<BLOB>>
+2022-05-07 16:29:27,109 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, 10, null, 2022-03-09 22:47:51, 1, null, <<BLOB>>
+2022-05-07 16:29:27,110 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, 李岳洪的周报, null, 2022-03-09 22:53:11, 1, null, <<BLOB>>
+2022-05-07 16:29:27,112 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, 李岳洪的周报, null, 2022-03-10 16:08:52, 1, null, <<BLOB>>
+2022-05-07 16:29:27,114 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, jgjgyjh, null, 2022-03-10 16:33:20, 1, null, <<BLOB>>
+2022-05-07 16:29:27,115 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, 李岳洪的周报, null, 2022-04-07 17:16:11, 1, null, <<BLOB>>
+2022-05-07 16:29:27,117 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小王的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>
+2022-05-07 16:29:27,118 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, 小李的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>
+2022-05-07 16:29:27,120 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>
+2022-05-07 16:29:27,121 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 13
+2022-05-07 16:29:33,865 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:29:33,867 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 9(Integer)
+2022-05-07 16:29:33,928 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:29:37,453 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:29:37,455 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 13(Integer)
+2022-05-07 16:29:37,528 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-05-07 16:29:37,529 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 5, 11, null, 2022-03-06 17:20:06, 13, null, <<BLOB>>
+2022-05-07 16:29:37,530 [http-nio-8082-exec-10] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 6, 11, null, 2022-03-06 17:20:25, 13, null, <<BLOB>>
+2022-05-07 16:29:37,531 [http-nio-8082-exec-10] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-05-07 16:29:42,445 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:29:42,446 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 10(Integer)
+2022-05-07 16:29:42,523 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:29:47,772 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:29:47,773 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 14(Integer)
+2022-05-07 16:29:47,851 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:29:55,538 [http-nio-8082-exec-7] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:29:55,538 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:29:55,539 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:29:55,608 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:29:55,610 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小王的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:29:55,611 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, 小李的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:29:55,612 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:29:55,613 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 3
+2022-05-07 16:30:01,339 [http-nio-8082-exec-8] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:30:01,341 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:30:01,342 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:30:01,411 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:30:01,412 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:30:01,412 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:30:01,412 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:30:01,413 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:30:01,414 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:30:01,415 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:30:01,417 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:30:01,419 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:30:01,420 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:30:01,422 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:30:01,423 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:30:01,424 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 9
+2022-05-07 16:30:01,488 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:30:01,489 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小王的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:30:01,490 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, 小李的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:30:01,491 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:30:01,493 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 3
+2022-05-07 16:30:37,716 [http-nio-8082-exec-5] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:30:37,719 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:30:37,720 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:30:37,781 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:30:37,782 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小王的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:30:37,783 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, 小李的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:30:37,785 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:30:37,786 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 3
+2022-05-07 16:32:01,831 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:32:01,833 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: string(String)
+2022-05-07 16:32:01,919 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-05-07 16:32:01,920 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, $2a$10$LIChXCPQB.1kmch7hXyamOmBro6LcK3oJN3usqkh4WvL2mhpp1q8K, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png
+2022-05-07 16:32:01,922 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:32:01,923 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-05-07 16:32:01,924 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 9(Integer)
+2022-05-07 16:32:02,004 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-05-07 16:32:02,005 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-05-07 16:32:02,005 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:32:40,972 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:32:40,974 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 111(String)
+2022-05-07 16:32:41,044 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:34:21,594 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:34:21,595 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: hu(String)
+2022-05-07 16:34:21,685 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:34:21,791 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: insert into user (id, username, password, enabled, email, regTime,avatar_name ) values (?, ?, ?, ?, ?, ?,? )
+2022-05-07 16:34:21,797 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: null, hu(String), $2a$10$wfAcPkCwtsQU97YY80/Hu.dWwLzM/PXPsUPISB74fWCPKMngOb5dO(String), true(Boolean), 1449582589@qq.com(String), 2022-05-07 16:34:21.686(Timestamp), 2022-03-06ca922e80a760458a9ee35552581c45c9.png(String)
+2022-05-07 16:34:21,937 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- <==    Updates: 1
+2022-05-07 16:34:21,943 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: insert into user_role (id,user_id,role_id) values (null,?,?)
+2022-05-07 16:34:21,945 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 16(Integer), 2(Integer)
+2022-05-07 16:34:22,062 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- <==    Updates: 1
+2022-05-07 16:34:29,782 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:34:29,783 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: hu(String)
+2022-05-07 16:34:29,852 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-05-07 16:34:29,853 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, $2a$10$wfAcPkCwtsQU97YY80/Hu.dWwLzM/PXPsUPISB74fWCPKMngOb5dO, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png
+2022-05-07 16:34:29,854 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:34:29,855 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-05-07 16:34:29,856 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 16(Integer)
+2022-05-07 16:34:29,932 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-05-07 16:34:29,934 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-05-07 16:34:29,935 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:34:34,173 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:34:34,174 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: hu(String)
+2022-05-07 16:34:34,249 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-05-07 16:34:34,250 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, $2a$10$wfAcPkCwtsQU97YY80/Hu.dWwLzM/PXPsUPISB74fWCPKMngOb5dO, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png
+2022-05-07 16:34:34,251 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:34:34,253 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-05-07 16:34:34,256 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 16(Integer)
+2022-05-07 16:34:34,339 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-05-07 16:34:34,340 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-05-07 16:34:34,341 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:34:35,991 [http-nio-8082-exec-6] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:34:35,992 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:34:35,993 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:34:36,068 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:34:36,069 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, qqq的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:34:36,071 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, mmm的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:34:36,072 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:34:36,074 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 3
+2022-05-07 16:34:58,315 [http-nio-8082-exec-3] INFO  -[ArticleController.java:76]- Article{id=null, title='hu', editDate=null, publishDate=null, uid=16, state=null, content='d', author=null}
+2022-05-07 16:34:58,346 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: insert into article ( title, publishDate, uid, content ) values ( ?, ?, ?, ? )
+2022-05-07 16:34:58,347 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: hu(String), 2022-05-07 16:34:58.317(Timestamp), 16(Integer), d(String)
+2022-05-07 16:34:58,467 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==    Updates: 1
+2022-05-07 16:35:06,250 [http-nio-8082-exec-1] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:35:06,251 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:35:06,252 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:35:06,331 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:35:06,331 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, qqq的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:35:06,332 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, mmm的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:35:06,332 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:35:06,333 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 18, hu, null, 2022-05-07 16:34:58, 16, null, <<BLOB>>, hu
+2022-05-07 16:35:06,333 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 4
+2022-05-07 16:36:31,257 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:36:31,258 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:36:31,338 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:36:31,339 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:36:31,340 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:36:31,341 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:36:31,342 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:36:31,343 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:36:31,345 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:36:31,346 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:36:31,347 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:36:31,348 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:36:31,349 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:36:31,350 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-05-07 16:37:13,875 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:37:13,878 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 10(Integer)
+2022-05-07 16:37:13,943 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:37:17,988 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:37:17,989 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:37:18,056 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:37:18,057 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:37:18,059 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:37:18,060 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:18,061 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:18,062 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:18,063 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:18,065 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:37:18,066 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:37:18,067 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:18,069 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:18,070 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-05-07 16:37:21,178 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:37:21,180 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 9(Integer)
+2022-05-07 16:37:21,246 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:37:25,167 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:37:25,168 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:37:25,238 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:37:25,238 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:37:25,239 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:37:25,240 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:25,240 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:25,241 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:25,242 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:25,242 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:37:25,243 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:37:25,244 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:25,244 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:37:25,245 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-05-07 16:37:28,865 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:37:28,867 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 16(Integer)
+2022-05-07 16:37:28,935 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-05-07 16:37:28,936 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 18, hu, null, 2022-05-07 16:34:58, 16, null, <<BLOB>>
+2022-05-07 16:37:28,937 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:38:08,870 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:38:08,871 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:38:08,937 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:38:08,938 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:38:08,940 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:38:08,941 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:08,942 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:08,944 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:08,945 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:08,946 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:38:08,947 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:38:08,949 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:08,950 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:08,950 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-05-07 16:38:13,148 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:38:13,149 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 14(Integer)
+2022-05-07 16:38:13,230 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:38:16,530 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:38:16,531 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:38:16,619 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:38:16,619 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:38:16,620 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:38:16,621 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:16,622 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:16,623 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:16,624 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:16,625 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:38:16,626 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:38:16,628 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:16,629 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:16,629 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-05-07 16:38:19,767 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:38:19,769 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 15(Integer)
+2022-05-07 16:38:19,850 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:38:23,387 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:38:23,388 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:38:23,452 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:38:23,454 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:38:23,456 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:38:23,457 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:23,458 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:23,459 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:23,459 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:23,460 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:38:23,461 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:38:23,462 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:23,463 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:38:23,464 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-05-07 16:38:27,799 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:38:27,800 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 13(Integer)
+2022-05-07 16:38:27,878 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-05-07 16:38:27,879 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 5, 11, null, 2022-03-06 17:20:06, 13, null, <<BLOB>>
+2022-05-07 16:38:27,881 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 6, 11, null, 2022-03-06 17:20:25, 13, null, <<BLOB>>
+2022-05-07 16:38:27,881 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-05-07 16:40:14,066 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:40:14,068 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-05-07 16:40:14,149 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-05-07 16:40:14,149 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-05-07 16:40:14,150 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:40:14,151 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-05-07 16:40:14,152 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-05-07 16:40:14,220 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-05-07 16:40:14,220 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-05-07 16:40:14,221 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-05-07 16:40:14,221 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-05-07 16:40:15,071 [http-nio-8082-exec-9] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:40:15,072 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:40:15,072 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:40:15,144 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:40:15,145 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, qqq的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:40:15,146 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, mmm的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:40:15,146 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:40:15,147 [http-nio-8082-exec-9] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 18, hu, null, 2022-05-07 16:34:58, 16, null, <<BLOB>>, hu
+2022-05-07 16:40:15,148 [http-nio-8082-exec-9] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 4
+2022-05-07 16:40:15,547 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:40:15,548 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:40:15,632 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:40:15,633 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:40:15,634 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:40:15,634 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:40:15,635 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:40:15,636 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:40:15,637 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:40:15,638 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:40:15,640 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:40:15,642 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:40:15,643 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:40:15,643 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-05-07 16:40:26,716 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:40:26,717 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 9(Integer)
+2022-05-07 16:40:26,801 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 0
+2022-05-07 16:40:30,024 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where uid = ?
+2022-05-07 16:40:30,025 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 13(Integer)
+2022-05-07 16:40:30,104 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
+2022-05-07 16:40:30,105 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 5, 11, null, 2022-03-06 17:20:06, 13, null, <<BLOB>>
+2022-05-07 16:40:30,105 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 6, 11, null, 2022-03-06 17:20:25, 13, null, <<BLOB>>
+2022-05-07 16:40:30,105 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-05-07 16:40:35,168 [http-nio-8082-exec-8] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:40:35,169 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:40:35,170 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:40:35,248 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:40:35,249 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, qqq的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:40:35,250 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, mmm的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:40:35,250 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:40:35,251 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 18, hu, null, 2022-05-07 16:34:58, 16, null, <<BLOB>>, hu
+2022-05-07 16:40:35,252 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 4
+2022-05-07 16:41:50,562 [http-nio-8082-exec-3] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:41:50,620 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:41:50,621 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:41:50,688 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:41:50,688 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, qqq的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:41:50,689 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, mmm的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:41:50,689 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:41:50,689 [http-nio-8082-exec-3] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 18, hu, null, 2022-05-07 16:34:58, 16, null, <<BLOB>>, hu
+2022-05-07 16:41:50,690 [http-nio-8082-exec-3] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 4
+2022-05-07 16:49:40,187 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:49:40,188 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: hu(String)
+2022-05-07 16:49:40,249 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-05-07 16:49:40,250 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, $2a$10$wfAcPkCwtsQU97YY80/Hu.dWwLzM/PXPsUPISB74fWCPKMngOb5dO, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png
+2022-05-07 16:49:40,251 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:49:40,252 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-05-07 16:49:40,253 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 16(Integer)
+2022-05-07 16:49:40,329 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-05-07 16:49:40,330 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-05-07 16:49:40,331 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:49:52,376 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:49:52,377 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: hu(String)
+2022-05-07 16:49:52,456 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-05-07 16:49:52,457 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, $2a$10$wfAcPkCwtsQU97YY80/Hu.dWwLzM/PXPsUPISB74fWCPKMngOb5dO, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png
+2022-05-07 16:49:52,458 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:49:52,459 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-05-07 16:49:52,460 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 16(Integer)
+2022-05-07 16:49:52,526 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-05-07 16:49:52,527 [http-nio-8082-exec-5] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-05-07 16:49:52,527 [http-nio-8082-exec-5] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:49:54,076 [http-nio-8082-exec-7] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:49:54,077 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:49:54,078 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:49:54,147 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:49:54,148 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, qqq的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:49:54,149 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, mmm的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:49:54,150 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:49:54,150 [http-nio-8082-exec-7] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 18, hu, null, 2022-05-07 16:34:58, 16, null, <<BLOB>>, hu
+2022-05-07 16:49:54,151 [http-nio-8082-exec-7] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 4
+2022-05-07 16:50:01,444 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:50:01,445 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:50:01,509 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:50:01,509 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:50:01,510 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:50:01,510 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:50:01,511 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:50:01,512 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:50:01,512 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:50:01,513 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:50:01,513 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:50:01,514 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:50:01,515 [http-nio-8082-exec-6] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:50:01,515 [http-nio-8082-exec-6] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-05-07 16:53:36,855 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, username, password, enabled, email, regTime, avatar_name from user where username=?
+2022-05-07 16:53:36,856 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: admin(String)
+2022-05-07 16:53:36,944 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, username, password, enabled, email, regTime, avatar_name
+2022-05-07 16:53:36,944 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, $2a$10$qx01CfXY0P0DQhr.lLmjP.xp7XeIFrnE3l8p4chLXJg0KoZTcREkq, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png
+2022-05-07 16:53:36,945 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
+2022-05-07 16:53:36,946 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT r.* FROM role AS r,user_role AS ur WHERE r.id = ur.`role_id` AND ur.`user_id`=?;
+2022-05-07 16:53:36,947 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
+2022-05-07 16:53:37,014 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, name, nameZh
+2022-05-07 16:53:37,015 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 超级管理员
+2022-05-07 16:53:37,016 [http-nio-8082-exec-2] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 2, user, 普通用户
+2022-05-07 16:53:37,016 [http-nio-8082-exec-2] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 2
+2022-05-07 16:53:38,454 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: SELECT u.`id` AS uid,u.username,u.`enabled`,u.`email`,u.`regTime`,u.`avatar_name` AS avatarName,r.`id` AS rid,r.`name` AS englishName,r.`nameZh` AS chineseName FROM `user` AS u, role AS r, user_role AS ur WHERE u.`id`=ur.`user_id` AND r.`id`=ur.`role_id`
+2022-05-07 16:53:38,455 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 
+2022-05-07 16:53:38,518 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: uid, username, enabled, email, regTime, avatarName, rid, englishName, chineseName
+2022-05-07 16:53:38,518 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 1, admin, 超级管理员
+2022-05-07 16:53:38,519 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, admin, 1, null, null, 2022-03-09e4c0daa13dbd4392b95a7b62402deac7.png, 2, user, 普通用户
+2022-05-07 16:53:38,519 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 9, string, 1, string, 2022-03-06 17:09:30, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:53:38,519 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 11, hyw11, 1, 1449582589@qq.com, 2022-03-06 17:14:26, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:53:38,520 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 12, lili, 1, thcyhtyhh, 2022-03-06 17:16:40, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:53:38,520 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 13, 11, 1, guzheng16399@163.com, 2022-03-06 17:19:01, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:53:38,520 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 10, hyw, 1, 1449582589@qq.com, 2022-03-06 17:14:05, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 1, admin, 超级管理员
+2022-05-07 16:53:38,521 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 14, liyuehong, 1, liyuehong@my.swjtu.edu.cn, 2022-03-15 20:11:58, 2022-03-15fed36e42102642e4a2045717763a02e8.png, 2, user, 普通用户
+2022-05-07 16:53:38,521 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, 小李, 1, 46468ge, 2022-05-07 15:26:20, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:53:38,521 [http-nio-8082-exec-8] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, hu, 1, 1449582589@qq.com, 2022-05-07 16:34:22, 2022-03-06ca922e80a760458a9ee35552581c45c9.png, 2, user, 普通用户
+2022-05-07 16:53:38,522 [http-nio-8082-exec-8] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 10
+2022-05-07 16:53:38,645 [http-nio-8082-exec-4] DEBUG -[ArticleController.java:87]- 2022-05-07
+2022-05-07 16:53:38,645 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select article.id, title, editDate, publishDate, uid, state , content ,user.username as author from article,user where DATE_FORMAT(publishDate,'%Y-%m-%d') BETWEEN ? AND ? and user.id=article.uid
+2022-05-07 16:53:38,646 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 2022-05-02(String), 2022-05-08(String)
+2022-05-07 16:53:38,713 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content, author
+2022-05-07 16:53:38,713 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 15, qqq的周报, null, 2022-05-07 14:55:25, 1, null, <<BLOB>>, admin
+2022-05-07 16:53:38,714 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 16, mmm的周报, null, 2022-05-07 15:29:12, 1, null, <<BLOB>>, admin
+2022-05-07 16:53:38,714 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
+2022-05-07 16:53:38,714 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 18, hu, null, 2022-05-07 16:34:58, 16, null, <<BLOB>>, hu
+2022-05-07 16:53:38,715 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 4
 2022-05-07 17:55:49,351 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
