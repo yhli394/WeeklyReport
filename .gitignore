@@ -14,7 +14,7 @@ target/
 .sts4-cache
 
 # 自定义
-logs
+logs/*
 Dockerfile
 *.yml
 ### IntelliJ IDEA ###
