@@ -14,7 +14,7 @@ target/
 .sts4-cache
 
 # 自定义
-Dockerfile
+#Dockerfile
 *.yml
 *.xml
 *.log
