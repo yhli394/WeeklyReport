@@ -16,6 +16,7 @@ target/
 # 自定义
 Dockerfile
 *.yml
+*.xml
 ### IntelliJ IDEA ###
 .idea
 *.iws
