@@ -1,9 +1,0 @@
-2022-02-13 23:58:21,186 [main] INFO  -[StartupInfoLogger.java:55]- Starting WeeklyReportApplication using Java 1.8.0_301 on LAPTOP-NUCNNVIC with PID 18820 (D:\GithubRepo\WeeklyReport\target\classes started by Swjtu-Li in D:\GithubRepo\WeeklyReport)
-2022-02-13 23:58:21,188 [main] INFO  -[SpringApplication.java:659]- No active profile set, falling back to default profiles: default
-2022-02-13 23:58:25,595 [main] INFO  -[StartupInfoLogger.java:61]- Started WeeklyReportApplication in 4.703 seconds (JVM running for 5.37)
-2022-02-13 23:58:30,731 [http-nio-8082-exec-1] INFO  -[ArticleController.java:97]- id:1
-2022-02-13 23:58:30,748 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==>  Preparing: select id, title, editDate, publishDate, uid, state , content from article where id=?
-2022-02-13 23:58:30,771 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- ==> Parameters: 1(Integer)
-2022-02-13 23:58:30,871 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==    Columns: id, title, editDate, publishDate, uid, state, content
-2022-02-13 23:58:30,872 [http-nio-8082-exec-1] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 1, 第一次周报, null, 2022-04-07 17:36:20, 1, null, <<BLOB>>
-2022-02-13 23:58:30,874 [http-nio-8082-exec-1] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 1
