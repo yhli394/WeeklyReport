@@ -1949,3 +1949,4 @@ date: 2022-5-7
 2022-05-07 16:53:38,714 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 17, t4y4y4y, null, 2022-05-07 15:37:53, 1, null, <<BLOB>>, admin
 2022-05-07 16:53:38,714 [http-nio-8082-exec-4] TRACE -[BaseJdbcLogger.java:143]- <==        Row: 18, hu, null, 2022-05-07 16:34:58, 16, null, <<BLOB>>, hu
 2022-05-07 16:53:38,715 [http-nio-8082-exec-4] DEBUG -[BaseJdbcLogger.java:137]- <==      Total: 4
+2022-05-07 17:55:49,351 [SpringApplicationShutdownHook] INFO  -[DruidDataSource.java:1825]- {dataSource-1} closed
