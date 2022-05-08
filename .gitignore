@@ -14,7 +14,6 @@ target/
 .sts4-cache
 
 # 自定义
-logs/*
 Dockerfile
 *.yml
 ### IntelliJ IDEA ###
@@ -35,3 +34,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/logs/
